@@ -73,6 +73,8 @@ struct WorkoutLoggerView: View {
             .sheet(item: $substituting) { exercise in
                 ExerciseSubstituteSheet(exercise: exercise, user: user)
             }
+        }
+    }
 
     private var dayPicker: some View {
         ScrollView(.horizontal, showsIndicators: false) {

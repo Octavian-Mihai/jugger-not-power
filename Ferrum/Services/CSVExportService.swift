@@ -1,3 +1,7 @@
+import Foundation
+import SwiftData
+import TrainingLogic
+
 enum CSVExportService {
     static func export(user: User) -> String {
         var lines: [String] = []

@@ -330,6 +330,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgramEngineTests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgressionEngineTests.swift"
         },
         {
@@ -358,6 +362,7 @@
       "moduleOutputPath" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/Modules/TrainingLogicTests.swiftmodule",
       "objects" : [
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/OneRepMaxTests.swift.o",
+        "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgramEngineTests.swift.o",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgressionEngineTests.swift.o",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ReadinessEngineTests.swift.o",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/VolumeBalancerTests.swift.o"
@@ -424,6 +429,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgramEngineTests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgressionEngineTests.swift.o"
         },
         {
@@ -442,6 +451,7 @@
       "prepareForIndexing" : false,
       "sources" : [
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/OneRepMaxTests.swift",
+        "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgramEngineTests.swift",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgressionEngineTests.swift",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ReadinessEngineTests.swift",
         "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/VolumeBalancerTests.swift"
@@ -604,6 +614,7 @@
       "traininglogic",
       "-c",
       "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/OneRepMaxTests.swift",
+      "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgramEngineTests.swift",
       "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgressionEngineTests.swift",
       "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ReadinessEngineTests.swift",
       "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/VolumeBalancerTests.swift",
@@ -828,6 +839,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgramEngineTests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicTests.build/ProgressionEngineTests.swift.o"
         },
         {
@@ -851,6 +866,10 @@
         {
           "kind" : "file",
           "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/OneRepMaxTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Tests/TrainingLogicTests/ProgramEngineTests.swift"
         },
         {
           "kind" : "file",

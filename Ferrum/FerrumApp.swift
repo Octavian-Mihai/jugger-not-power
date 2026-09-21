@@ -1,26 +1,9 @@
 import SwiftUI
 import SwiftData
-import TrainingLogic
 
 @main
 struct FerrumApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            User.self,
-            TrainingProgram.self,
-            TrainingWeek.self,
-            WorkoutDay.self,
-            Exercise.self,
-            SetLog.self,
-            ReadinessCheckIn.self
-        ])
-        let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-        do {
-            return try ModelContainer(for: schema, configurations: [configuration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    var sharedModelContainer: ModelContainer = FerrumPersistence.makeContainer()
 
     var body: some Scene {
         WindowGroup {

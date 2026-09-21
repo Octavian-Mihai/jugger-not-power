@@ -8,7 +8,6 @@ struct ReadinessView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @StateObject private var model = ReadinessViewModel()
-    @State private var applied = false
 
     var body: some View {
         ScrollView {
@@ -40,7 +39,6 @@ struct ReadinessView: View {
                             to: day,
                             user: user
                         )
-                        applied = true
                         dismiss()
                     } catch {
                         model.errorMessage = error.localizedDescription

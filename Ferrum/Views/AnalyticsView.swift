@@ -45,23 +45,35 @@ struct AnalyticsView: View {
     private var volumePoints: [VolumePoint] {
         var result: [VolumePoint] = []
         for week in user.activeProgram?.orderedWeeks ?? [] {
-            var planned: [String: Int] = [:]
-            var actual: [String: Int] = [:]
+            var planned = 0
+            var actual = 0
+            for day in week.days where !day.isRestDay {
+                for exercise in day.exercises {
+                    let working = exercise.setLogs.filter { !$0.isWarmup }
+                    planned += working.count
+                    actual += working.filter(\.isCompleted).count
+                }
+            }
+            if planned > 0 || actual > 0 {
+                result.append(VolumePoint(week: week.weekNumber, series: "Planned", sets: planned))
+                result.append(VolumePoint(week: week.weekNumber, series: "Actual", sets: actual))
+            }
+        }
+        return result
+    }
+
+    private var musclePoints: [VolumePoint] {
+        var result: [VolumePoint] = []
+        for week in user.activeProgram?.orderedWeeks ?? [] {
+            var counts: [String: Int] = [:]
             for day in week.days where !day.isRestDay {
                 for exercise in day.exercises {
                     let group = volumeGroup(for: exercise)
-                    let working = exercise.setLogs.filter { !$0.isWarmup }
-                    planned[group, default: 0] += working.count
-                    actual[group, default: 0] += working.filter(\.isCompleted).count
+                    counts[group, default: 0] += exercise.setLogs.filter { $0.isCompleted && !$0.isWarmup }.count
                 }
             }
-            for group in ["Push", "Pull", "Legs", "Other"] {
-                let plannedCount = planned[group] ?? 0
-                let actualCount = actual[group] ?? 0
-                if plannedCount > 0 || actualCount > 0 {
-                    result.append(VolumePoint(week: week.weekNumber, series: "\(group) planned", sets: plannedCount))
-                    result.append(VolumePoint(week: week.weekNumber, series: "\(group) actual", sets: actualCount))
-                }
+            for group in ["Push", "Pull", "Legs"] where (counts[group] ?? 0) > 0 {
+                result.append(VolumePoint(week: week.weekNumber, series: group, sets: counts[group] ?? 0))
             }
         }
         return result
@@ -152,6 +164,25 @@ struct AnalyticsView: View {
                                 .position(by: .value("Series", point.series))
                             }
                             .frame(height: 260)
+                        }
+                    }
+                    chartCard(title: "Weekly volume (push / pull / legs)") {
+                        if musclePoints.isEmpty {
+                            empty
+                        } else {
+                            Chart(musclePoints) { point in
+                                BarMark(
+                                    x: .value("Week", point.week),
+                                    y: .value("Sets", point.sets)
+                                )
+                                .foregroundStyle(by: .value("Group", point.series))
+                            }
+                            .chartForegroundStyleScale([
+                                "Push": FerrumTheme.warning,
+                                "Pull": FerrumTheme.copper,
+                                "Legs": FerrumTheme.iron
+                            ])
+                            .frame(height: 220)
                         }
                     }
                     chartCard(title: "Readiness trend") {

@@ -142,18 +142,20 @@ public enum ReadinessEngine {
 
     private static func cutAccessoryVolume(_ workout: PlannedWorkout, multiplier: Double) -> PlannedWorkout {
         var copy = workout
-        let originalSets = copy.exercises.reduce(0) { $0 + $1.sets.count }
+        let originalSets = copy.exercises.reduce(0) { $0 + $1.sets.filter { !$0.isWarmup }.count }
         let targetSets = max(1, Int((Double(originalSets) * multiplier).rounded()))
         var remainingToDrop = max(0, originalSets - targetSets)
         for index in copy.exercises.indices.reversed() {
             guard remainingToDrop > 0 else { break }
             let isMain = copy.exercises[index].role == .main
-            let floor = isMain ? min(2, copy.exercises[index].sets.count) : 0
-            while copy.exercises[index].sets.count > floor && remainingToDrop > 0 {
-                copy.exercises[index].sets.removeLast()
+            func workingCount() -> Int { copy.exercises[index].sets.filter { !$0.isWarmup }.count }
+            let floor = isMain ? min(2, workingCount()) : 0
+            while workingCount() > floor && remainingToDrop > 0 {
+                guard let lastWorking = copy.exercises[index].sets.lastIndex(where: { !$0.isWarmup }) else { break }
+                copy.exercises[index].sets.remove(at: lastWorking)
                 remainingToDrop -= 1
             }
-            if copy.exercises[index].sets.isEmpty && copy.exercises[index].role == .accessory {
+            if workingCount() == 0 && copy.exercises[index].role == .accessory {
                 copy.exercises.remove(at: index)
             }
         }
