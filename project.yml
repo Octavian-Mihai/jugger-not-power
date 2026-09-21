@@ -1,0 +1,70 @@
+name: Ferrum
+options:
+  bundleIdPrefix: app.ferrum
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "18.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+packages:
+  TrainingLogic:
+    path: TrainingLogic
+targets:
+  Ferrum:
+    type: application
+    platform: iOS
+    sources:
+      - Ferrum
+    info:
+      path: Ferrum/Info.plist
+      properties:
+        CFBundleDisplayName: Ferrum
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    dependencies:
+      - package: TrainingLogic
+        product: TrainingLogic
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.ferrum.ios
+        PRODUCT_NAME: Ferrum
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: false
+        INFOPLIST_FILE: Ferrum/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SWIFT_EMIT_LOC_STRINGS: YES
+        TARGETED_DEVICE_FAMILY: "1,2"
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
+        SDKROOT: iphoneos
+        CODE_SIGN_STYLE: Automatic
+        SUPPORTS_MACCATALYST: false
+schemes:
+  Ferrum:
+    build:
+      targets:
+        Ferrum: all
+    run:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/master.swiftdeps"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/runner.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogicPackageTests.build/runner.dia"
+  }
+}

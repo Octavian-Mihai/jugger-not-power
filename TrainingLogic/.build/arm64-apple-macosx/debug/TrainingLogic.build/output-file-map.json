@@ -1,0 +1,82 @@
+{
+  "": {
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/master.swiftdeps"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/AthleteProfile.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/AthleteProfile.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/AthleteProfile.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/AthleteProfile~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/AthleteProfile.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/AthleteProfile.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/Enums.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/Enums.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/Enums.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/Enums~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/Enums.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/Enums.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/ExerciseLibrary.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ExerciseLibrary.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ExerciseLibrary.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ExerciseLibrary~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ExerciseLibrary.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ExerciseLibrary.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/GeneratedProgram.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/GeneratedProgram.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/GeneratedProgram.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/GeneratedProgram~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/GeneratedProgram.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/GeneratedProgram.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/OneRepMax.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/OneRepMax.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/OneRepMax.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/OneRepMax~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/OneRepMax.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/OneRepMax.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/ProgramEngine.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgramEngine.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgramEngine.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgramEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgramEngine.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgramEngine.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/ProgressionEngine.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgressionEngine.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgressionEngine.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgressionEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgressionEngine.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ProgressionEngine.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/ReadinessEngine.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ReadinessEngine.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ReadinessEngine.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ReadinessEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ReadinessEngine.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/ReadinessEngine.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/VolumeBalancer.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeBalancer.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeBalancer.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeBalancer~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeBalancer.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeBalancer.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/VolumeLandmarks.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeLandmarks.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeLandmarks.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeLandmarks~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeLandmarks.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeLandmarks.dia"
+  },
+  "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/Sources/TrainingLogic/VolumeMetrics.swift": {
+    "dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeMetrics.d",
+    "object": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeMetrics.swift.o",
+    "swiftmodule": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeMetrics~partial.swiftmodule",
+    "swift-dependencies": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeMetrics.swiftdeps",
+    "diagnostics": "/Users/user_octa/Desktop/DESKTOP/PROJECTS/cursor/jugger_not_power/TrainingLogic/.build/arm64-apple-macosx/debug/TrainingLogic.build/VolumeMetrics.dia"
+  }
+}
