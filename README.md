@@ -8,23 +8,21 @@
 
 Ferrum builds a rule-based training program on device, checks daily readiness, auto-regulates loads from logged RPE, and keeps push/pull volume honest — with no accounts, no cloud, and no LLM.
 
-<p align="center">
-  <img src="docs/images/ferrum-hero.jpg" alt="Ferrum hero banner" width="900" />
-</p>
+## Screenshots
 
-## Screens
+Captured from the iOS Simulator (iPhone 16).
 
 <p align="center">
-  <img src="docs/images/ferrum-dashboard.jpg" alt="Today dashboard" width="240" />
+  <img src="docs/images/ferrum-dashboard.png" alt="Today dashboard" width="260" />
   &nbsp;
-  <img src="docs/images/ferrum-logger.jpg" alt="Workout logger" width="240" />
+  <img src="docs/images/ferrum-logger.png" alt="Workout logger" width="260" />
   &nbsp;
-  <img src="docs/images/ferrum-analytics.jpg" alt="Analytics" width="240" />
+  <img src="docs/images/ferrum-analytics.png" alt="Analytics" width="260" />
 </p>
 
 | Today | Log | Analytics |
 | --- | --- | --- |
-| Readiness score, week/block, start session | Sets, warm-ups, rest timer, substitute | 1RM trends, volume, push/pull |
+| Readiness, week/block, start session | Warm-ups, targets, rest days, set logging | Push/pull ratio, volume, 1RM trends |
 
 ## Features
 
@@ -51,6 +49,7 @@ jugger-not-power/
 ├── TrainingLogic/          # Pure Swift package (unit-tested, no UI)
 │   ├── Sources/TrainingLogic/
 │   └── Tests/TrainingLogicTests/
+├── docs/images/            # App icon + Simulator screenshots
 └── Ferrum.xcodeproj
 ```
 
@@ -89,6 +88,14 @@ xcodebuild \
   CODE_SIGNING_ALLOWED=NO \
   build
 ```
+
+## Refresh screenshots
+
+```bash
+./scripts/capture-screenshots.sh
+```
+
+Launches Ferrum on the iPhone 16 Simulator with `-demoScreenshots` demo data and overwrites `docs/images/ferrum-*.png`.
 
 ## Test
 

@@ -23,6 +23,7 @@
 		B511433065C6413CF0820457 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25665996E60D9F398DBC5EBF /* UnitConverter.swift */; };
 		CA46A00896E87F10A20EC37E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA2304641C357DB217F139 /* SettingsView.swift */; };
 		D4A81B2C9E0F4C1A8B7D6E5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B70A1D8E0F4C1A8B7D6E5F /* Persistence.swift */; };
+		E1F2A3B4C5D6E7F8091A2B3C /* DemoScreenshotSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1D2C3B4A5968778695A4B /* DemoScreenshotSupport.swift */; };
 		F96950275B342772BAFE0975 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E024B78D730B7878D8C86 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		A083827A8E26D22B4AE386C2 /* ReadinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadinessView.swift; sourceTree = "<group>"; };
 		BD5A1CCC800C7053D4181A21 /* Ferrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ferrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B70A1D8E0F4C1A8B7D6E5F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F0E1D2C3B4A5968778695A4B /* DemoScreenshotSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScreenshotSupport.swift; sourceTree = "<group>"; };
 		C421E8B554ED3679C037C397 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 		C986072367D902A4996A4C9D /* TrainingLogic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TrainingLogic; sourceTree = SOURCE_ROOT; };
 		DBF6926262761E553A80D892 /* ProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramService.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		7B8B762B6A5C90C713A7B7AC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F0E1D2C3B4A5968778695A4B /* DemoScreenshotSupport.swift */,
 				C3B70A1D8E0F4C1A8B7D6E5F /* Persistence.swift */,
 				5D1E024B78D730B7878D8C86 /* Theme.swift */,
 				25665996E60D9F398DBC5EBF /* UnitConverter.swift */,
@@ -237,6 +240,7 @@
 				3C1DF5215B56F2861421B583 /* DashboardView.swift in Sources */,
 				75BAD18E236968D79F7BFEBD /* FerrumApp.swift in Sources */,
 				8DD47D2DA4A6A4C5189EBB98 /* OnboardingView.swift in Sources */,
+				E1F2A3B4C5D6E7F8091A2B3C /* DemoScreenshotSupport.swift in Sources */,
 				D4A81B2C9E0F4C1A8B7D6E5F /* Persistence.swift in Sources */,
 				A554A08DFB0DEE110D23F498 /* ProgramService.swift in Sources */,
 				4CE8A8A6F4A5D2381F07D5B7 /* ReadinessView.swift in Sources */,

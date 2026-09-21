@@ -3,7 +3,16 @@ import SwiftData
 
 @main
 struct FerrumApp: App {
-    var sharedModelContainer: ModelContainer = FerrumPersistence.makeContainer()
+    let sharedModelContainer: ModelContainer
+
+    init() {
+        let container = FerrumPersistence.makeContainer()
+        self.sharedModelContainer = container
+        if DemoScreenshotSupport.isEnabled {
+            let context = ModelContext(container)
+            DemoScreenshotSupport.seedIfNeeded(context: context)
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -31,7 +40,7 @@ struct RootView: View {
 struct MainTabView: View {
     @Bindable var user: User
     @StateObject private var restTimer = RestTimer()
-    @State private var selectedTab: FerrumTab = .today
+    @State private var selectedTab: FerrumTab = DemoScreenshotSupport.initialTab
     @State private var focusedDayID: PersistentIdentifier?
 
     var body: some View {
