@@ -4,6 +4,8 @@
 
 # Ferrum
 
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for an architecture diagram.
+
 **Offline algorithmic strength coach for iOS.**
 
 Ferrum builds a rule-based training program on device, checks daily readiness, auto-regulates loads from logged RPE, and keeps push/pull volume honest — with no accounts, no cloud, and no LLM.
