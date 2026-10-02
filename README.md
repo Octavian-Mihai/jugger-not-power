@@ -4,11 +4,44 @@
 
 # Ferrum
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for an architecture diagram.
-
 **Offline algorithmic strength coach for iOS.**
 
 Ferrum builds a rule-based training program on device, checks daily readiness, auto-regulates loads from logged RPE, and keeps push/pull volume honest — with no accounts, no cloud, and no LLM.
+
+
+## Architecture
+
+```mermaid
+flowchart TD
+    subgraph App["Ferrum (SwiftUI)"]
+        Entry[FerrumApp]
+        Views["Views/<br/>Onboarding · Dashboard · WorkoutLogger<br/>Readiness · Analytics · Settings"]
+        VM[ViewModels]
+        Svc["Services/<br/>ProgramService · RestTimer · CSVExport"]
+        Util["Utilities/<br/>Persistence · Theme · UnitConverter"]
+        SD[(SwiftData models)]
+    end
+
+    subgraph Pkg["TrainingLogic (Swift package, no UI)"]
+        Prof[AthleteProfile]
+        PE[ProgramEngine] --> GP[GeneratedProgram]
+        Lib[ExerciseLibrary] --> PE
+        Prog[ProgressionEngine<br/>RPE auto-regulation]
+        Ready[ReadinessEngine]
+        VB["VolumeBalancer<br/>VolumeLandmarks · VolumeMetrics"]
+        ORM[OneRepMax]
+    end
+
+    Entry --> Views --> VM
+    VM --> Svc
+    VM --> SD
+    Svc --> PE & Prog & Ready & VB & ORM
+    Prof --> PE
+    Util --> SD
+    Svc -->|export| CSV[(CSV)]
+```
+
+More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
 ## Screenshots
 
