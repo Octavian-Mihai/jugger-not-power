@@ -17,8 +17,17 @@ struct WorkoutView: View {
     @State private var confirmFinish = false
     @State private var infoExercise: ExerciseInfo?
     @State private var page = 0
+    @State private var showSummary = false
 
     var body: some View {
+        if showSummary {
+            WorkoutSummaryView(session: session) { dismiss() }
+        } else {
+            workout
+        }
+    }
+
+    private var workout: some View {
         NavigationStack {
             Group { if profile.swipeWorkout { pager } else { scroller } }
                 .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -221,8 +230,8 @@ struct WorkoutView: View {
             later.weightKg = store.toKg(store.unit.round(store.display(later.targetWeightKg) * factor))
         }
         let pct = Int(abs((factor - 1) * 100).rounded())
-        if factor < 0.995 { session.easeNote = "Tough start: upcoming loads eased \(pct)%" }
-        else if factor > 1.005 { session.easeNote = "Moving well: upcoming loads nudged up \(pct)%" }
+        if factor < 0.98 { session.easeNote = "Tough start: upcoming loads eased \(pct)%" }
+        else if factor > 1.02 { session.easeNote = "Moving well: upcoming loads nudged up \(pct)%" }
         else { session.easeNote = "" }
     }
 
@@ -237,15 +246,22 @@ struct WorkoutView: View {
     }
 
     private func finish() {
-        let now = Date()
+        keypad.deactivate()
+        restEnd = nil
         // Drop sets that were never completed.
         for s in session.sets where !s.isDone { context.delete(s) }
+        // Nothing logged: no workout to record or summarise.
+        guard session.sets.contains(where: \.isDone) else {
+            context.delete(session)
+            dismiss()
+            return
+        }
         session.isFinished = true
-        session.finishedAt = now
+        session.finishedAt = Date()
         if let pid = session.programID, let program = programs.first(where: { $0.id == pid }) {
             program.completedSessions += 1
         }
-        dismiss()
+        showSummary = true
     }
 }
 
