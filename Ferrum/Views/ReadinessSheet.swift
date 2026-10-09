@@ -31,6 +31,7 @@ struct ReadinessSheet: View {
             }
             .background(t.bg.ignoresSafeArea())
             .navigationTitle("Readiness")
+            .keyboardDoneBar()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } } }
         }

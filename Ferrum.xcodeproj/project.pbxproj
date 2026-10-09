@@ -38,6 +38,7 @@
 		2B5FA5B8DA1C586F0BE79556 /* rir.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7E69860D3AF3BBCFA35E4 /* rir.json */; };
 		2BF4D1AEF74FAA8514FCACC1 /* inverted-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B4DAB00B3FA4652B3A0D7C8 /* inverted-row.jpg */; };
 		2C37475F41CF78D62CB7242F /* zercher-jefferson-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94A7EDA5F8E1CFA5DA45CE62 /* zercher-jefferson-curl.jpg */; };
+		35307FF40E664B9D13AE4120 /* MaxesEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E25F2531D6E2F50FE8236A /* MaxesEditor.swift */; };
 		3586EAF869EC48E288732659 /* deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = D61DA05253CCA3E77C19A88D /* deadlift.png */; };
 		3658F0D8526B19C4BA503E05 /* guide-guide-forearms-grip.png in Resources */ = {isa = PBXBuildFile; fileRef = F24FBD3373CDF21A0CABF4C1 /* guide-guide-forearms-grip.png */; };
 		36B5753DDB852D4D2D490DDD /* front-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9464543DFD681B596EE50718 /* front-raise.jpg */; };
@@ -52,6 +53,7 @@
 		405599580B51BA4A88D922B3 /* clean-and-jerk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35CE34C97B021A3C43A87F72 /* clean-and-jerk.jpg */; };
 		40E36B218C04247AE3F8C036 /* sit-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B384C0A52BEF0AE987917039 /* sit-up.jpg */; };
 		415A357DDEADC3600C77A60C /* reverse-hyper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE16B12AAFAB2BF76B79A385 /* reverse-hyper.jpg */; };
+		42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E33D2745B02852C4BDF8EC /* DemoData.swift */; };
 		43270057D78EB22EAE5DD480 /* machine-shoulder-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADCD4BF8B47814B88E12825C /* machine-shoulder-press.jpg */; };
 		43B0974A8D4467AC354BA53C /* guide-guide-triceps.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FB0852783A51547DAF15BBF /* guide-guide-triceps.jpg */; };
 		4462190F846A03E547A926E0 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F448AD430FA7E12F51667 /* ProgramsView.swift */; };
@@ -106,6 +108,7 @@
 		8C13BCF164CAEAF61E98569C /* face-pull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E77F6571D2E281DFA4C7BD /* face-pull.jpg */; };
 		8DD47D2DA4A6A4C5189EBB98 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3EA71479549397DA1C27E /* OnboardingView.swift */; };
 		8E722E428D9BAF6CC1A80E36 /* ReadinessSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8F424629600436335E8EF /* ReadinessSheet.swift */; };
+		8EAA76532E8E08C10B05EC8F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A11B4169D380EA8E5A5058 /* Keyboard.swift */; };
 		9119C8405132C0765CB2999F /* calf-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B44FF48E56C908B8CEBB628 /* calf-raise.jpg */; };
 		9127EA5F8FBC84E7466B3A93 /* shoulder-external-rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41AC96071B05AA1181C8B928 /* shoulder-external-rotation.jpg */; };
 		920489FE06D198E07C1C563B /* guide-guide-erectors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AADFE019BF15B4DDA710D046 /* guide-guide-erectors.jpg */; };
@@ -271,6 +274,7 @@
 		7470F7B3E5265CC6C0AB8B66 /* zercher-reverse-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-reverse-lunge.jpg"; sourceTree = "<group>"; };
 		752AE9988E0CC7CB65276C11 /* one-arm-cable-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "one-arm-cable-row.jpg"; sourceTree = "<group>"; };
 		75412835A6427795EAB5C19B /* romanian-deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "romanian-deadlift.png"; sourceTree = "<group>"; };
+		76A11B4169D380EA8E5A5058 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		78297712BBF6D075805776DB /* cable-woodchop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-woodchop.jpg"; sourceTree = "<group>"; };
 		7941B43A8A92B5387C44476A /* hip-external-rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hip-external-rotation.jpg"; sourceTree = "<group>"; };
 		79CB2821EBC68362A097585E /* ab-crunch-machine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ab-crunch-machine.jpg"; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 		A26AE64C5D6E1F996C9DF9AD /* hip-thrust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hip-thrust.png"; sourceTree = "<group>"; };
 		A47DB148FECF0ED3DF168BAE /* plank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plank.jpg; sourceTree = "<group>"; };
 		A64D7F005FE54D82B0B006D2 /* zercher-step-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-step-up.jpg"; sourceTree = "<group>"; };
+		A6E25F2531D6E2F50FE8236A /* MaxesEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxesEditor.swift; sourceTree = "<group>"; };
 		A74C02524790AE7FA5A2DA1C /* power-snatch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "power-snatch.jpg"; sourceTree = "<group>"; };
 		A85CB998B9C1A2E2121F52C4 /* glute-kickback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "glute-kickback.jpg"; sourceTree = "<group>"; };
 		A9E2FA2063D273C9CC14660E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -355,6 +360,7 @@
 		D52A3D3553022AF8A35FA741 /* FerrumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerrumApp.swift; sourceTree = "<group>"; };
 		D61DA05253CCA3E77C19A88D /* deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deadlift.png; sourceTree = "<group>"; };
 		D8130BC30CDDF4CC10DA496D /* guide-guide-biceps.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-biceps.jpg"; sourceTree = "<group>"; };
+		D8E33D2745B02852C4BDF8EC /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		D9CD9265ACA1F8F495D2135A /* box-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-jump.png"; sourceTree = "<group>"; };
 		DB25003342F7E250D52F3011 /* smith-machine-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smith-machine-squat.jpg"; sourceTree = "<group>"; };
 		DD0F5C57AFF0B4C9450FABEF /* snatch-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "snatch-pull.jpg"; sourceTree = "<group>"; };
@@ -584,6 +590,7 @@
 			children = (
 				B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */,
 				A9E2FA2063D273C9CC14660E /* LibraryView.swift */,
+				A6E25F2531D6E2F50FE8236A /* MaxesEditor.swift */,
 				93E3EA71479549397DA1C27E /* OnboardingView.swift */,
 				8B4E9833A0BB132099E41D6E /* ProgramBuilderView.swift */,
 				436F448AD430FA7E12F51667 /* ProgramsView.swift */,
@@ -628,6 +635,8 @@
 		BDDAE590D5DD30F0AE4A1114 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D8E33D2745B02852C4BDF8EC /* DemoData.swift */,
+				76A11B4169D380EA8E5A5058 /* Keyboard.swift */,
 				59301CDAD3BB6C23299B768B /* NumberField.swift */,
 				01B3942E5365C19C503B2B9D /* Store.swift */,
 				7C0ED869299A0C29B7C16F69 /* Theme.swift */,
@@ -894,9 +903,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */,
 				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
 				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,
+				8EAA76532E8E08C10B05EC8F /* Keyboard.swift in Sources */,
 				3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */,
+				35307FF40E664B9D13AE4120 /* MaxesEditor.swift in Sources */,
 				DA0D2D5794B0D18A75FC927C /* Models.swift in Sources */,
 				BFD88206609498071F00DF35 /* NumberField.swift in Sources */,
 				8DD47D2DA4A6A4C5189EBB98 /* OnboardingView.swift in Sources */,

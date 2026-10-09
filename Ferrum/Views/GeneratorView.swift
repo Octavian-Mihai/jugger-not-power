@@ -51,6 +51,7 @@ struct GeneratorView: View {
             }
             .background(t.bg.ignoresSafeArea())
             .navigationTitle("Generate program")
+            .keyboardDoneBar()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } } }
             .onAppear { days = profile.daysPerWeek; experience = profile.experience }

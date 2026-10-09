@@ -49,3 +49,44 @@ public enum Analytics {
 
     public static func totalVolume(_ sets: [SetRecord]) -> Double { sets.reduce(0) { $0 + $1.volume } }
 }
+
+public struct WeekPoint: Identifiable, Hashable, Sendable {
+    public var id: Date { weekStart }
+    public let weekStart: Date
+    public let volume: Double   // tonnage: weight x reps
+    public let sets: Int
+}
+
+public struct Improvement: Hashable, Sendable {
+    public let exerciseID: String
+    public let first: Double
+    public let latest: Double
+    public var percent: Double { first > 0 ? (latest - first) / first * 100 : 0 }
+}
+
+public extension Analytics {
+    /// Tonnage and set count per calendar week, oldest first, zero-filled for the last `weeks` weeks.
+    static func weeklyTotals(_ sets: [SetRecord], weeks: Int, now: Date = .now, calendar: Calendar = .current) -> [WeekPoint] {
+        guard let thisWeek = calendar.dateInterval(of: .weekOfYear, for: now)?.start else { return [] }
+        let grouped = Dictionary(grouping: sets) { calendar.dateInterval(of: .weekOfYear, for: $0.date)?.start ?? $0.date }
+        return (0..<weeks).reversed().compactMap { back in
+            guard let start = calendar.date(byAdding: .weekOfYear, value: -back, to: thisWeek) else { return nil }
+            let rows = grouped[start] ?? []
+            return WeekPoint(weekStart: start, volume: totalVolume(rows), sets: rows.count)
+        }
+    }
+
+    /// First vs. latest daily-best e1RM. nil until the exercise has been trained on two different days.
+    static func improvement(_ sets: [SetRecord], exerciseID: String, calendar: Calendar = .current) -> Improvement? {
+        let h = e1RMHistory(sets, exerciseID: exerciseID, calendar: calendar)
+        guard h.count >= 2, let f = h.first, let l = h.last else { return nil }
+        return Improvement(exerciseID: exerciseID, first: f.value, latest: l.value)
+    }
+
+    /// e1RM history as % change from the first session (0 = starting point).
+    static func percentChangeHistory(_ sets: [SetRecord], exerciseID: String, calendar: Calendar = .current) -> [E1RMPoint] {
+        let h = e1RMHistory(sets, exerciseID: exerciseID, calendar: calendar)
+        guard let first = h.first?.value, first > 0 else { return [] }
+        return h.map { E1RMPoint(date: $0.date, value: ($0.value - first) / first * 100) }
+    }
+}

@@ -8,6 +8,7 @@ struct SettingsView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.theme) private var t
     @State private var confirmReset = false
+    @State private var showMaxes = false
 
     var body: some View {
         NavigationStack {
@@ -22,12 +23,10 @@ struct SettingsView: View {
                         HStack {
                             Text(lift.title)
                             Spacer()
-                            NumberField(value: Binding(get: { store.display(profile.oneRepMaxKg(lift)) },
-                                                       set: { profile.setOneRepMaxKg(lift, store.toKg($0)) }))
-                                .multilineTextAlignment(.trailing).frame(width: 90)
-                            Text(profile.unit.label).foregroundStyle(t.secondary)
+                            Text(profile.oneRepMaxKg(lift) > 0 ? store.format(profile.oneRepMaxKg(lift)) : "Not set").foregroundStyle(t.secondary)
                         }
                     }
+                    Button("Edit maxes") { showMaxes = true }
                 }
                 Section("Training") {
                     Stepper("\(profile.daysPerWeek) days per week", value: $profile.daysPerWeek, in: 2...6)
@@ -50,6 +49,9 @@ struct SettingsView: View {
                         }
                     }
                 }
+                #if DEBUG
+                Section("Debug") { Button("Load demo training history") { DemoData.load(context: context) } }
+                #endif
                 Section {
                     Button("Erase all data", role: .destructive) { confirmReset = true }
                 } footer: { Text("Ferrum stores everything on this device only.") }
@@ -57,6 +59,8 @@ struct SettingsView: View {
             .scrollContentBackground(.hidden)
             .background(t.bg.ignoresSafeArea())
             .navigationTitle("Settings")
+            .keyboardDoneBar()
+            .sheet(isPresented: $showMaxes) { MaxesSheet(profile: profile) }
             .confirmationDialog("Erase all programs, workouts and settings?", isPresented: $confirmReset, titleVisibility: .visible) {
                 Button("Erase everything", role: .destructive) { eraseAll() }
             }

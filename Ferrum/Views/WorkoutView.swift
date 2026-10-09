@@ -30,6 +30,7 @@ struct WorkoutView: View {
             }
             .background(t.bg.ignoresSafeArea())
             .navigationTitle(session.dayName)
+            .keyboardDoneBar()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }

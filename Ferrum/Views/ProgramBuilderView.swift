@@ -38,6 +38,7 @@ struct ProgramBuilderView: View {
             .scrollContentBackground(.hidden)
             .background(t.bg.ignoresSafeArea())
             .navigationTitle("Program builder")
+            .keyboardDoneBar()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { if isNew { context.delete(program) }; dismiss() } }
@@ -101,6 +102,7 @@ struct BlockEditor: View {
         .scrollContentBackground(.hidden)
         .background(t.bg.ignoresSafeArea())
         .navigationTitle(block.name)
+        .keyboardDoneBar()
         .toolbar { EditButton() }
     }
 
@@ -144,6 +146,7 @@ struct DayEditor: View {
         .scrollContentBackground(.hidden)
         .background(t.bg.ignoresSafeArea())
         .navigationTitle(day.name)
+        .keyboardDoneBar()
         .toolbar { EditButton() }
         .sheet(isPresented: $picking) {
             ExercisePicker { info in
@@ -186,6 +189,7 @@ struct ExerciseEditor: View {
         .scrollContentBackground(.hidden)
         .background(t.bg.ignoresSafeArea())
         .navigationTitle("Sets")
+        .keyboardDoneBar()
         .navigationBarTitleDisplayMode(.inline)
     }
 }

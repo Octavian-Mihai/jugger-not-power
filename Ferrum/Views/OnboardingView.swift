@@ -6,11 +6,12 @@ struct OnboardingView: View {
     @Environment(Store.self) private var store
     @Environment(\.theme) private var t
     @State private var step = 0
-    @State private var squat = ""
-    @State private var bench = ""
-    @State private var deadlift = ""
 
     var body: some View {
+        NavigationStack { content.toolbar(.hidden, for: .navigationBar).keyboardDoneBar() }
+    }
+
+    private var content: some View {
         VStack(spacing: 24) {
             ProgressView(value: Double(step + 1), total: 4).tint(t.accent).padding(.top, 8)
             Group {
@@ -25,7 +26,7 @@ struct OnboardingView: View {
 
             HStack {
                 if step > 0 { Button("Back") { step -= 1 }.buttonStyle(PrimaryButton(prominent: false)) }
-                Button(step == 3 ? "Start training" : "Continue") { next() }.buttonStyle(PrimaryButton())
+                Button(step == 3 ? "Start training" : (step == 2 && !hasMaxes ? "Skip for now" : "Continue")) { next() }.buttonStyle(PrimaryButton())
             }
         }
         .padding(20)
@@ -70,23 +71,18 @@ struct OnboardingView: View {
     }
 
     private var lifts: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Text("Your current maxes").font(.title.bold()).foregroundStyle(t.text)
-            Text("Enter a 1RM or your best recent estimate in \(profile.unit.label). You can skip this and add it later.")
-                .foregroundStyle(t.secondary)
-            field("Squat", $squat); field("Bench press", $bench); field("Deadlift", $deadlift)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("Your current maxes").font(.title.bold()).foregroundStyle(t.text)
+                Text("Enter your one-rep max in \(profile.unit.label), or estimate it from a recent hard set. Ferrum needs these to show weights for your lifts.")
+                    .foregroundStyle(t.secondary)
+                MaxesEditor(profile: profile)
+            }
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
-    private func field(_ title: String, _ binding: Binding<String>) -> some View {
-        HStack {
-            Text(title).foregroundStyle(t.text)
-            Spacer()
-            TextField("0", text: binding).keyboardType(.decimalPad).multilineTextAlignment(.trailing)
-                .frame(width: 100).foregroundStyle(t.text)
-            Text(profile.unit.label).foregroundStyle(t.secondary)
-        }.card()
-    }
+    private var hasMaxes: Bool { MainLift.allCases.contains { profile.oneRepMaxKg($0) > 0 } }
 
     private var themePick: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -109,11 +105,8 @@ struct OnboardingView: View {
     }
 
     private func next() {
-        if step == 2 {
-            store.unit = profile.unit
-            func kg(_ s: String) -> Double { store.toKg(Double(s.replacingOccurrences(of: ",", with: ".")) ?? 0) }
-            profile.squatKg = kg(squat); profile.benchKg = kg(bench); profile.deadliftKg = kg(deadlift)
-        }
+        if step == 1 { store.unit = profile.unit }
+        Keyboard.hide()
         if step == 3 { profile.onboarded = true } else { step += 1 }
     }
 }

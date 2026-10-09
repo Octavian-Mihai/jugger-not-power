@@ -62,6 +62,7 @@ struct Screen<Content: View>: View {
             }
             .background(t.bg.ignoresSafeArea())
             .navigationTitle(title)
+            .keyboardDoneBar()
         }
     }
 }

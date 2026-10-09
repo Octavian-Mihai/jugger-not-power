@@ -12,6 +12,7 @@ struct TodayView: View {
     @Query(sort: \WorkoutSession.date, order: .reverse) private var sessions: [WorkoutSession]
     @Query private var allSets: [LoggedSet]
     @State private var showCheckIn = false
+    @State private var showMaxes = false
     @State private var workout: WorkoutSession?
 
     private var program: Program? { active.first }
@@ -30,10 +31,12 @@ struct TodayView: View {
             } else {
                 emptyCard
             }
+            if MainLift.allCases.contains(where: { profile.oneRepMaxKg($0) <= 0 }) { maxesCard }
             readinessCard
             recent
         }
         .sheet(isPresented: $showCheckIn) { ReadinessSheet() }
+        .sheet(isPresented: $showMaxes) { MaxesSheet(profile: profile) }
         .fullScreenCover(item: $workout) { session in
             WorkoutView(session: session, profile: profile)
         }
@@ -98,6 +101,15 @@ struct TodayView: View {
         let reps = first.isRange ? "\(first.repsLow)-\(first.reps)" : "\(first.reps)"
         let w = first.weight.map { " @ \(store.format(store.toKg($0)))" } ?? ""
         return "\(ex.sets.count) × \(reps)\(w) · RIR \(Int(first.targetRIR))"
+    }
+
+    private var maxesCard: some View {
+        let missing = MainLift.allCases.filter { profile.oneRepMaxKg($0) <= 0 }.map(\.title).joined(separator: ", ")
+        return VStack(alignment: .leading, spacing: 8) {
+            SectionHeader(text: "Set your maxes")
+            Text("Add your 1RM for \(missing) so Ferrum can show the weight for each set.").foregroundStyle(t.secondary)
+            Button("Enter maxes") { showMaxes = true }.buttonStyle(PrimaryButton())
+        }.frame(maxWidth: .infinity, alignment: .leading).card()
     }
 
     private var readinessCard: some View {

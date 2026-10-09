@@ -168,7 +168,8 @@ struct CustomExerciseSheet: View {
                     ForEach(["barbell", "dumbbell", "cable", "machine", "bodyweight", "kettlebell", "band", "other"], id: \.self) { Text($0.capitalized).tag($0) }
                 }
             }
-            .navigationTitle("New exercise").navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("New exercise")
+            .keyboardDoneBar().navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {

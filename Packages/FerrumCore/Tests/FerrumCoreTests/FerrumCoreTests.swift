@@ -170,4 +170,20 @@ final class FerrumCoreTests: XCTestCase {
         let vol = Analytics.muscleSets([a, b], library: lib)
         XCTAssertEqual(vol["quadriceps"], 2)
     }
+
+    func testWeeklyTotalsAndImprovement() {
+        let cal = Calendar.current
+        let now = Date()
+        let lastWeek = cal.date(byAdding: .day, value: -8, to: now)!
+        let a = SetRecord(exerciseID: "back-squat", weight: 100, reps: 5, rir: 2, date: lastWeek)
+        let b = SetRecord(exerciseID: "back-squat", weight: 110, reps: 5, rir: 2, date: now)
+        let weeks = Analytics.weeklyTotals([a, b], weeks: 4, now: now)
+        XCTAssertEqual(weeks.count, 4)
+        XCTAssertEqual(weeks.last?.volume, 550)
+        XCTAssertEqual(weeks.reduce(0) { $0 + $1.sets }, 2)
+        let imp = Analytics.improvement([a, b], exerciseID: "back-squat")
+        XCTAssertEqual(imp?.percent ?? 0, 10, accuracy: 0.001)
+        XCTAssertNil(Analytics.improvement([a], exerciseID: "back-squat"))
+        XCTAssertEqual(Analytics.percentChangeHistory([a, b], exerciseID: "back-squat").first?.value, 0)
+    }
 }
