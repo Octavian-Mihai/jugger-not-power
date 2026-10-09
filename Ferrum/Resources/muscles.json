@@ -1,0 +1,359 @@
+[
+ {
+  "id": "chest-pectorals",
+  "name": "Chest (Pectorals)",
+  "region": "Upper body",
+  "split": "push",
+  "role": "Prime mover on horizontal push; upper fibers assist incline and some overhead work.",
+  "function": "Shoulder horizontal adduction, flexion, internal rotation.",
+  "examples": [
+   "Bench Press",
+   "Incline Press",
+   "DB Fly",
+   "Decline Fly"
+  ],
+  "patterns": [
+   "Horizontal Push",
+   "Deceleration / Catching"
+  ],
+  "image": "guide-chest-pectorals.jpg"
+ },
+ {
+  "id": "anterior-delts",
+  "name": "Anterior Delts",
+  "region": "Upper body",
+  "split": "push",
+  "role": "Prime mover on overhead pressing and the front-of-shoulder contribution to incline and bench work.",
+  "function": "Shoulder flexion. Front head of the deltoid on vertical and horizontal pushes.",
+  "examples": [
+   "OHP",
+   "Incline Press"
+  ],
+  "patterns": [
+   "Vertical Push",
+   "Horizontal Push"
+  ],
+  "image": "guide-anterior-delts.png"
+ },
+ {
+  "id": "lateral-delts",
+  "name": "Lateral Delts",
+  "region": "Upper body",
+  "split": "push",
+  "role": "Shoulder abduction and the cap of the deltoid on overhead presses and raises.",
+  "function": "Shoulder abduction. Lateral head that sets the arm path on vertical push.",
+  "examples": [
+   "Lateral Raise",
+   "DB Shoulder Press"
+  ],
+  "patterns": [
+   "Vertical Push"
+  ],
+  "image": "guide-lateral-delts.png"
+ },
+ {
+  "id": "triceps",
+  "name": "Triceps",
+  "region": "Arms",
+  "split": "push",
+  "role": "Elbow extensor and press lockout. Shows up on every vertical and horizontal push, then again on isolation extensions.",
+  "function": "Elbow extension. Long head extends shoulder, lateral head stabilizes.",
+  "examples": [
+   "Pushdown",
+   "Skullcrusher",
+   "Diamond Push-up",
+   "Overhead Extension"
+  ],
+  "patterns": [
+   "Vertical Push",
+   "Horizontal Push"
+  ],
+  "image": "guide-triceps.jpg"
+ },
+ {
+  "id": "core-and-abs",
+  "name": "Core & Abs",
+  "region": "Trunk",
+  "split": "push",
+  "role": "Brace, anti-motion, and some flexion/rotation. Treat it as a cylinder on compounds, then add anti-series and flexion work as needed.",
+  "function": "Spinal flexion, rotation, anti-extension, anti-rotation.",
+  "examples": [
+   "Cable Crunch",
+   "Dragon Fly",
+   "Russian Twist",
+   "Plank"
+  ],
+  "patterns": [
+   "Anti-Rotation & Anti-Lateral",
+   "Rotational Acceleration",
+   "Loaded Carries"
+  ],
+  "image": "guide-core-abs.jpg"
+ },
+ {
+  "id": "lats",
+  "name": "Lats",
+  "region": "Upper body",
+  "split": "pull",
+  "role": "Prime mover on vertical and horizontal pulls. Width and shoulder extension from overhead and from a row.",
+  "function": "Shoulder extension and adduction. Depresses the scapula on vertical pulls.",
+  "examples": [
+   "Pull-up",
+   "Lat Pulldown",
+   "Meadows Row"
+  ],
+  "patterns": [
+   "Vertical Pull",
+   "Horizontal Pull"
+  ],
+  "image": "guide-lats.jpg"
+ },
+ {
+  "id": "rhomboids",
+  "name": "Rhomboids",
+  "region": "Upper body",
+  "split": "pull",
+  "role": "Scapular retractors that build the upper-back wall behind every press.",
+  "function": "Scapular retraction. Pull the shoulder blades toward the spine.",
+  "examples": [
+   "Barbell Row",
+   "Seal Row",
+   "Face Pull"
+  ],
+  "patterns": [
+   "Horizontal Pull"
+  ],
+  "image": "guide-rhomboids.jpg"
+ },
+ {
+  "id": "traps",
+  "name": "Traps",
+  "region": "Upper body",
+  "split": "pull",
+  "role": "Postural wall on rows and the packed-shoulder work of carries.",
+  "function": "Scapular retraction, elevation, and upward rotation. Middle fibers retract; upper fibers support loaded carries.",
+  "examples": [
+   "Face Pull",
+   "Loaded Carry",
+   "Shrug-style work from pulls"
+  ],
+  "patterns": [
+   "Horizontal Pull",
+   "Loaded Carries"
+  ],
+  "image": "guide-traps.jpg"
+ },
+ {
+  "id": "erectors",
+  "name": "Erectors",
+  "region": "Trunk",
+  "split": "pull",
+  "role": "Spinal extensors that keep the trunk rigid on hinges and squats.",
+  "function": "Spinal extension and isometric bracing under axial load.",
+  "examples": [
+   "Deadlift",
+   "RDL",
+   "Back Squat"
+  ],
+  "patterns": [
+   "Hinge Pattern",
+   "Squat Pattern"
+  ],
+  "image": "guide-erectors.jpg"
+ },
+ {
+  "id": "posterior-delts",
+  "name": "Posterior Delts",
+  "region": "Upper body",
+  "split": "pull",
+  "role": "The rear head that balances pressing volume with horizontal pulling.",
+  "function": "Shoulder extension and external rotation. Posterior head of the deltoid.",
+  "examples": [
+   "Rear Delt Fly",
+   "Face Pull"
+  ],
+  "patterns": [
+   "Horizontal Pull"
+  ],
+  "image": "guide-posterior-delts.png"
+ },
+ {
+  "id": "biceps",
+  "name": "Biceps",
+  "region": "Arms",
+  "split": "pull",
+  "role": "Elbow flexor and pull accessory. Direct curls plus indirect work on every vertical and horizontal pull.",
+  "function": "Elbow flexion, supination. Long head contributes to shoulder flexion.",
+  "examples": [
+   "BB Curl",
+   "Hammer Curl",
+   "Preacher Curl",
+   "Reverse Curl"
+  ],
+  "patterns": [
+   "Horizontal Pull",
+   "Vertical Pull"
+  ],
+  "image": "guide-biceps.jpg"
+ },
+ {
+  "id": "forearms-and-grip",
+  "name": "Forearms & Grip",
+  "region": "Arms",
+  "split": "pull",
+  "role": "Limiters on pulls, hinges, and carries. Train grip so the hands are not the first thing to quit.",
+  "function": "Wrist flexion, extension, pronation, supination.",
+  "examples": [
+   "Wrist Curl",
+   "Reverse Curl",
+   "Pronation/Supination Twists"
+  ],
+  "patterns": [
+   "Loaded Carries",
+   "Vertical Pull",
+   "Horizontal Pull"
+  ],
+  "image": "guide-forearms-grip.png"
+ },
+ {
+  "id": "quadriceps",
+  "name": "Quadriceps",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Knee extension on squats, lunges, and jumps. The main knee-dominant engine.",
+  "function": "Knee extension, hip flexion.",
+  "examples": [
+   "Squat",
+   "Leg Extension",
+   "Bulgarian Split Squat",
+   "Goblet Squat"
+  ],
+  "patterns": [
+   "Squat Pattern",
+   "Power / Triple Extension"
+  ],
+  "image": "guide-quadriceps.png"
+ },
+ {
+  "id": "hamstrings",
+  "name": "Hamstrings",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Hip extension on hinges plus knee flexion on curls. Pair with quads so the posterior chain is not an afterthought.",
+  "function": "Knee flexion, hip extension.",
+  "examples": [
+   "Nordic Curl",
+   "RDL",
+   "Glute Ham Raise",
+   "Leg Curl"
+  ],
+  "patterns": [
+   "Hinge Pattern",
+   "Single-Leg Pattern"
+  ],
+  "image": "guide-hamstrings.jpg"
+ },
+ {
+  "id": "glutes",
+  "name": "Glutes",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Hip extension, abduction, and the finish of squats, hinges, and jumps.",
+  "function": "Hip extension, abduction, external rotation.",
+  "examples": [
+   "Step-ups",
+   "Lunges",
+   "Hip Thrust",
+   "RDL"
+  ],
+  "patterns": [
+   "Squat Pattern",
+   "Hinge Pattern",
+   "Power / Triple Extension"
+  ],
+  "image": "guide-glutes.jpg"
+ },
+ {
+  "id": "calves",
+  "name": "Calves",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Ankle plantarflexion and elastic stiffness for gait, jumps, and single-leg work.",
+  "function": "Plantarflexion (gastrocnemius and soleus).",
+  "examples": [
+   "Standing / Seated Calf Raise"
+  ],
+  "patterns": [
+   "Single-Leg Pattern",
+   "Power / Triple Extension"
+  ],
+  "image": "guide-calves.jpg"
+ },
+ {
+  "id": "tibialis",
+  "name": "Tibialis",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Ankle dorsiflexion. The front-of-shin counterpart to the calves.",
+  "function": "Dorsiflexion (tibialis anterior).",
+  "examples": [
+   "Tibialis Raise"
+  ],
+  "patterns": [
+   "Single-Leg Pattern"
+  ],
+  "image": "guide-tibialis.jpg"
+ },
+ {
+  "id": "adductors",
+  "name": "Adductors",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Share squat depth and stance control. Pelvic stability on squats and lunges.",
+  "function": "Adduction (pull the leg in) and pelvic stability.",
+  "examples": [
+   "Copenhagen Adductor",
+   "Lateral Lunge"
+  ],
+  "patterns": [
+   "Squat Pattern",
+   "Single-Leg Pattern"
+  ],
+  "image": "guide-adductors.jpg"
+ },
+ {
+  "id": "abductors",
+  "name": "Abductors",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Keep the pelvis level on lunges and single-leg work.",
+  "function": "Abduction (push the leg out) and pelvic stability.",
+  "examples": [
+   "Cable Side Extension",
+   "side-lying abduction"
+  ],
+  "patterns": [
+   "Single-Leg Pattern",
+   "Anti-Rotation & Anti-Lateral"
+  ],
+  "image": "guide-abductors.jpg"
+ },
+ {
+  "id": "hip-flexors",
+  "name": "Hip Flexors",
+  "region": "Lower body",
+  "split": "lowerBody",
+  "role": "Swing-leg and knee-drive muscles. They stabilize the pelvis and show up in sprinting, hanging leg raises, and split-stance work.",
+  "function": "Hip flexion, stabilizes pelvis.",
+  "examples": [
+   "Reverse Squat",
+   "Hanging Leg Raise",
+   "Reverse Lunge"
+  ],
+  "patterns": [
+   "Single-Leg Pattern",
+   "Power / Triple Extension"
+  ],
+  "image": "guide-hip-flexors.jpg"
+ }
+]

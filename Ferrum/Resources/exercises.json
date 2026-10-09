@@ -1,0 +1,2426 @@
+[
+ {
+  "id": "lat-pulldown",
+  "name": "Lat Pulldown",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "biceps",
+   "rhomboids"
+  ],
+  "cue": "Set the scaps first. Pull the bar to the upper chest, elbows down, not behind the body.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "lat-pulldown.jpg"
+ },
+ {
+  "id": "close-grip-lat-pulldown",
+  "name": "Close-Grip Lat Pulldown",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "biceps"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Set the scaps, then pull the handle to the upper chest. Elbows stay in; don’t lean way back.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "close-grip-lat-pulldown.jpeg"
+ },
+ {
+  "id": "wide-grip-lat-pulldown",
+  "name": "Wide-Grip Lat Pulldown",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "biceps",
+   "rhomboids"
+  ],
+  "cue": "Wide grip, scaps set. Pull to the upper chest with elbows down, not behind the body.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "wide-grip-lat-pulldown.jpg"
+ },
+ {
+  "id": "pull-up",
+  "name": "Pull-Up",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "biceps",
+   "rhomboids"
+  ],
+  "cue": "Dead hang to chin over the bar. Drive elbows down; avoid kipping unless that’s the point.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "pull-up.jpg"
+ },
+ {
+  "id": "assisted-pull-up",
+  "name": "Assisted Pull-Up",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "biceps",
+   "rhomboids"
+  ],
+  "cue": "Set the counterweight so the last rep or two is hard, not free. Dead hang to chin over the bar.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "assisted-pull-up.jpg"
+ },
+ {
+  "id": "chin-up",
+  "name": "Chin-Up",
+  "pattern": "Vertical Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "biceps"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Supinated grip. Same full range as a pull-up, with a little more biceps.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "chin-up.jpg"
+ },
+ {
+  "id": "barbell-row",
+  "name": "Barbell Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts",
+   "erectors"
+  ],
+  "cue": "Hinge, brace, and row to the lower ribs. Don’t turn it into a shrug or a deadlift.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "barbell-row.jpg"
+ },
+ {
+  "id": "landmine-row",
+  "name": "Landmine Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts",
+   "core-and-abs"
+  ],
+  "cue": "Hinge, brace, and row the bar to the hip. Don’t yank with the torso or turn it into a shrug.",
+  "equipment": "landmine",
+  "equipmentGuess": false,
+  "image": "landmine-row.jpg"
+ },
+ {
+  "id": "chest-supported-dumbbell-row",
+  "name": "Chest-Supported Dumbbell Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Chest stays on the pad. Row the elbows back and squeeze; don’t yank from the neck.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "chest-supported-dumbbell-row.png"
+ },
+ {
+  "id": "chest-supported-t-bar-row",
+  "name": "Chest-Supported T-Bar Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Drive the chest into the pad. Pull toward the lower ribs and lower under control; don’t bounce.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "chest-supported-t-bar-row.jpg"
+ },
+ {
+  "id": "one-arm-dumbbell-row",
+  "name": "One-Arm Dumbbell Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Hinge, brace, and row the elbow to the hip. Don’t rotate the torso to cheat the last inches.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "one-arm-dumbbell-row.jpg"
+ },
+ {
+  "id": "one-arm-cable-row",
+  "name": "One-Arm Cable Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Start from a long arm. Pull the elbow back, pause, then reach without rounding hard.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "one-arm-cable-row.jpg"
+ },
+ {
+  "id": "machine-row",
+  "name": "Machine Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Chest on the pad, set the shoulder blades, then pull the handles to the ribs. Pause and control the stretch; don’t yank with the lower back.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-row.png"
+ },
+ {
+  "id": "seated-cable-row",
+  "name": "Seated Cable Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Start from a long arm. Pull elbows back, pause, then reach forward without rounding hard.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "seated-cable-row.jpg"
+ },
+ {
+  "id": "inverted-row",
+  "name": "Inverted Row",
+  "pattern": "Horizontal Pull",
+  "split": "pull",
+  "primary": [
+   "lats",
+   "rhomboids"
+  ],
+  "secondary": [
+   "biceps",
+   "posterior-delts"
+  ],
+  "cue": "Body straight from a bar or rings, chest to the bar. Keep the hips up; don’t let them sag.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "inverted-row.jpg"
+ },
+ {
+  "id": "back-squat",
+  "name": "Back Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "adductors",
+   "core-and-abs",
+   "erectors"
+  ],
+  "cue": "Brace before you descend. Sit between the hips, keep mid-foot pressure, and stand without collapsing the chest.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "back-squat.jpeg"
+ },
+ {
+  "id": "front-squat",
+  "name": "Front Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "secondary": [
+   "glutes",
+   "rhomboids"
+  ],
+  "cue": "Elbows high, torso tall. The bar stays over mid-foot as you sit down and drive up.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "front-squat.jpg"
+ },
+ {
+  "id": "zercher-squat",
+  "name": "Zercher Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "erectors",
+   "adductors"
+  ],
+  "cue": "Hold the bar in the elbow crook and keep a tall torso. Brace, sit between the hips, and stand without folding forward.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-squat.png"
+ },
+ {
+  "id": "hack-squat",
+  "name": "Hack Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [],
+  "cue": "Back against the pad, feet planted. Descend with control and stand without locking out aggressively.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "hack-squat.jpg"
+ },
+ {
+  "id": "smith-machine-squat",
+  "name": "Smith Machine Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [],
+  "cue": "Brace and sit between the hips. Keep mid-foot pressure; don’t collapse the chest or ride the bar forward.",
+  "equipment": "smith machine",
+  "equipmentGuess": false,
+  "image": "smith-machine-squat.jpg"
+ },
+ {
+  "id": "belt-squat",
+  "name": "Belt Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [],
+  "cue": "Load the hips, not the spine. Sit down and stand tall; don’t let the torso fold.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "belt-squat.jpg"
+ },
+ {
+  "id": "sissy-squat",
+  "name": "Sissy Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps"
+  ],
+  "secondary": [],
+  "cue": "Knees travel forward as the hips stay relatively high. Control the descent; don’t dump into the low back.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "sissy-squat.png"
+ },
+ {
+  "id": "reverse-squat",
+  "name": "Reverse Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "hip-flexors"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "quadriceps"
+  ],
+  "cue": "Drive the knees up against the load without dumping the pelvis. Control the return; don’t swing.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "reverse-squat.png"
+ },
+ {
+  "id": "landmine-squat",
+  "name": "Landmine Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "adductors"
+  ],
+  "cue": "Hold the bar at chest height and sit between the hips. Brace, stay tall, and stand without folding forward.",
+  "equipment": "landmine",
+  "equipmentGuess": false,
+  "image": "landmine-squat.jpg"
+ },
+ {
+  "id": "box-squat",
+  "name": "Box Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "adductors",
+   "core-and-abs",
+   "erectors"
+  ],
+  "cue": "Sit back to the box under control, pause briefly, then drive up without rocking forward.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "box-squat.jpg"
+ },
+ {
+  "id": "goblet-squat",
+  "name": "Goblet Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "glutes",
+   "adductors"
+  ],
+  "cue": "Hold the weight at chest height. Sit between the hips and keep the elbows inside the knees.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "goblet-squat.jpg"
+ },
+ {
+  "id": "safety-bar-squat",
+  "name": "Safety Bar Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "adductors",
+   "erectors",
+   "glutes"
+  ],
+  "cue": "Set the yoke on your back and brace. Sit between the hips and drive up without folding forward.",
+  "equipment": "safety bar",
+  "equipmentGuess": false,
+  "image": "safety-bar-squat.jpg"
+ },
+ {
+  "id": "pendulum-squat",
+  "name": "Pendulum Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [],
+  "cue": "Shoulders under the pads, feet planted. Sit deep along the arc with control and drive up without locking out hard.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "pendulum-squat.jpg"
+ },
+ {
+  "id": "leg-press",
+  "name": "Leg Press",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "adductors"
+  ],
+  "cue": "Full foot on the platform. Lower with control and stop before the low back rounds.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "leg-press.jpg"
+ },
+ {
+  "id": "cossack-squat",
+  "name": "Cossack Squat",
+  "pattern": "Squat",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "adductors",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "core-and-abs"
+  ],
+  "cue": "Shift side to side with one leg extended. Keep the working heel down and chest as tall as you can.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "cossack-squat.png"
+ },
+ {
+  "id": "bulgarian-split-squat",
+  "name": "Bulgarian Split Squat",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "adductors",
+   "core-and-abs"
+  ],
+  "cue": "Most of the load on the front leg. Slight forward lean is fine; keep the front knee tracking over the toes.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "bulgarian-split-squat.jpg"
+ },
+ {
+  "id": "zercher-split-squat",
+  "name": "Zercher Split Squat",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "adductors",
+   "core-and-abs"
+  ],
+  "cue": "Bar in the elbow crook, most of the load on the front leg. Stay tall; keep the front knee tracking over the toes.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-split-squat.jpg"
+ },
+ {
+  "id": "step-up",
+  "name": "Step-Up",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Drive through the whole foot on the box. Stand tall; don’t push off the trailing leg. Use a big box.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "step-up.jpg"
+ },
+ {
+  "id": "zercher-step-up",
+  "name": "Zercher Step-Up",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Bar in the elbow crook, drive through the whole foot on the box. Stand tall; don’t push off the trailing leg.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-step-up.jpg"
+ },
+ {
+  "id": "walking-lunge",
+  "name": "Walking Lunge",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Long enough stride to load the glute. Front knee tracks the toes; trail knee drops under the hip.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "walking-lunge.jpg"
+ },
+ {
+  "id": "zercher-lunge",
+  "name": "Zercher Lunge",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Hold the bar in the elbow crook and stay tall. Long enough stride to load the glute; front knee tracks the toes.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-lunge.jpg"
+ },
+ {
+  "id": "reverse-lunge",
+  "name": "Reverse Lunge",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Step back far enough to load the front glute. Front knee tracks the toes; don’t crash the trail knee.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "reverse-lunge.jpg"
+ },
+ {
+  "id": "zercher-reverse-lunge",
+  "name": "Zercher Reverse Lunge",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs"
+  ],
+  "cue": "Hold the bar in the elbow crook. Step back far enough to load the front glute; stay tall through the torso.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-reverse-lunge.jpg"
+ },
+ {
+  "id": "forward-lunge",
+  "name": "Forward Lunge",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "core-and-abs"
+  ],
+  "cue": "Step forward and drop the trail knee under the hip. Front knee tracks; don’t slam into the bottom.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "forward-lunge.jpg"
+ },
+ {
+  "id": "pistol-squat",
+  "name": "Pistol Squat",
+  "pattern": "Lunge / Split",
+  "split": "legs",
+  "primary": [
+   "quadriceps"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "hip-flexors",
+   "glutes"
+  ],
+  "cue": "Balance on one leg, extend the other forward. Sit as deep as you can control and stand without collapsing.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "pistol-squat.jpeg"
+ },
+ {
+  "id": "glute-ham-raise",
+  "name": "Glute-Ham Raise",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "erectors"
+  ],
+  "cue": "Hips stay extended as you lower. Pull back with the hamstrings; don’t pike or fold at the waist.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "glute-ham-raise.jpg"
+ },
+ {
+  "id": "romanian-deadlift",
+  "name": "Romanian Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "erectors"
+  ],
+  "cue": "Soft knees, push the hips back, bar close to the legs. Stop when the hamstrings run out of range.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "romanian-deadlift.png"
+ },
+ {
+  "id": "single-leg-romanian-deadlift",
+  "name": "Single Leg Romanian Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondary": [
+   "erectors",
+   "core-and-abs"
+  ],
+  "cue": "Hinge at the hip over one leg, trailing leg reaching back for balance. Keep the hips square and the weight close.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "single-leg-romanian-deadlift.jpg"
+ },
+ {
+  "id": "deadlift",
+  "name": "Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "erectors"
+  ],
+  "secondary": [
+   "quadriceps",
+   "traps",
+   "core-and-abs"
+  ],
+  "cue": "Wedge in, brace, and push the floor away. The bar stays over mid-foot from floor to lockout.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "deadlift.png"
+ },
+ {
+  "id": "zercher-deadlift",
+  "name": "Zercher Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "erectors"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs",
+   "traps"
+  ],
+  "cue": "Bar in the elbow crook from the floor. Brace, then stand tall without losing the torso.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-deadlift.jpg"
+ },
+ {
+  "id": "sumo-deadlift",
+  "name": "Sumo Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "erectors"
+  ],
+  "secondary": [
+   "quadriceps",
+   "traps",
+   "adductors",
+   "core-and-abs"
+  ],
+  "cue": "Wide stance, toes turned out. Push the knees out, wedge in, and keep the bar over mid-foot.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "sumo-deadlift.png"
+ },
+ {
+  "id": "trap-bar-deadlift",
+  "name": "Trap Bar Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "quadriceps"
+  ],
+  "secondary": [
+   "erectors",
+   "traps",
+   "core-and-abs"
+  ],
+  "cue": "Stand inside the handles, hinge and grip. Push the floor away and stand tall without rounding the back.",
+  "equipment": "trap bar",
+  "equipmentGuess": false,
+  "image": "trap-bar-deadlift.jpg"
+ },
+ {
+  "id": "rack-pull",
+  "name": "Rack Pull",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "erectors",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "hamstrings",
+   "core-and-abs"
+  ],
+  "cue": "Set the bar at knee height or above. Brace, then drive the hips forward to lockout without hyperextending.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "rack-pull.jpg"
+ },
+ {
+  "id": "deficit-deadlift",
+  "name": "Deficit Deadlift",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "erectors"
+  ],
+  "secondary": [
+   "quadriceps",
+   "traps",
+   "core-and-abs"
+  ],
+  "cue": "Stand on a plate or platform. Wedge in from the deeper start, brace, and pull with the bar over mid-foot.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "deficit-deadlift.jpg"
+ },
+ {
+  "id": "good-morning",
+  "name": "Good Morning",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "erectors"
+  ],
+  "secondary": [
+   "glutes"
+  ],
+  "cue": "Brace, then hinge until the hamstrings stop you. Bar stays over mid-foot; don’t round the back.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "good-morning.jpg"
+ },
+ {
+  "id": "seated-good-morning",
+  "name": "Seated Good Morning",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "adductors",
+   "erectors"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "hamstrings"
+  ],
+  "cue": "Sit tall, then hinge and pull with the posterior chain. Brace; don’t round through the low back to finish.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "seated-good-morning.png"
+ },
+ {
+  "id": "jefferson-curl",
+  "name": "Jefferson Curl",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "erectors"
+  ],
+  "secondary": [
+   "glutes",
+   "core-and-abs"
+  ],
+  "cue": "Hold the bar in the hands and round the spine slowly from the neck down. Reverse with control; don’t bounce out of the bottom.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "jefferson-curl.jpg"
+ },
+ {
+  "id": "zercher-jefferson-curl",
+  "name": "Zercher Jefferson Curl",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "hamstrings",
+   "erectors"
+  ],
+  "secondary": [
+   "glutes",
+   "core-and-abs"
+  ],
+  "cue": "Bar in the elbow crook. Round the spine slowly vertebra by vertebra, then reverse with control; don’t rush the flexion.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-jefferson-curl.jpg"
+ },
+ {
+  "id": "back-extension",
+  "name": "Back Extension",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "erectors",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings"
+  ],
+  "cue": "Hinge at the hips, not the spine. Rise until the body is in line; don’t hyperextend the low back.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "back-extension.jpg"
+ },
+ {
+  "id": "reverse-hyper",
+  "name": "Reverse Hyper",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "secondary": [
+   "erectors"
+  ],
+  "cue": "Hips on the pad, swing the legs with the glutes. Stop in line with the torso; don’t hyperextend the low back.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "reverse-hyper.jpg"
+ },
+ {
+  "id": "kettlebell-swing",
+  "name": "Kettlebell Swing",
+  "pattern": "Hinge",
+  "split": "explosive",
+  "primary": [
+   "hamstrings"
+  ],
+  "secondary": [
+   "glutes",
+   "erectors",
+   "core-and-abs",
+   "adductors",
+   "forearms-and-grip"
+  ],
+  "cue": "Hinge hard, then snap the hips to float the bell to chest height. Keep the arms loose; don’t squat the swing or lift with the shoulders.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-swing.jpg"
+ },
+ {
+  "id": "hip-thrust",
+  "name": "Hip Thrust",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings"
+  ],
+  "cue": "Chin tucked, ribs down. Finish with a hard glute squeeze and a flat torso at the top.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "hip-thrust.png"
+ },
+ {
+  "id": "barbell-hip-thrust",
+  "name": "Barbell Hip Thrust",
+  "pattern": "Hinge",
+  "split": "legs",
+  "primary": [
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "core-and-abs"
+  ],
+  "cue": "Upper back on the bench, chin tucked, ribs down. Drive the bar up with the glutes and finish with a flat torso at the top.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "barbell-hip-thrust.jpg"
+ },
+ {
+  "id": "barbell-curl",
+  "name": "Barbell Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [
+   "forearms-and-grip"
+  ],
+  "cue": "Elbows close. No swing. Squeeze at the top and lower for 2–3 seconds.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "barbell-curl.jpg"
+ },
+ {
+  "id": "dumbbell-curl",
+  "name": "Dumbbell Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [
+   "forearms-and-grip"
+  ],
+  "cue": "Supinate through the lift. Keep the upper arm still.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-curl.jpg"
+ },
+ {
+  "id": "hammer-curl",
+  "name": "Hammer Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps",
+   "forearms-and-grip"
+  ],
+  "secondary": [],
+  "cue": "Neutral grip. Control both directions; this is also a forearm builder.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "hammer-curl.png"
+ },
+ {
+  "id": "preacher-curl",
+  "name": "Preacher Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Upper arms pinned to the pad. Curl through a full range and lower slowly; don’t hyperextend the elbows.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "preacher-curl.jpg"
+ },
+ {
+  "id": "preacher-curl-machine",
+  "name": "Preacher Curl Machine",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Upper arms pinned to the pad. Curl through a full range and lower slowly; don’t hyperextend the elbows.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "preacher-curl-machine.jpg"
+ },
+ {
+  "id": "incline-dumbbell-curl",
+  "name": "Incline Dumbbell Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Let the arms hang. Curl without swinging, and keep the shoulders from rolling forward.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "incline-dumbbell-curl.jpg"
+ },
+ {
+  "id": "cable-curl",
+  "name": "Cable Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Elbows close, constant tension. Squeeze at the top and don’t lean back to finish.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-curl.jpg"
+ },
+ {
+  "id": "concentration-curl",
+  "name": "Concentration Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Elbow braced. Curl to the shoulder and lower fully; no body English.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "concentration-curl.jpg"
+ },
+ {
+  "id": "spider-curl",
+  "name": "Spider Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps"
+  ],
+  "secondary": [],
+  "cue": "Chest on the bench, arms hanging. Curl without swinging; control the stretch at the bottom.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "spider-curl.jpg"
+ },
+ {
+  "id": "reverse-curl",
+  "name": "Reverse Curl",
+  "pattern": "Biceps",
+  "split": "pull",
+  "primary": [
+   "biceps",
+   "forearms-and-grip"
+  ],
+  "secondary": [],
+  "cue": "Pronated grip, elbows close. Curl without swinging; this loads the forearms too.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "reverse-curl.jpg"
+ },
+ {
+  "id": "shoulder-external-rotation",
+  "name": "Shoulder External Rotation",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "posterior-delts"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Elbow pinned at your side, bent 90°. Rotate the forearm outward with light load; don’t shrug or let the elbow drift.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "shoulder-external-rotation.jpg"
+ },
+ {
+  "id": "cable-pullover",
+  "name": "Cable Pullover",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "triceps",
+   "core-and-abs"
+  ],
+  "cue": "Arms stay slightly bent. Sweep the handle down and in an arc over the hips; don’t turn it into a triceps pushdown.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-pullover.jpg"
+ },
+ {
+  "id": "dumbbell-pullover",
+  "name": "Dumbbell Pullover",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "lats"
+  ],
+  "secondary": [
+   "triceps",
+   "core-and-abs"
+  ],
+  "cue": "Upper back supported, weight held with soft elbows. Lower behind the head for a stretch, then pull back over the chest.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-pullover.jpg"
+ },
+ {
+  "id": "face-pull",
+  "name": "Face Pull",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "posterior-delts",
+   "traps"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Pull toward the face, externally rotate at the end, and keep the ribs down.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "face-pull.jpg"
+ },
+ {
+  "id": "rear-delt-fly",
+  "name": "Rear Delt Fly",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "posterior-delts"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Hinge, soft elbows, and sweep the arms out. Stop at torso height; don’t yank with the traps.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "rear-delt-fly.jpg"
+ },
+ {
+  "id": "cable-rear-delt-fly",
+  "name": "Cable Rear Delt Fly",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "posterior-delts"
+  ],
+  "secondary": [
+   "rhomboids",
+   "traps"
+  ],
+  "cue": "Hinge or stand tall with soft elbows. Sweep the handles out to the sides and squeeze the rear delts.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-rear-delt-fly.jpg"
+ },
+ {
+  "id": "reverse-pec-deck",
+  "name": "Reverse Pec Deck",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "posterior-delts"
+  ],
+  "secondary": [
+   "rhomboids"
+  ],
+  "cue": "Chest on the pad, soft elbows. Sweep out and squeeze the rear delts without shrugging.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "reverse-pec-deck.jpg"
+ },
+ {
+  "id": "upright-row",
+  "name": "Upright Row",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "traps",
+   "lateral-delts"
+  ],
+  "secondary": [
+   "biceps"
+  ],
+  "cue": "Lead with the elbows, bar close to the body. Stop around chest height; don’t yank the bar into the neck.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "upright-row.jpg"
+ },
+ {
+  "id": "dumbbell-shrug",
+  "name": "Dumbbell Shrug",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "traps"
+  ],
+  "secondary": [],
+  "cue": "Stand tall and shrug straight up. Pause at the top; don’t roll the shoulders.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-shrug.jpg"
+ },
+ {
+  "id": "barbell-shrug",
+  "name": "Barbell Shrug",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "traps"
+  ],
+  "secondary": [],
+  "cue": "Brace, then shrug the bar straight up. Pause and lower; don’t roll or heave.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "barbell-shrug.png"
+ },
+ {
+  "id": "wrist-curl",
+  "name": "Wrist Curl",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "forearms-and-grip"
+  ],
+  "secondary": [],
+  "cue": "Forearms supported, wrists hanging. Curl through a full range and don’t let the elbows take over.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "wrist-curl.jpg"
+ },
+ {
+  "id": "reverse-wrist-curl",
+  "name": "Reverse Wrist Curl",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "forearms-and-grip"
+  ],
+  "secondary": [],
+  "cue": "Forearms supported, palms down. Extend the wrists through a full range; keep it slow.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "reverse-wrist-curl.jpg"
+ },
+ {
+  "id": "hand-gripper",
+  "name": "Hand Gripper",
+  "pattern": "Accessory",
+  "split": "pull",
+  "primary": [
+   "forearms-and-grip"
+  ],
+  "secondary": [],
+  "cue": "Squeeze until the handles touch, then release under control. Keep the wrist neutral and elbow still. ## Legs",
+  "equipment": "gripper",
+  "equipmentGuess": false,
+  "image": "hand-gripper.jpg"
+ },
+ {
+  "id": "barbell-bench-press",
+  "name": "Barbell Bench Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Plant the feet, set the scaps, and lower to the chest with wrists stacked. Press back toward the rack.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "barbell-bench-press.jpg"
+ },
+ {
+  "id": "decline-bench-press",
+  "name": "Decline Bench Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Lock the legs under the pads and lower to the lower chest. Press up and slightly back toward the rack.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "decline-bench-press.png"
+ },
+ {
+  "id": "smith-machine-bench-press",
+  "name": "Smith Machine Bench Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Set the bar path over the nipple line. Lower under control and press without bouncing off the safety catches.",
+  "equipment": "smith machine",
+  "equipmentGuess": false,
+  "image": "smith-machine-bench-press.jpg"
+ },
+ {
+  "id": "incline-barbell-bench-press",
+  "name": "Incline Barbell Bench Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Set the scaps and keep a slight arch. Lower to the upper chest with control; don’t bounce or flare the elbows out wide.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "incline-barbell-bench-press.jpeg"
+ },
+ {
+  "id": "incline-dumbbell-press",
+  "name": "Incline Dumbbell Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals",
+   "anterior-delts"
+  ],
+  "secondary": [
+   "triceps"
+  ],
+  "cue": "30–45° bench. Lower until the elbows are in line with the torso, then press without flaring wildly.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "incline-dumbbell-press.jpg"
+ },
+ {
+  "id": "dumbbell-bench-press",
+  "name": "Dumbbell Bench Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Slight arch, dumbbells travel in a gentle arc. Control the bottom stretch.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-bench-press.png"
+ },
+ {
+  "id": "machine-press",
+  "name": "Machine Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Set the seat so the handles line up with mid-chest. Shoulder blades back, press smoothly, and don’t let the shoulders roll forward.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-press.jpg"
+ },
+ {
+  "id": "machine-chest-press",
+  "name": "Machine Chest Press",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts"
+  ],
+  "cue": "Brace and keep the shoulders packed. Press through a full range and stop short of locking out aggressively.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-chest-press.png"
+ },
+ {
+  "id": "dips",
+  "name": "Dips",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals",
+   "triceps"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Shoulders down. Lean forward for more chest; stay more upright for triceps. Don’t dump into the joints.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "dips.jpg"
+ },
+ {
+  "id": "dip-machine",
+  "name": "Dip Machine",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals",
+   "triceps"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Set the seat so the handles line up under the shoulders. Lean forward for more chest; stay upright for triceps.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "dip-machine.jpeg"
+ },
+ {
+  "id": "push-up",
+  "name": "Push-Up",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "triceps",
+   "anterior-delts",
+   "core-and-abs"
+  ],
+  "cue": "Body in one line. Elbows ~45° from the torso. Chest to near the floor, then press the floor away.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "push-up.png"
+ },
+ {
+  "id": "assisted-dip",
+  "name": "Assisted Dip",
+  "pattern": "Horizontal Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals",
+   "triceps"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Log the assistance, not your weight: less assistance is harder. Shoulders down, lean forward for chest, and don’t dump into the joints.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "assisted-dip.jpg"
+ },
+ {
+  "id": "cable-fly",
+  "name": "Cable Fly",
+  "pattern": "Chest Isolation",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Soft elbows, sweep in an arc, and squeeze without shrugging.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-fly.jpg"
+ },
+ {
+  "id": "dumbbell-fly",
+  "name": "Dumbbell Fly",
+  "pattern": "Chest Isolation",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Slight bend in the elbows and a wide arc. Stop when the chest is stretched; don’t turn it into a press.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-fly.jpg"
+ },
+ {
+  "id": "pec-deck",
+  "name": "Pec Deck",
+  "pattern": "Chest Isolation",
+  "split": "push",
+  "primary": [
+   "chest-pectorals"
+  ],
+  "secondary": [
+   "anterior-delts"
+  ],
+  "cue": "Soft elbows, chest proud. Sweep until you feel a stretch, then squeeze without shrugging the shoulders.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "pec-deck.jpg"
+ },
+ {
+  "id": "overhead-press",
+  "name": "Overhead Press",
+  "pattern": "Vertical Push",
+  "split": "push",
+  "primary": [
+   "anterior-delts"
+  ],
+  "secondary": [
+   "triceps",
+   "traps",
+   "core-and-abs"
+  ],
+  "cue": "Glutes tight, ribs stacked. Bar path close to the face; head through at the top.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "overhead-press.png"
+ },
+ {
+  "id": "landmine-press",
+  "name": "Landmine Press",
+  "pattern": "Vertical Push",
+  "split": "push",
+  "primary": [
+   "chest-pectorals",
+   "anterior-delts"
+  ],
+  "secondary": [
+   "triceps",
+   "core-and-abs"
+  ],
+  "cue": "Brace and press the bar up and slightly forward on an arc. Don’t over-arch the low back or let the shoulder dump forward.",
+  "equipment": "landmine",
+  "equipmentGuess": false,
+  "image": "landmine-press.jpg"
+ },
+ {
+  "id": "dumbbell-shoulder-press",
+  "name": "Dumbbell Shoulder Press",
+  "pattern": "Vertical Push",
+  "split": "push",
+  "primary": [
+   "anterior-delts",
+   "lateral-delts"
+  ],
+  "secondary": [
+   "triceps"
+  ],
+  "cue": "Press slightly in front of the head. Don’t over-arch the low back.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "dumbbell-shoulder-press.jpg"
+ },
+ {
+  "id": "machine-shoulder-press",
+  "name": "Machine Shoulder Press",
+  "pattern": "Vertical Push",
+  "split": "push",
+  "primary": [
+   "anterior-delts",
+   "lateral-delts"
+  ],
+  "secondary": [
+   "triceps"
+  ],
+  "cue": "Ribs down, glutes on. Press overhead without over-arching the low back.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-shoulder-press.jpg"
+ },
+ {
+  "id": "lateral-raise",
+  "name": "Lateral Raise",
+  "pattern": "Delt Isolation",
+  "split": "push",
+  "primary": [
+   "lateral-delts"
+  ],
+  "secondary": [
+   "traps"
+  ],
+  "cue": "Lead with the elbows, slight lean, and stop around shoulder height. Control the lower.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "lateral-raise.jpg"
+ },
+ {
+  "id": "cable-lateral-raise",
+  "name": "Cable Lateral Raise",
+  "pattern": "Delt Isolation",
+  "split": "push",
+  "primary": [
+   "lateral-delts"
+  ],
+  "secondary": [
+   "traps"
+  ],
+  "cue": "Lead with the elbows and keep tension through the whole arc. Stop around shoulder height; don’t swing.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-lateral-raise.jpg"
+ },
+ {
+  "id": "front-raise",
+  "name": "Front Raise",
+  "pattern": "Delt Isolation",
+  "split": "push",
+  "primary": [
+   "anterior-delts"
+  ],
+  "secondary": [],
+  "cue": "Raise to eye height with a slight elbow bend. Don’t use the low back to heave the weight up.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "front-raise.jpg"
+ },
+ {
+  "id": "close-grip-bench-press",
+  "name": "Close-Grip Bench Press",
+  "pattern": "Triceps",
+  "split": "push",
+  "primary": [
+   "triceps"
+  ],
+  "secondary": [
+   "chest-pectorals",
+   "anterior-delts"
+  ],
+  "cue": "Grip just inside shoulder width. Elbows stay tucked; lower to the chest and press without bouncing.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "close-grip-bench-press.jpg"
+ },
+ {
+  "id": "jm-press",
+  "name": "JM Press",
+  "pattern": "Triceps",
+  "split": "push",
+  "primary": [
+   "triceps"
+  ],
+  "secondary": [
+   "chest-pectorals",
+   "anterior-delts"
+  ],
+  "cue": "Elbows forward, bar travels down toward the upper chest. Press back without flaring the elbows wide.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "jm-press.jpg"
+ },
+ {
+  "id": "tricep-pushdown",
+  "name": "Tricep Pushdown",
+  "pattern": "Triceps",
+  "split": "push",
+  "primary": [
+   "triceps"
+  ],
+  "secondary": [],
+  "cue": "Elbows pinned by the sides. Full extension, then a controlled return.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "tricep-pushdown.png"
+ },
+ {
+  "id": "overhead-cable-triceps-extension",
+  "name": "Overhead Cable Triceps Extension",
+  "pattern": "Triceps",
+  "split": "push",
+  "primary": [
+   "triceps"
+  ],
+  "secondary": [],
+  "cue": "Elbows stay high and close. Extend fully, then control the stretch; don’t flare.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "overhead-cable-triceps-extension.png"
+ },
+ {
+  "id": "skull-crusher",
+  "name": "Skull Crusher",
+  "pattern": "Triceps",
+  "split": "push",
+  "primary": [
+   "triceps"
+  ],
+  "secondary": [],
+  "cue": "Only the elbows move. Lower toward the forehead or hairline, then extend without flaring.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "skull-crusher.jpg"
+ },
+ {
+  "id": "seated-leg-curl",
+  "name": "Seated Leg Curl",
+  "pattern": "Knee Flexion",
+  "split": "legs",
+  "primary": [
+   "hamstrings"
+  ],
+  "secondary": [],
+  "cue": "Hips stay pinned to the pad. Curl through a full range and lower slowly.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "seated-leg-curl.jpg"
+ },
+ {
+  "id": "lying-leg-curl",
+  "name": "Lying Leg Curl",
+  "pattern": "Knee Flexion",
+  "split": "legs",
+  "primary": [
+   "hamstrings"
+  ],
+  "secondary": [
+   "erectors"
+  ],
+  "cue": "Hips stay glued to the pad. Curl fully and lower without lifting the pelvis.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "lying-leg-curl.png"
+ },
+ {
+  "id": "nordic-curl",
+  "name": "Nordic Curl",
+  "pattern": "Knee Flexion",
+  "split": "legs",
+  "primary": [
+   "hamstrings"
+  ],
+  "secondary": [],
+  "cue": "Brace and lower as far as you can control. Catch with the hamstrings; don’t fold at the hips.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "nordic-curl.jpg"
+ },
+ {
+  "id": "leg-extension",
+  "name": "Leg Extension",
+  "pattern": "Knee Extension",
+  "split": "legs",
+  "primary": [
+   "quadriceps"
+  ],
+  "secondary": [],
+  "cue": "Control the top squeeze. Avoid slamming the stack; pause briefly at lockout.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "leg-extension.png"
+ },
+ {
+  "id": "glute-kickback",
+  "name": "Glute Kickback",
+  "pattern": "Glute Isolation",
+  "split": "legs",
+  "primary": [
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings"
+  ],
+  "cue": "Square the hips and kick without arching the low back. Squeeze at the top; don’t swing.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "glute-kickback.jpg"
+ },
+ {
+  "id": "machine-hip-abduction",
+  "name": "Machine Hip Abduction",
+  "pattern": "Glute Isolation",
+  "split": "legs",
+  "primary": [
+   "abductors"
+  ],
+  "secondary": [],
+  "cue": "Sit tall, then drive the knees out. Pause at the end range; don’t lean to cheat.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-hip-abduction.jpg"
+ },
+ {
+  "id": "machine-hip-adduction",
+  "name": "Machine Hip Adduction",
+  "pattern": "Other Isolation",
+  "split": "legs",
+  "primary": [
+   "adductors"
+  ],
+  "secondary": [],
+  "cue": "Sit tall and squeeze the thighs together. Control the return; don’t slam the stack.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "machine-hip-adduction.png"
+ },
+ {
+  "id": "calf-raise",
+  "name": "Calf Raise",
+  "pattern": "Other Isolation",
+  "split": "legs",
+  "primary": [
+   "calves"
+  ],
+  "secondary": [],
+  "cue": "Full stretch at the bottom, pause at the top. Knee position stays consistent.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "calf-raise.jpg"
+ },
+ {
+  "id": "tibialis-raise",
+  "name": "Tibialis Raise",
+  "pattern": "Other Isolation",
+  "split": "legs",
+  "primary": [
+   "tibialis"
+  ],
+  "secondary": [],
+  "cue": "Heels planted, lift the toes as high as you can. Pause at the top; don’t rock the torso.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "tibialis-raise.jpg"
+ },
+ {
+  "id": "hip-internal-rotation",
+  "name": "Hip Internal Rotation",
+  "pattern": "Other Isolation",
+  "split": "legs",
+  "primary": [
+   "adductors"
+  ],
+  "secondary": [
+   "glutes"
+  ],
+  "cue": "Seated or lying, knee fixed. Rotate the lower leg outward so the thigh turns in at the hip. Slow and controlled, no pelvis shift.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "hip-internal-rotation.jpg"
+ },
+ {
+  "id": "hip-external-rotation",
+  "name": "Hip External Rotation",
+  "pattern": "Other Isolation",
+  "split": "legs",
+  "primary": [
+   "glutes"
+  ],
+  "secondary": [
+   "abductors"
+  ],
+  "cue": "Seated or lying, knee fixed. Rotate the lower leg inward so the thigh turns out at the hip. Keep the pelvis still. ## Explosive",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "hip-external-rotation.jpg"
+ },
+ {
+  "id": "shoulder-internal-rotation",
+  "name": "Shoulder Internal Rotation",
+  "pattern": "Other Isolation",
+  "split": "push",
+  "primary": [
+   "anterior-delts"
+  ],
+  "secondary": [
+   "lats",
+   "chest-pectorals"
+  ],
+  "cue": "Elbow pinned at your side, bent 90°. Rotate the forearm across the belly with light load; keep the shoulder down. ## Pull",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "shoulder-internal-rotation.png"
+ },
+ {
+  "id": "snatch",
+  "name": "Snatch",
+  "pattern": "Snatch",
+  "split": "explosive",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs",
+   "anterior-delts",
+   "lats"
+  ],
+  "cue": "Keep the bar close, then explode and punch under to lockout. Catch in a full squat with arms locked; don’t press it out.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "snatch.png"
+ },
+ {
+  "id": "power-snatch",
+  "name": "Power Snatch",
+  "pattern": "Snatch",
+  "split": "explosive",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs",
+   "anterior-delts"
+  ],
+  "cue": "Same pull as the snatch, catch higher. Bar close, explode, and punch under without riding into a deep squat.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "power-snatch.jpg"
+ },
+ {
+  "id": "snatch-pull",
+  "name": "Snatch Pull",
+  "pattern": "Snatch",
+  "split": "explosive",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "lats"
+  ],
+  "cue": "Pull like a snatch without going overhead. Bar close, explode through the hips, and finish tall; don’t lean back and yank.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "snatch-pull.jpg"
+ },
+ {
+  "id": "kettlebell-snatch",
+  "name": "Kettlebell Snatch",
+  "pattern": "Snatch",
+  "split": "explosive",
+  "primary": [
+   "glutes",
+   "hamstrings",
+   "anterior-delts"
+  ],
+  "secondary": [
+   "biceps",
+   "core-and-abs",
+   "erectors",
+   "forearms-and-grip"
+  ],
+  "cue": "Hike the bell, explode the hips, and punch through to lockout overhead. The bell should roll around the wrist, not slam onto it.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-snatch.png"
+ },
+ {
+  "id": "clean",
+  "name": "Clean",
+  "pattern": "Clean",
+  "split": "explosive",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs",
+   "biceps"
+  ],
+  "cue": "Bar close off the floor, then explode and pull under to the front rack. Catch with elbows high; don’t crash the bar onto the shoulders.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "clean.jpg"
+ },
+ {
+  "id": "clean-and-jerk",
+  "name": "Clean and Jerk",
+  "pattern": "Clean",
+  "split": "explosive",
+  "primary": [
+   "hamstrings",
+   "glutes",
+   "traps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "core-and-abs",
+   "anterior-delts",
+   "triceps"
+  ],
+  "cue": "Clean to a solid front rack, then dip and drive the bar overhead. Punch under the jerk and lock out; don’t press it out from the shoulders.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "clean-and-jerk.jpg"
+ },
+ {
+  "id": "kettlebell-clean",
+  "name": "Kettlebell Clean",
+  "pattern": "Clean",
+  "split": "explosive",
+  "primary": [
+   "glutes",
+   "hamstrings",
+   "biceps"
+  ],
+  "secondary": [
+   "anterior-delts",
+   "core-and-abs",
+   "erectors",
+   "forearms-and-grip"
+  ],
+  "cue": "Hinge and snap the hips, then guide the bell into a tight rack. Elbow close, wrist stacked; don’t let the bell crash onto the forearm.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-clean.jpg"
+ },
+ {
+  "id": "kettlebell-clean-and-jerk",
+  "name": "Kettlebell Clean and Jerk",
+  "pattern": "Clean",
+  "split": "explosive",
+  "primary": [
+   "glutes",
+   "hamstrings",
+   "anterior-delts"
+  ],
+  "secondary": [
+   "triceps",
+   "core-and-abs",
+   "biceps",
+   "quadriceps",
+   "erectors"
+  ],
+  "cue": "Clean to a solid rack, then dip and drive the bell overhead. Punch under to lockout; don’t press it out from a stalled rack.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-clean-and-jerk.jpg"
+ },
+ {
+  "id": "box-jump",
+  "name": "Box Jump",
+  "pattern": "Plyometric",
+  "split": "explosive",
+  "primary": [
+   "quadriceps",
+   "glutes"
+  ],
+  "secondary": [
+   "hamstrings",
+   "calves",
+   "core-and-abs"
+  ],
+  "cue": "Load the hips, then jump onto the box and land softly with the whole foot. Stand tall to finish; don’t rebound off a bouncing landing.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "box-jump.png"
+ },
+ {
+  "id": "kettlebell-high-pull",
+  "name": "Kettlebell High Pull",
+  "pattern": "Plyometric",
+  "split": "explosive",
+  "primary": [
+   "traps",
+   "lateral-delts"
+  ],
+  "secondary": [
+   "glutes",
+   "hamstrings",
+   "biceps",
+   "forearms-and-grip"
+  ],
+  "cue": "Hinge and explode the hips, then pull the bell to the chest with high elbows. Keep it close; don’t shrug it out in front of you.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-high-pull.jpg"
+ },
+ {
+  "id": "kettlebell-push-press",
+  "name": "Kettlebell Push Press",
+  "pattern": "Plyometric",
+  "split": "explosive",
+  "primary": [
+   "anterior-delts",
+   "triceps"
+  ],
+  "secondary": [
+   "quadriceps",
+   "glutes",
+   "core-and-abs",
+   "lateral-delts"
+  ],
+  "cue": "Dip the knees slightly, then drive the bell overhead and finish with the arm. Use the legs to start the press; don’t turn it into a strict press. ## Core",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "kettlebell-push-press.jpg"
+ },
+ {
+  "id": "plank",
+  "name": "Plank",
+  "pattern": "Anti-Extension",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [
+   "anterior-delts",
+   "glutes"
+  ],
+  "cue": "Ribs down, glutes on, neck long. Don’t sag or pike.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "plank.jpg"
+ },
+ {
+  "id": "ab-wheel",
+  "name": "Ab Wheel",
+  "pattern": "Anti-Extension",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [
+   "lats",
+   "anterior-delts"
+  ],
+  "cue": "Roll out only as far as you can keep a braced, slightly rounded torso. ---",
+  "equipment": "ab wheel",
+  "equipmentGuess": false,
+  "image": "ab-wheel.jpg"
+ },
+ {
+  "id": "hanging-leg-raise",
+  "name": "Hanging Leg Raise",
+  "pattern": "Flexion",
+  "split": "core",
+  "primary": [
+   "hip-flexors"
+  ],
+  "secondary": [
+   "core-and-abs",
+   "forearms-and-grip"
+  ],
+  "cue": "Posteriorly tilt the pelvis and lift with the abs, not momentum.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "hanging-leg-raise.jpg"
+ },
+ {
+  "id": "sit-up",
+  "name": "Sit-Up",
+  "pattern": "Flexion",
+  "split": "core",
+  "primary": [
+   "hip-flexors"
+  ],
+  "secondary": [
+   "core-and-abs"
+  ],
+  "cue": "Ribs toward the hips. Sit up without yanking on the neck or using momentum.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "sit-up.jpg"
+ },
+ {
+  "id": "cable-crunch",
+  "name": "Cable Crunch",
+  "pattern": "Flexion",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [],
+  "cue": "Round the spine to shorten the abs. Hips stay relatively still.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-crunch.jpg"
+ },
+ {
+  "id": "ab-crunch-machine",
+  "name": "Ab Crunch Machine",
+  "pattern": "Flexion",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [],
+  "cue": "Round the spine to shorten the abs rather than just pulling the handles down. Control the return.",
+  "equipment": "machine",
+  "equipmentGuess": false,
+  "image": "ab-crunch-machine.jpg"
+ },
+ {
+  "id": "cable-woodchop",
+  "name": "Cable Woodchop",
+  "pattern": "Rotation",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [],
+  "cue": "Brace and rotate through the torso, not the arms. Control both directions; don’t twist from the knees.",
+  "equipment": "cable",
+  "equipmentGuess": false,
+  "image": "cable-woodchop.jpg"
+ },
+ {
+  "id": "landmine-rotation",
+  "name": "Landmine Rotation",
+  "pattern": "Rotation",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [],
+  "cue": "Brace and rotate the bar through the torso, not the arms. Control both directions; don’t twist from the knees.",
+  "equipment": "landmine",
+  "equipmentGuess": false,
+  "image": "landmine-rotation.jpg"
+ },
+ {
+  "id": "russian-twist",
+  "name": "Russian Twist",
+  "pattern": "Rotation",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [],
+  "cue": "Lean back with feet up or grounded, rotate the torso side to side. Move slow; don’t just swing the arms.",
+  "equipment": "bodyweight",
+  "equipmentGuess": false,
+  "image": "russian-twist.jpg"
+ },
+ {
+  "id": "zercher-carry",
+  "name": "Zercher Carry",
+  "pattern": "Carry",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [
+   "quadriceps",
+   "glutes",
+   "rhomboids"
+  ],
+  "cue": "Hold the bar in the elbow crook and brace hard. Walk tall without leaning or letting the torso fold.",
+  "equipment": "barbell",
+  "equipmentGuess": false,
+  "image": "zercher-carry.jpg"
+ },
+ {
+  "id": "farmers-walk",
+  "name": "Farmer's Walk",
+  "pattern": "Carry",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [
+   "traps",
+   "forearms-and-grip",
+   "quadriceps"
+  ],
+  "cue": "Brace hard and walk tall with the weights close to your sides. Don’t shrug or let the torso lean; short, quick steps.",
+  "equipment": "dumbbell",
+  "equipmentGuess": false,
+  "image": "farmers-walk.jpg"
+ },
+ {
+  "id": "turkish-get-up",
+  "name": "Turkish Get-Up",
+  "pattern": "Carry",
+  "split": "core",
+  "primary": [
+   "core-and-abs"
+  ],
+  "secondary": [
+   "anterior-delts",
+   "glutes",
+   "quadriceps"
+  ],
+  "cue": "Press the bell up and keep your eyes on it through every step from floor to standing. Move slow and deliberate, not rushed.",
+  "equipment": "kettlebell",
+  "equipmentGuess": false,
+  "image": "turkish-get-up.jpg"
+ }
+]

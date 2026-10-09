@@ -1,0 +1,26 @@
+[
+ {
+  "title": "What RIR is",
+  "body": "RIR means reps in reserve — how many more clean reps you could have done. A set of 8 at RIR 2 means you had about two reps left. Log the set you actually did, then mark RIR honestly."
+ },
+ {
+  "title": "0–1 grind",
+  "body": "Near failure. Useful for testing a top set, but these cost a lot of fatigue. Keep them scarce if you train often."
+ },
+ {
+  "title": "2–3 productive",
+  "body": "Hard, useful work. Most working sets belong here: challenging enough to drive progress, with a little room left so form stays solid."
+ },
+ {
+  "title": "4 easy",
+  "body": "Comfortable sets. Good for warm-ups, back-off work, or days you are managing fatigue instead of pushing."
+ },
+ {
+  "title": "5+ technique",
+  "body": "Easy leftover reps. Use these for skill work, first warm-up plates, or when the load is just there to groove the pattern."
+ },
+ {
+  "title": "Why honest RIR matters",
+  "body": "RIR is how the app reads how hard a set really was — not just the weight and reps. Low RIR raises fatigue and stress estimates. If you sandbag the number, trends look easier than the work you did. If you always log 0, everything looks like a grind. Match the color to how the set felt so volume, stress, and estimated 1RM stay trustworthy."
+ }
+]
