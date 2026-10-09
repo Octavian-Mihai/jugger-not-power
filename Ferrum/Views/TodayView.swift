@@ -98,6 +98,9 @@ struct TodayView: View {
                         Spacer()
                     }
                 }
+                if todaysReadiness != nil, adjustment.loadMultiplier != 1 || adjustment.setDelta != 0 {
+                    Label(adjustmentLine, systemImage: "heart.text.square").font(.footnote).foregroundStyle(t.warn)
+                }
                 if todaysReadiness == nil {
                     Button { showCheckIn = true } label: { Label("Check in to adjust today's load", systemImage: "heart.text.square") }
                         .buttonStyle(PrimaryButton(prominent: false))
@@ -107,6 +110,14 @@ struct TodayView: View {
                 }
             }
         }.frame(maxWidth: .infinity, alignment: .leading).card()
+    }
+
+    private var adjustmentLine: String {
+        var parts: [String] = []
+        if adjustment.loadMultiplier != 1 { parts.append("loads \(Int(((adjustment.loadMultiplier - 1) * 100).rounded()))%") }
+        if adjustment.setDelta != 0 { parts.append("\(abs(adjustment.setDelta)) fewer set\(abs(adjustment.setDelta) == 1 ? "" : "s") per exercise") }
+        if adjustment.rirOffset != 0 { parts.append("+\(Int(adjustment.rirOffset)) RIR") }
+        return "Readiness adjusted: " + parts.joined(separator: ", ")
     }
 
     private func summary(_ ex: ResolvedExercise) -> String {
@@ -206,6 +217,7 @@ struct TodayView: View {
     private func start(_ program: Program, resolved: [ResolvedExercise], day: PlannedDay, block: Block, pos: PlanPosition) {
         let session = WorkoutSession(programID: program.id, dayName: day.name, blockName: block.name,
                                      weekLabel: "Week \(pos.weekInBlock + 1)", readinessScore: todaysReadiness?.score ?? 0)
+        session.loadMultiplier = adjustment.loadMultiplier
         context.insert(session)
         for (order, ex) in resolved.enumerated() {
             for s in ex.sets {

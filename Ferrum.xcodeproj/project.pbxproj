@@ -22,6 +22,7 @@
 		125246340F64359F1AE9C52E /* glute-kickback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A85CB998B9C1A2E2121F52C4 /* glute-kickback.jpg */; };
 		13F23C01B31834E931A8005D /* reverse-pec-deck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1F27A6B0559266CC4782BBF /* reverse-pec-deck.jpg */; };
 		13FF0EDD864378C691E567FA /* back-extension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6812C44B4E59814A6089A5 /* back-extension.jpg */; };
+		14B77E3748E646C5E8C1C597 /* WorkoutKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2541A3E37BDFB384F83C121F /* WorkoutKeypad.swift */; };
 		15175676B65B7C518C0766CF /* incline-barbell-bench-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1524A0376B295FCE46F1EEFC /* incline-barbell-bench-press.jpg */; };
 		151C36651336D8B3D61558CD /* tricep-pushdown.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C3B7F98E559A826D4819F8 /* tricep-pushdown.png */; };
 		17E9A2B3A7F38629856C71D4 /* romanian-deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = 75412835A6427795EAB5C19B /* romanian-deadlift.png */; };
@@ -63,6 +64,7 @@
 		46DC0A2AD4BF40700FD3DDDC /* dip-machine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EA68E514E2EAA0FDF467BA2 /* dip-machine.jpg */; };
 		4BED4EF943E481C7D9757192 /* zercher-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C654BED5BA1FC92A4880C4BD /* zercher-lunge.jpg */; };
 		4BFE460ACA57EA7BC78C4123 /* cable-lateral-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E06C4AF935BCDFE98A31F3BF /* cable-lateral-raise.jpg */; };
+		4E6AE2C6829287CD966994A7 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8A75747D897D417947719 /* Haptics.swift */; };
 		50CAAFB7046E333A787CEF57 /* incline-dumbbell-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0153A70754E1BF01FF9A74F0 /* incline-dumbbell-curl.jpg */; };
 		520A5A0DCFC56D3C89E30265 /* wide-grip-lat-pulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98F4965B53473E61E3F34ED /* wide-grip-lat-pulldown.jpg */; };
 		5296B91041D520D93B9B283C /* landmine-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B571F84F8ACF0F4A3C7305F7 /* landmine-squat.jpg */; };
@@ -227,6 +229,7 @@
 		22FE0B051B39D2EF03E80CF9 /* cossack-squat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cossack-squat.png"; sourceTree = "<group>"; };
 		232B09AC95493F23BFA81D11 /* barbell-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbell-curl.jpg"; sourceTree = "<group>"; };
 		2456659E7FA73A1E2D3B35CF /* dumbbell-shrug.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-shrug.jpg"; sourceTree = "<group>"; };
+		2541A3E37BDFB384F83C121F /* WorkoutKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutKeypad.swift; sourceTree = "<group>"; };
 		25CD2D72E9BFC1DC72738A02 /* overhead-cable-triceps-extension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overhead-cable-triceps-extension.png"; sourceTree = "<group>"; };
 		25D6878C4CE5AF8BA52DEEF5 /* kettlebell-snatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kettlebell-snatch.png"; sourceTree = "<group>"; };
 		260100C98402CF53B66D710E /* guide-guide-adductors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-adductors.jpg"; sourceTree = "<group>"; };
@@ -367,6 +370,7 @@
 		D8E33D2745B02852C4BDF8EC /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		D9CD9265ACA1F8F495D2135A /* box-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-jump.png"; sourceTree = "<group>"; };
 		DB25003342F7E250D52F3011 /* smith-machine-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smith-machine-squat.jpg"; sourceTree = "<group>"; };
+		DBB8A75747D897D417947719 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		DD0F5C57AFF0B4C9450FABEF /* snatch-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "snatch-pull.jpg"; sourceTree = "<group>"; };
 		DE16B12AAFAB2BF76B79A385 /* reverse-hyper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-hyper.jpg"; sourceTree = "<group>"; };
 		E06C4AF935BCDFE98A31F3BF /* cable-lateral-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-lateral-raise.jpg"; sourceTree = "<group>"; };
@@ -605,6 +609,7 @@
 				49C9675A49E1819DAFA47696 /* RootView.swift */,
 				8CFA2304641C357DB217F139 /* SettingsView.swift */,
 				8DAE564D438D2A8057624394 /* TodayView.swift */,
+				2541A3E37BDFB384F83C121F /* WorkoutKeypad.swift */,
 				BCABB4BC37E52622F101A17B /* WorkoutView.swift */,
 			);
 			path = Views;
@@ -642,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E33D2745B02852C4BDF8EC /* DemoData.swift */,
+				DBB8A75747D897D417947719 /* Haptics.swift */,
 				76A11B4169D380EA8E5A5058 /* Keyboard.swift */,
 				59301CDAD3BB6C23299B768B /* NumberField.swift */,
 				01B3942E5365C19C503B2B9D /* Store.swift */,
@@ -913,6 +919,7 @@
 				42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */,
 				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
 				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,
+				4E6AE2C6829287CD966994A7 /* Haptics.swift in Sources */,
 				5DD7799F4A1247C79036C468 /* HistoryView.swift in Sources */,
 				8EAA76532E8E08C10B05EC8F /* Keyboard.swift in Sources */,
 				3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */,
@@ -929,6 +936,7 @@
 				D9E9CEE2BAA1CDCE54FFCC4D /* Store.swift in Sources */,
 				FDDC02766F84B6776B6D2F59 /* Theme.swift in Sources */,
 				46C22D048B0C1F9679490A9A /* TodayView.swift in Sources */,
+				14B77E3748E646C5E8C1C597 /* WorkoutKeypad.swift in Sources */,
 				725F48A8E9A0BCD71C311FAE /* WorkoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

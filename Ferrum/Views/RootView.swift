@@ -28,8 +28,10 @@ struct RootView: View {
         .onAppear {
             if profiles.isEmpty { context.insert(Profile()) }
             store.unit = profile?.unit ?? .kg
+            Haptics.enabled = profile?.hapticsEnabled ?? true
             store.refreshCustom(customExercises)
         }
+        .onChange(of: profile?.hapticsEnabled) { _, v in Haptics.enabled = v ?? true }
         .onChange(of: profile?.unitRaw) { _, _ in store.unit = profile?.unit ?? .kg }
         .onChange(of: customExercises.count) { _, _ in store.refreshCustom(customExercises) }
     }

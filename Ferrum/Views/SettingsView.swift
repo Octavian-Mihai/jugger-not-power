@@ -32,6 +32,7 @@ struct SettingsView: View {
                     Picker("Workout layout", selection: $profile.swipeWorkout) {
                         Text("Scroll").tag(false); Text("Swipe").tag(true)
                     }.pickerStyle(.segmented)
+                    Toggle("Haptics", isOn: $profile.hapticsEnabled)
                 } header: { Text("During workouts") } footer: {
                     Text(profile.swipeWorkout ? "One exercise per screen. Swipe left or right to move between them."
                          : "All exercises in one list. Scroll down to move on.")

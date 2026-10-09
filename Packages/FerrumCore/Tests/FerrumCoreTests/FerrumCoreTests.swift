@@ -366,4 +366,86 @@ final class FerrumCoreTests: XCTestCase {
         XCTAssertEqual(plan.blocks[0].days.map(\.isRest), [false, false, true])
         XCTAssertEqual(plan.totalSessions, 12)
     }
+
+    // MARK: adaptation + plates
+    func testHardSetLowersNextSetMoreThanOnPlanSet() {
+        let onPlan = Adaptation.Performed(weight: 100, reps: 8, rir: 2, targetRIR: 2)
+        let hard = Adaptation.Performed(weight: 100, reps: 8, rir: 1, targetRIR: 3)
+        let same = Adaptation.nextSetLoad(after: onPlan, nextReps: 8, nextRIR: 2, isLastSet: false, unit: .kg)
+        XCTAssertEqual(same, 100)
+        let lower = Adaptation.nextSetLoad(after: hard, nextReps: 8, nextRIR: 3, isLastSet: false, unit: .kg)
+        XCTAssertLessThan(lower, 97.5)
+        let lastSet = Adaptation.nextSetLoad(after: hard, nextReps: 8, nextRIR: 3, isLastSet: true, unit: .kg)
+        XCTAssertLessThan(lastSet, lower)
+        XCTAssertGreaterThanOrEqual(lastSet, 87.5)   // never much more than a 12% cut in one step
+    }
+
+    func testEasySetRaisesNextSetButIsCapped() {
+        let easy = Adaptation.Performed(weight: 100, reps: 8, rir: 5, targetRIR: 2)
+        let up = Adaptation.nextSetLoad(after: easy, nextReps: 8, nextRIR: 2, isLastSet: false, unit: .kg)
+        XCTAssertGreaterThan(up, 100); XCTAssertLessThanOrEqual(up, 110)
+    }
+
+    func testSessionFactor() {
+        XCTAssertEqual(Adaptation.sessionFactor(hardness: [0, 0, 0.5]), 1)
+        XCTAssertEqual(Adaptation.sessionFactor(hardness: [1]), 1)               // too little evidence
+        XCTAssertLessThan(Adaptation.sessionFactor(hardness: [2, 2, 2]), 1)
+        XCTAssertGreaterThanOrEqual(Adaptation.sessionFactor(hardness: [5, 5, 5]), 0.94)
+        XCTAssertGreaterThan(Adaptation.sessionFactor(hardness: [-3, -3, -3]), 1)
+    }
+
+    func testPlateMath() {
+        XCTAssertEqual(PlateMath.breakdown(total: 0, bar: 20, unit: .kg).headline, "Enter weight")
+        XCTAssertEqual(PlateMath.breakdown(total: 15, bar: 20, unit: .kg).headline, "Below bar")
+        XCTAssertEqual(PlateMath.breakdown(total: 20, bar: 20, unit: .kg).headline, "Bar only")
+        let b = PlateMath.breakdown(total: 92.5, bar: 20, unit: .kg)   // 36.25 per side = 25 + 10 + 1.25
+        XCTAssertEqual(b.headline, "Per side 25 + 10 + 1.25")
+        XCTAssertNil(b.remainderText)
+        let odd = PlateMath.breakdown(total: 101, bar: 20, unit: .kg)  // 40.5 per side -> 25 + 15 + 0.5 left
+        XCTAssertEqual(odd.perSide, [25, 15])
+        XCTAssertEqual(odd.remainderText, "rem 1")
+        XCTAssertEqual(PlateMath.breakdown(total: 225, bar: 45, unit: .lb).headline, "Per side 45 + 45")
+    }
+
+    // MARK: keypad typing rules
+    func testFirstKeyReplacesThenAppends() {
+        var e = NumericEntry(kind: .weight, initial: "100")
+        e.digit("8"); XCTAssertEqual(e.text, "8")
+        e.digit("5"); XCTAssertEqual(e.text, "85")
+        e.point(); XCTAssertEqual(e.text, "85.")
+        e.point(); XCTAssertEqual(e.text, "85.")        // only one decimal point
+        e.digit("5"); XCTAssertEqual(e.text, "85.5")
+    }
+
+    func testPointFirstGivesZeroPoint() {
+        var e = NumericEntry(kind: .weight, initial: "60")
+        e.point(); XCTAssertEqual(e.text, "0.")
+        e.digit("5"); XCTAssertEqual(e.text, "0.5")
+    }
+
+    func testBackspaceFirstEditsInsteadOfReplacing() {
+        var e = NumericEntry(kind: .weight, initial: "100")
+        e.backspace(); XCTAssertEqual(e.text, "10")
+        e.digit("5"); XCTAssertEqual(e.text, "105")     // appended, not replaced
+    }
+
+    func testLoneZeroIsReplaced() {
+        var e = NumericEntry(kind: .reps, initial: "")
+        e.digit("0"); XCTAssertEqual(e.text, "0")
+        e.digit("7"); XCTAssertEqual(e.text, "7")
+    }
+
+    func testLengthLimitsAndRepsAreWholeNumbers() {
+        var w = NumericEntry(kind: .weight, initial: "")
+        for d in "123456789" { w.digit(d) }
+        XCTAssertEqual(w.text, "1234567")               // 7 characters max
+        var r = NumericEntry(kind: .reps, initial: "")
+        for d in "12345" { r.digit(d) }
+        XCTAssertEqual(r.text, "123")                   // 3 digits max
+        r.point(); XCTAssertEqual(r.text, "123")        // no decimals in reps
+        XCTAssertEqual(r.repsValue, 123)
+        var empty = NumericEntry(kind: .weight, initial: "5")
+        empty.backspace(); empty.backspace()
+        XCTAssertEqual(empty.weightValue, 0)
+    }
 }

@@ -21,6 +21,9 @@ final class Profile {
     var prefAvoid: String = ""
     /// Workout screen: false = one scrolling list, true = swipe between exercises.
     var swipeWorkout: Bool = false
+    var hapticsEnabled: Bool = true
+    /// Barbell weight used by the workout keypad's plate maths, always in kg.
+    var barKg: Double = 20
 
     init() {}
 
@@ -76,6 +79,10 @@ final class WorkoutSession {
     var readinessScore: Int = 0
     var isFinished: Bool = false
     var isRest: Bool = false
+    /// Load multiplier from the readiness check-in when the workout started (1 = unchanged).
+    var loadMultiplier: Double = 1
+    /// Shown in the workout when later exercises were eased or nudged up from how earlier ones went.
+    var easeNote: String = ""
     var finishedAt: Date?
     @Relationship(deleteRule: .cascade, inverse: \LoggedSet.session) var sets: [LoggedSet] = []
 
@@ -109,6 +116,8 @@ final class LoggedSet {
     var reps: Int = 0
     var rir: Double = 2
     var isDone: Bool = false
+    /// True once the lifter typed a weight, so auto-adjustment leaves it alone.
+    var edited: Bool = false
     var date = Date()
     var session: WorkoutSession?
 
