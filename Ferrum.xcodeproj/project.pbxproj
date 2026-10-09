@@ -47,6 +47,7 @@
 		380280540466E170B8ACF34C /* tibialis-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CCA29E0B7E45BCA3681E537 /* tibialis-raise.jpg */; };
 		38945F82BE3D33E4675D61E1 /* belt-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6482C0EB50C4D353133916 /* belt-squat.jpg */; };
 		39BBA0EAA90A1DA880A82318 /* bulgarian-split-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE8C6458A85F6494182ADF /* bulgarian-split-squat.jpg */; };
+		39F31AD05B6A9E6F8204FF5E /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A82EBD570F7E1173FC3DC /* EmptyState.swift */; };
 		3C1024B678FC6EEE441A546C /* zercher-deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E081A52281AC747B9DD6AC8E /* zercher-deadlift.jpg */; };
 		3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E2FA2063D273C9CC14660E /* LibraryView.swift */; };
 		3EDC1993FA380964BFEB7551 /* cable-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACCC1E5A692BF7FAFC4EDF6B /* cable-curl.jpg */; };
@@ -239,6 +240,7 @@
 		2D5A24E196D5DF70893F2F6F /* deficit-deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "deficit-deadlift.jpg"; sourceTree = "<group>"; };
 		2F13FEFBA5628DCB454ECE41 /* guide-guide-hamstrings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-hamstrings.jpg"; sourceTree = "<group>"; };
 		30D1DB14C2AB48A4D3E90F6D /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
+		313A82EBD570F7E1173FC3DC /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		31A0ECBC19E4594DC5696665 /* close-grip-bench-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "close-grip-bench-press.jpg"; sourceTree = "<group>"; };
 		31FCD70549D194C87EC1E43F /* pec-deck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pec-deck.jpg"; sourceTree = "<group>"; };
 		34D885BD9302A488E1675886 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 			isa = PBXGroup;
 			children = (
 				65201EA916EEC135C3F04DAF /* BodyWeightViews.swift */,
+				313A82EBD570F7E1173FC3DC /* EmptyState.swift */,
 				B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */,
 				8F172B4CB3CAD6070CDCD7DC /* HistoryView.swift */,
 				A9E2FA2063D273C9CC14660E /* LibraryView.swift */,
@@ -920,6 +923,7 @@
 			files = (
 				884ABE7E8CD14C758B093DFE /* BodyWeightViews.swift in Sources */,
 				42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */,
+				39F31AD05B6A9E6F8204FF5E /* EmptyState.swift in Sources */,
 				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
 				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,
 				4E6AE2C6829287CD966994A7 /* Haptics.swift in Sources */,

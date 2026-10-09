@@ -112,7 +112,7 @@ struct GeneratorView: View {
             question("How long should each workout be?")
             FlowLayout(spacing: 8) {
                 ForEach([30, 45, 60, 75, 90, 0], id: \.self) { m in
-                    Button { minutes = m } label: { Chip(text: m == 0 ? "No limit" : "\(m) min", selected: minutes == m) }
+                    Button { minutes = m } label: { Chip(text: m == 0 ? "No limit" : "\(m) min", selected: minutes == m) }.buttonStyle(PressableStyle())
                 }
             }
             Text("Ferrum trims accessories and sets to fit. Main lifts always stay.").font(.caption).foregroundStyle(t.secondary)
@@ -139,7 +139,7 @@ struct GeneratorView: View {
             question("What equipment do you have access to?")
             FlowLayout(spacing: 8) {
                 ForEach(presets, id: \.id) { p in
-                    Button { equipmentPreset = p.id; equipment = p.set } label: { Chip(text: p.title, selected: equipmentPreset == p.id) }
+                    Button { equipmentPreset = p.id; equipment = p.set } label: { Chip(text: p.title, selected: equipmentPreset == p.id) }.buttonStyle(PressableStyle())
                 }
             }
             Text("Or pick exactly what you have").font(.caption.weight(.bold)).foregroundStyle(t.secondary)
@@ -290,9 +290,9 @@ struct ExerciseMultiPicker: View {
                 Section {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            Button { pattern = nil } label: { Chip(text: "All", selected: pattern == nil) }
+                            Button { pattern = nil } label: { Chip(text: "All", selected: pattern == nil) }.buttonStyle(PressableStyle())
                             ForEach(store.library.patterns, id: \.self) { p in
-                                Button { pattern = (pattern == p) ? nil : p } label: { Chip(text: p, selected: pattern == p) }
+                                Button { pattern = (pattern == p) ? nil : p } label: { Chip(text: p, selected: pattern == p) }.buttonStyle(PressableStyle())
                             }
                         }
                     }.listRowInsets(EdgeInsets()).listRowBackground(Color.clear)
@@ -331,7 +331,7 @@ struct FlowChips: View {
     var body: some View {
         FlowLayout(spacing: 8) {
             ForEach(items, id: \.self) { id in
-                Button { toggle(id) } label: { Chip(text: title(id), selected: selected.contains(id)) }
+                Button { toggle(id) } label: { Chip(text: title(id), selected: selected.contains(id)) }.buttonStyle(PressableStyle())
             }
         }
     }

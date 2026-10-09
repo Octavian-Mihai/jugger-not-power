@@ -55,6 +55,35 @@ extension View {
     func card() -> some View { modifier(CardStyle()) }
 }
 
+/// Shared press feedback: a small spring shrink and dim while held. The shrink is skipped under Reduce Motion.
+struct PressFeedback: ViewModifier {
+    let isPressed: Bool
+    var scale: CGFloat = 0.97
+    var dim: Double = 0.8
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(isPressed && !reduceMotion ? scale : 1)
+            .opacity(isPressed ? dim : 1)
+            .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.6), value: isPressed)
+    }
+}
+
+extension View {
+    func pressFeedback(_ isPressed: Bool, scale: CGFloat = 0.97, dim: Double = 0.8) -> some View {
+        modifier(PressFeedback(isPressed: isPressed, scale: scale, dim: dim))
+    }
+}
+
+/// For buttons whose label is already styled (chips, cards): press feedback only, no extra chrome.
+struct PressableStyle: ButtonStyle {
+    var scale: CGFloat = 0.95
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label.pressFeedback(configuration.isPressed, scale: scale, dim: 0.75)
+    }
+}
+
 struct PrimaryButton: ButtonStyle {
     @Environment(\.theme) var t
     var prominent = true
@@ -64,6 +93,6 @@ struct PrimaryButton: ButtonStyle {
             .frame(maxWidth: .infinity, minHeight: 52)
             .foregroundStyle(prominent ? t.onAccent : t.accent)
             .background(prominent ? t.accent : t.accent.opacity(0.15), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-            .opacity(configuration.isPressed ? 0.8 : 1)
+            .pressFeedback(configuration.isPressed)
     }
 }

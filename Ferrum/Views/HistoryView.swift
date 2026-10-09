@@ -13,7 +13,8 @@ struct HistoryView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
                 if sessions.isEmpty {
-                    Text("Finished workouts show up here.").foregroundStyle(t.secondary).card()
+                    EmptyState(icon: "clock.arrow.circlepath", title: "No workouts yet",
+                               message: "Finished workouts show up here, with every set you logged.")
                 }
                 ForEach(sessions) { s in
                     if s.isRest { SessionRow(session: s) }

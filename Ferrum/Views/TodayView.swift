@@ -48,10 +48,8 @@ struct TodayView: View {
 
     // MARK: cards
     private var emptyCard: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("No active program").font(.title2.bold()).foregroundStyle(t.text)
-            Text("Generate a program or build your own from the Programs tab.").foregroundStyle(t.secondary)
-        }.frame(maxWidth: .infinity, alignment: .leading).card()
+        EmptyState(icon: "bolt.slash", title: "No active program",
+                   message: "Generate a program or build your own from the Programs tab.", compact: true).card()
     }
 
     private func resumeCard(_ s: WorkoutSession) -> some View {
@@ -186,7 +184,7 @@ struct TodayView: View {
                 NavigationLink { HistoryView() } label: { Text("See all").font(.subheadline.weight(.semibold)) }
             }
             let done = sessions.filter { $0.isFinished }.prefix(5)
-            if done.isEmpty { Text("Finished workouts appear here.").foregroundStyle(t.secondary) }
+            if done.isEmpty { EmptyState(icon: "figure.strengthtraining.traditional", title: "No workouts yet", message: "Finished workouts appear here.", compact: true).card() }
             ForEach(Array(done)) { s in
                 if s.isRest { SessionRow(session: s) }
                 else { NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain) }

@@ -72,8 +72,9 @@ struct BodyWeightCard: View {
                 Button("Log") { showSheet = true }.font(.subheadline.weight(.semibold))
             }
             if shown.count < 2 {
-                Text(entries.isEmpty ? "Log your weight to see the trend." : "Log again on another day to draw the trend.")
-                    .foregroundStyle(t.secondary).frame(maxWidth: .infinity, minHeight: 70)
+                EmptyState(icon: "scalemass", title: entries.isEmpty ? "No weigh-ins yet" : "One more weigh-in",
+                           message: entries.isEmpty ? "Log your weight to see the trend." : "Log again on another day to draw the trend.",
+                           actionTitle: entries.isEmpty ? "Log weight" : nil, compact: true) { showSheet = true }
             } else {
                 Chart {
                     ForEach(shown) { p in

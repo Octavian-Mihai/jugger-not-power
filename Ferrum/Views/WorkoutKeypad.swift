@@ -273,12 +273,8 @@ struct WorkoutKeypad: View {
 
 /// Keys shrink slightly and dim while held (the shrink is skipped under Reduce Motion).
 struct KeyPressStyle: ButtonStyle {
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.94 : 1)
-            .opacity(configuration.isPressed ? 0.7 : 1)
-            .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.6), value: configuration.isPressed)
+        configuration.label.pressFeedback(configuration.isPressed, scale: 0.94, dim: 0.7)
     }
 }
 

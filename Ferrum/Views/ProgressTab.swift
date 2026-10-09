@@ -64,7 +64,7 @@ struct ProgressTab: View {
         return VStack(alignment: .leading, spacing: 12) {
             SectionHeader(text: "Improvement")
             if all.isEmpty {
-                Text("Train the same lift on two different days to see how much you've improved.").foregroundStyle(t.secondary)
+                EmptyState(icon: "chart.line.uptrend.xyaxis", title: "Nothing to compare yet", message: "Train the same lift on two different days to see how much you've improved.", compact: true)
             } else {
                 if !series.isEmpty {
                     Chart {
@@ -109,7 +109,7 @@ struct ProgressTab: View {
                     .pickerStyle(.segmented).frame(width: 130)
             }
             if total == 0 {
-                Text("Finish workouts to see your weekly training volume.").foregroundStyle(t.secondary).frame(maxWidth: .infinity, minHeight: 80)
+                EmptyState(icon: "chart.bar", title: "No volume yet", message: "Finish a workout to see your weekly training volume.", compact: true)
             } else {
                 Chart(weeks) { w in
                     BarMark(x: .value("Week", w.weekStart, unit: .weekOfYear),
@@ -142,8 +142,8 @@ struct ProgressTab: View {
                 }.labelsHidden()
             }
             if points.count < 2 {
-                Text(points.isEmpty ? "Log sets for this lift to see your trend." : "Log one more session to draw the trend.")
-                    .foregroundStyle(t.secondary).frame(maxWidth: .infinity, minHeight: 100)
+                EmptyState(icon: "chart.xyaxis.line", title: points.isEmpty ? "No data for this lift" : "One more session",
+                           message: points.isEmpty ? "Log sets for this lift to see your trend." : "Log this lift again to draw the trend.", compact: true)
             } else {
                 Chart(points) { p in
                     LineMark(x: .value("Date", p.date), y: .value("e1RM", store.display(p.value))).foregroundStyle(t.accent)
@@ -167,7 +167,7 @@ struct ProgressTab: View {
                     .pickerStyle(.segmented).frame(width: 150)
             }
             if rows.isEmpty {
-                Text("Complete workouts to see weekly volume.").foregroundStyle(t.secondary).frame(maxWidth: .infinity, minHeight: 60)
+                EmptyState(icon: "figure.strengthtraining.traditional", title: "No hard sets yet", message: "Complete workouts to see which muscles you train.", compact: true)
             } else {
                 Chart(rows, id: \.name) { r in
                     BarMark(x: .value("Sets", r.sets), y: .value("Muscle", r.name)).foregroundStyle(t.accent)
@@ -185,7 +185,7 @@ struct ProgressTab: View {
         }.sorted { $0.set.e1RM > $1.set.e1RM }.prefix(8)
         return VStack(alignment: .leading, spacing: 10) {
             SectionHeader(text: "Personal records")
-            if bests.isEmpty { Text("Your best sets show up here.").foregroundStyle(t.secondary) }
+            if bests.isEmpty { EmptyState(icon: "trophy", title: "No records yet", message: "Your best sets show up here.", compact: true) }
             ForEach(Array(bests), id: \.id) { b in
                 HStack {
                     VStack(alignment: .leading) {

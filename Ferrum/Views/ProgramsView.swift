@@ -27,8 +27,8 @@ struct ProgramsView: View {
             Button { importing = true } label: { Label("Import from file", systemImage: "square.and.arrow.down") }
                 .buttonStyle(PrimaryButton(prominent: false))
             if programs.isEmpty {
-                Text("No programs yet. Generate one from your goals, or build one from scratch.")
-                    .foregroundStyle(t.secondary).card()
+                EmptyState(icon: "list.bullet.rectangle", title: "No programs yet",
+                           message: "Generate one from your goals, or build one from scratch.")
             }
             ForEach(programs) { program in
                 NavigationLink { ProgramDetailView(program: program, profile: profile) } label: { row(program) }

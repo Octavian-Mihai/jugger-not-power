@@ -263,9 +263,9 @@ struct ExercisePicker: View {
                 Section {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            Button { pattern = nil } label: { Chip(text: "All", selected: pattern == nil) }
+                            Button { pattern = nil } label: { Chip(text: "All", selected: pattern == nil) }.buttonStyle(PressableStyle())
                             ForEach(store.library.patterns, id: \.self) { p in
-                                Button { pattern = p } label: { Chip(text: p, selected: pattern == p) }
+                                Button { pattern = p } label: { Chip(text: p, selected: pattern == p) }.buttonStyle(PressableStyle())
                             }
                         }
                     }.listRowInsets(EdgeInsets()).listRowBackground(Color.clear)

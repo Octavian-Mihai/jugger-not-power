@@ -261,6 +261,7 @@ struct WorkoutView: View {
         if let pid = session.programID, let program = programs.first(where: { $0.id == pid }) {
             program.completedSessions += 1
         }
+        Haptics.success()
         showSummary = true
     }
 }
@@ -287,11 +288,18 @@ struct SetRow: View {
                     .background(rirColor.opacity(0.25), in: RoundedRectangle(cornerRadius: 8)).foregroundStyle(t.text)
             }
             Button {
-                set.isDone.toggle(); onToggle(set.isDone)
+                set.isDone.toggle()
+                if set.isDone { Haptics.selection() } else { Haptics.light() }
+                onToggle(set.isDone)
             } label: {
                 Image(systemName: set.isDone ? "checkmark.circle.fill" : "circle").font(.title2)
                     .foregroundStyle(set.isDone ? t.good : t.secondary)
-            }.frame(width: 40)
+                    .contentTransition(.symbolEffect(.replace))
+                    .symbolEffect(.bounce, value: set.isDone)
+                    .frame(width: 40, height: 40).contentShape(Rectangle())
+            }
+            .buttonStyle(KeyPressStyle())
+            .accessibilityLabel(set.isDone ? "Mark set not done" : "Mark set done")
         }
         .opacity(set.isDone ? 0.65 : 1)
         .id(set.persistentModelID)

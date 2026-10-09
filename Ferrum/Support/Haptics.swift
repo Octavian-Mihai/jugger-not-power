@@ -8,6 +8,11 @@ enum Haptics {
         guard enabled else { return }
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
+    /// Reserved for real milestones: a finished workout.
+    static func success() {
+        guard enabled else { return }
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
     static func selection() {
         guard enabled else { return }
         UISelectionFeedbackGenerator().selectionChanged()
