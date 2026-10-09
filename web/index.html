@@ -75,12 +75,30 @@
   .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--card2); border: 1px solid var(--line); padding: 10px 16px; border-radius: 10px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 20; }
   .toast.show { opacity: 1; }
   .hint { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
+  .rest-day { display: flex; align-items: center; gap: 10px; }
+  .rest-day .zzz { font-size: 20px; }
+  .rest-day input { font-weight: 700; background: transparent; border-color: transparent; flex: 1; }
+  .goal { display: flex; width: 100%; text-align: left; gap: 10px; align-items: center; background: var(--card2); padding: 10px 12px; border-radius: 10px; margin-bottom: 8px; border: 2px solid transparent; }
+  .goal.on { border-color: var(--accent); }
+  .goal small { color: var(--muted); display: block; }
+  .qsec { margin: 14px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); font-weight: 700; }
+  .chiprow { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chiprow .chip { cursor: pointer; border: 0; color: var(--text); }
+  .chip.x { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+  .gdlg { width: min(640px, 96vw); }
+  .gbody { overflow: auto; padding: 4px 16px 16px; }
+  .gfoot { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--line); justify-content: flex-end; flex-wrap: wrap; }
+  .notes { background: var(--card2); border-radius: 10px; padding: 8px 12px; font-size: 13px; margin: 8px 0; }
+  .prev-day { background: var(--card2); border-radius: 10px; padding: 8px 12px; margin: 6px 0; }
+  .prev-day summary { margin: 0; color: var(--text); font-weight: 600; }
+  .prev-day li { color: var(--muted); font-size: 13px; }
 </style>
 </head>
 <body>
 <header>
   <span class="logo">FERRUM</span><span class="sub">Program Builder</span>
   <span class="spacer"></span>
+  <button class="primary" id="btnGenerate">Generate program</button>
   <button id="btnExample">Load example</button>
   <button id="btnImport">Open file…</button>
   <input type="file" id="fileInput" accept=".json,application/json" hidden>
@@ -116,9 +134,17 @@
     <div class="list" id="pickerList"></div>
   </div>
 </dialog>
+<dialog id="gen" class="gdlg">
+  <div class="dlg">
+    <header><strong style="flex:1" id="genTitle">Generate a program</strong><button id="genClose">Close</button></header>
+    <div class="gbody" id="genBody"></div>
+    <div class="gfoot" id="genFoot"></div>
+  </div>
+</dialog>
 <div class="toast" id="toast"></div>
 
 <script src="exercises-data.js"></script>
+<script src="generator.js"></script>
 <script>
 (() => {
   const LIB = window.FERRUM_EXERCISES;
@@ -145,7 +171,8 @@
     const main = ['back-squat', 'barbell-bench-press', 'deadlift'].includes(id);
     return { _id: uid(), exercise: id, rest: main ? 180 : 90, note: '', reference: '', sets: [main ? Object.assign(setGroup('percent'), { count: 4 }) : setGroup('range')] };
   }
-  function day(n) { return { _id: uid(), name: 'Day ' + n, exercises: [] }; }
+  function day(n) { return { _id: uid(), name: 'Day ' + n, rest: false, exercises: [] }; }
+  function restDay() { return { _id: uid(), name: 'Rest day', rest: true, exercises: [] }; }
   function block(n) {
     return { _id: uid(), name: 'Block ' + n, phase: 'general', weeks: 4, deloadLastWeek: false, rirShiftStart: 0, rirShiftEnd: 0, percentStep: 0, days: [day(1)] };
   }
@@ -196,7 +223,7 @@
       if (!b.days.length) p.push(`${bl}: add a day.`);
       b.days.forEach((d, di) => {
         const dl = `${bl}, day ${di + 1}`;
-        if (!d.exercises.length) p.push(`${dl}: add an exercise.`);
+        if (!d.exercises.length && !d.rest) p.push(`${dl}: add an exercise, or make it a rest day.`);
         d.exercises.forEach((e, ei) => {
           const el = `${dl}, exercise ${ei + 1}`;
           if (!BY_ID[e.exercise]) p.push(`${el}: choose an exercise.`);
@@ -221,7 +248,7 @@
       blocks: plan.blocks.map(b => ({
         name: b.name, phase: b.phase, weeks: +b.weeks, deloadLastWeek: !!b.deloadLastWeek,
         rirShiftStart: +b.rirShiftStart || 0, rirShiftEnd: +b.rirShiftEnd || 0, percentStep: +b.percentStep || 0,
-        days: b.days.map(d => ({ name: d.name, exercises: d.exercises.map(e => ({
+        days: b.days.map(d => ({ name: d.name, ...(d.rest ? { rest: true } : {}), exercises: d.rest ? [] : d.exercises.map(e => ({
           exercise: e.exercise, rest: +e.rest || 0, note: e.note || '', reference: e.reference || null,
           sets: e.sets.map(s => {
             const base = { count: +s.count, type: s.type };
@@ -239,7 +266,7 @@
       blocks: f.blocks.map(b => ({
         _id: uid(), name: b.name || 'Block', phase: PHASES.includes(b.phase) ? b.phase : 'general', weeks: b.weeks || 4,
         deloadLastWeek: !!b.deloadLastWeek, rirShiftStart: b.rirShiftStart || 0, rirShiftEnd: b.rirShiftEnd || 0, percentStep: b.percentStep || 0,
-        days: (b.days || []).map(d => ({ _id: uid(), name: d.name || 'Day', exercises: (d.exercises || []).map(e => ({
+        days: (b.days || []).map(d => ({ _id: uid(), name: d.name || 'Day', rest: !!d.rest, exercises: (d.exercises || []).map(e => ({
           _id: uid(), exercise: e.exercise, rest: e.rest ?? 120, note: e.note || '', reference: e.reference || '',
           sets: (e.sets || []).map(s => ({ _id: uid(), count: s.count, type: s.type === 'range' || s.type === 'rir' || s.type === 'percent' || s.type === 'fixed' ? s.type : 'range',
             pct: s.pct, reps: s.reps, rir: s.rir, low: s.low, high: s.high, weight: s.weight != null ? (unit === 'lb' ? Math.round(s.weight * KG * 10) / 10 : s.weight) : 0 })) })) }))
@@ -299,6 +326,11 @@
   }
 
   function renderDay(d, path, n, total) {
+    if (d.rest) return `<div class="day rest-day"><span class="zzz">😴</span>
+        <input data-p="${path}.name" data-t="str" value="${esc(d.name)}" aria-label="Rest day name"><span class="day-meta">No training</span>
+        <button class="icon" data-act="up" data-p="${path}" ${n === 0 ? 'disabled' : ''}>↑</button>
+        <button class="icon" data-act="down" data-p="${path}" ${n === total - 1 ? 'disabled' : ''}>↓</button>
+        <button class="icon danger" data-act="del" data-p="${path}" title="Remove rest day">✕</button></div>`;
     return `<div class="day">
       <div class="day-head">
         <input data-p="${path}.name" data-t="str" value="${esc(d.name)}" aria-label="Day name">
@@ -337,7 +369,7 @@
         <p class="hint">RIR shift moves every RIR / rep-range target across the block (negative = harder). “% added per week” raises % of 1RM sets each week.</p>
       </details>
       ${b.days.map((d, di) => renderDay(d, `${path}.days.${di}`, di, b.days.length)).join('')}
-      <div class="row" style="margin-top:12px"><button class="ghost fixed" data-act="addday" data-p="${path}">+ Add day</button></div>
+      <div class="row" style="margin-top:12px"><button class="ghost fixed" data-act="addday" data-p="${path}">+ Add day</button><button class="ghost fixed" data-act="addrest" data-p="${path}">+ Add rest day</button></div>
     </div>`;
   }
 
@@ -359,10 +391,10 @@
     document.getElementById('btnDownload').disabled = errs.length > 0;
     const weeks = plan.blocks.reduce((a, b) => a + (+b.weeks || 0), 0);
     const sessions = plan.blocks.reduce((a, b) => a + (+b.weeks || 0) * b.days.length, 0);
-    const days = plan.blocks.flatMap(b => b.days);
+    const days = plan.blocks.flatMap(b => b.days).filter(d => !d.rest);
     const avg = days.length ? Math.round(days.reduce((a, d) => a + dayMinutes(d), 0) / days.length) : 0;
     const muscles = {};
-    plan.blocks[0]?.days.forEach(d => d.exercises.forEach(e => { const info = BY_ID[e.exercise]; if (info) info.muscles.forEach(m => muscles[m] = (muscles[m] || 0) + totalSets(e)); }));
+    plan.blocks[0]?.days.forEach(d => d.rest || d.exercises.forEach(e => { const info = BY_ID[e.exercise]; if (info) info.muscles.forEach(m => muscles[m] = (muscles[m] || 0) + totalSets(e)); }));
     const top = Object.entries(muscles).sort((a, b) => b[1] - a[1]).slice(0, 8);
     document.getElementById('summary').innerHTML =
       `<div class="stat"><span>Blocks</span><b>${plan.blocks.length}</b></div>
@@ -409,6 +441,7 @@
       case 'dup': { const c = clone(arr[idx]); c.name += ' copy'; arr.splice(idx + 1, 0, c); break; }
       case 'addblock': plan.blocks.push(block(plan.blocks.length + 1)); break;
       case 'addday': { const bl = getPath(plan, p); bl.days.push(day(bl.days.length + 1)); break; }
+      case 'addrest': getPath(plan, p).days.push(restDay()); break;
       case 'addset': getPath(plan, p).sets.push(setGroup('range')); break;
       case 'addex': openPicker(id => { getPath(plan, p).exercises.push(exercise(id)); renderEditor(); }); return;
       case 'pick': openPicker(id => { const e = getPath(plan, p); e.exercise = id; renderEditor(); }); return;
@@ -465,7 +498,122 @@
     unit = next; localStorage.setItem('ferrum-unit', unit); renderEditor();
   };
 
-  window.ferrumDebug = { exportJSON: () => JSON.stringify(toFile(), null, 2), validate };
+
+  // ---------- generator questionnaire
+  const GEN = FerrumGenerator.create(LIB);
+  const GKEY = 'ferrum-gen-answers-v1';
+  const PRESETS = [['full', 'Full gym', []], ['home', 'Home gym', ['barbell', 'dumbbell', 'kettlebell', 'band']], ['db', 'Dumbbells only', ['dumbbell']],
+    ['machines', 'Machines & cables', ['machine', 'cable', 'smith machine']], ['body', 'Bodyweight only', ['bodyweight']]];
+  const EMPHASIS = [['chest-pectorals', 'Chest'], ['lats', 'Lats'], ['lateral-delts', 'Side delts'], ['biceps', 'Biceps'], ['triceps', 'Triceps'],
+    ['quadriceps', 'Quads'], ['hamstrings', 'Hamstrings'], ['glutes', 'Glutes'], ['calves', 'Calves'], ['core-and-abs', 'Core']];
+  const PATTERNS = ['Vertical Push', 'Horizontal Push', 'Lunge / Split', 'Hinge', 'Squat', 'Vertical Pull', 'Horizontal Pull', 'Plyometric', 'Carry'];
+  const defaults = () => ({ goal: 'powerbuilding', days: 4, minutes: 60, experience: 'intermediate', emphasis: [], equipment: [], preset: 'full',
+    favorites: [], dislikes: [], avoid: [], name: '' });
+  let ans = Object.assign(defaults(), (() => { try { return JSON.parse(localStorage.getItem(GKEY)) || {}; } catch (_) { return {}; } })());
+  let generated = null;
+  const gdlg = document.getElementById('gen');
+
+  const toggle = (arr, v) => { const i = arr.indexOf(v); if (i >= 0) arr.splice(i, 1); else arr.push(v); };
+  const chips = (items, selected, attr) => `<div class="chiprow">${items.map(([v, t]) => `<button class="chip ${selected.includes(v) ? 'x' : ''}" data-${attr}="${esc(v)}">${esc(t)}</button>`).join('')}</div>`;
+  const nameList = ids => ids.length ? `<div class="chiprow" style="margin:6px 0">${ids.map(id => `<button class="chip x" data-rm="${esc(id)}">${esc(BY_ID[id]?.name || id)} ✕</button>`).join('')}</div>` : '';
+
+  function openGenerator() { generated = null; renderGen(); if (!gdlg.open) gdlg.showModal(); }
+
+  function renderGen() {
+    const body = document.getElementById('genBody'), foot = document.getElementById('genFoot');
+    if (generated) return renderGenResult(body, foot);
+    document.getElementById('genTitle').textContent = 'Generate a program';
+    body.innerHTML = `
+      <div class="qsec">What are you training for?</div>
+      ${Object.entries(FerrumGenerator.GOALS).map(([k, g]) => `<button class="goal ${ans.goal === k ? 'on' : ''}" data-goal="${k}"><span style="flex:1"><b>${g.title}</b><small>${g.blurb}</small></span><span>${ans.goal === k ? '●' : '○'}</span></button>`).join('')}
+      <div class="qsec">Schedule</div>
+      <div class="row">
+        <div><label>Training days per week</label><select data-q="days">${[2, 3, 4, 5, 6].map(n => `<option value="${n}" ${ans.days === n ? 'selected' : ''}>${n} days</option>`).join('')}</select></div>
+        <div><label>How long should a workout be?</label><select data-q="minutes">${[[30, '30 min'], [45, '45 min'], [60, '60 min'], [75, '75 min'], [90, '90 min'], [0, 'No limit']].map(([v, t]) => `<option value="${v}" ${ans.minutes === v ? 'selected' : ''}>${t}</option>`).join('')}</select></div>
+        <div><label>Experience</label><select data-q="experience">${['beginner', 'intermediate', 'advanced'].map(v => `<option value="${v}" ${ans.experience === v ? 'selected' : ''}>${v[0].toUpperCase() + v.slice(1)}</option>`).join('')}</select></div>
+      </div>
+      <div class="qsec">Muscles to bring up (optional)</div>
+      ${chips(EMPHASIS, ans.emphasis, 'emph')}
+      <div class="qsec">What equipment do you have?</div>
+      <div class="chiprow">${PRESETS.map(([k, t]) => `<button class="chip ${ans.preset === k ? 'x' : ''}" data-preset="${k}">${t}</button>`).join('')}</div>
+      <div class="hint">Or pick exactly what you have. Bodyweight exercises are always allowed.</div>
+      ${chips(FerrumGenerator.EQUIPMENT_OPTIONS, ans.equipment.length ? ans.equipment : FerrumGenerator.EQUIPMENT_OPTIONS.map(o => o[0]), 'equip')}
+      <div class="qsec">Exercises you enjoy</div>
+      ${nameList(ans.favorites)}<button data-pick="favorites">+ Add favourites</button>
+      <div class="qsec">Exercises to avoid</div>
+      ${nameList(ans.dislikes)}<button data-pick="dislikes">+ Add exercises to avoid</button>
+      <div class="hint" style="margin-top:10px">Skip whole movement types</div>
+      ${chips(PATTERNS.map(p => [p, p]), ans.avoid, 'avoid')}
+      <div class="qsec">Name (optional)</div>
+      <input data-q="name" value="${esc(ans.name)}" placeholder="e.g. Winter strength block">`;
+    foot.innerHTML = '<button id="gReset">Reset answers</button><button class="primary" id="gGo">Generate</button>';
+    // the "avoid" and rm handlers are delegated below
+  }
+
+  function renderGenResult(body, foot) {
+    document.getElementById('genTitle').textContent = generated.name;
+    const first = generated.blocks[0];
+    const weeks = generated.blocks.reduce((a, b) => a + b.weeks, 0);
+    const sessions = generated.blocks.reduce((a, b) => a + b.weeks * b.days.length, 0);
+    const avg = Math.round(first.days.reduce((a, d) => a + FerrumGenerator.estimatedMinutes(d), 0) / first.days.length);
+    body.innerHTML = `
+      <div class="stat"><span>Goal</span><b>${FerrumGenerator.GOALS[ans.goal].title}</b></div>
+      <div class="stat"><span>Length</span><b>${weeks} weeks · ${sessions} sessions</b></div>
+      <div class="stat"><span>Blocks</span><b>${generated.blocks.map(b => esc(b.name)).join(' → ')}</b></div>
+      <div class="stat"><span>Average session</span><b>~${avg} min</b></div>
+      ${generated.notes.length ? `<div class="notes"><b>Adjusted for you</b><br>${generated.notes.map(n => '• ' + esc(n)).join('<br>')}</div>` : ''}
+      <div class="qsec">${esc(first.name)} · each week</div>
+      ${first.days.map(d => `<details class="prev-day"><summary>${esc(d.name)} <span class="day-meta">~${FerrumGenerator.estimatedMinutes(d)} min</span></summary>
+        <ul>${d.exercises.map(e => `<li>${esc(BY_ID[e.exercise]?.name || e.exercise)} · ${FerrumGenerator.totalSets(e)} sets</li>`).join('')}</ul></details>`).join('')}
+      <p class="hint">Want to change something? Customize opens it in the editor, where you can swap exercises, change sets, add rest days and more.</p>`;
+    foot.innerHTML = '<button id="gBack">Back</button><button id="gDownload">Download as is</button><button class="primary" id="gCustomize">Customize in editor</button>';
+  }
+
+  function runGenerate() {
+    const out = GEN.generate({
+      goal: ans.goal, daysPerWeek: ans.days, experience: ans.experience, emphasis: ans.emphasis, name: ans.name.trim() || undefined,
+      sessionMinutes: ans.minutes || null, equipment: ans.equipment, favorites: ans.favorites, dislikes: ans.dislikes, avoidPatterns: ans.avoid,
+    });
+    try { localStorage.setItem(GKEY, JSON.stringify(ans)); } catch (_) {}
+    generated = out; renderGen();
+  }
+
+  // convert the generator's output into the editor's shape
+  function toEditorPlan(g) {
+    return { name: g.name, blocks: g.blocks.map(b => ({ _id: uid(), name: b.name, phase: b.phase, weeks: b.weeks, deloadLastWeek: b.deloadLastWeek,
+      rirShiftStart: b.rirShiftStart, rirShiftEnd: b.rirShiftEnd, percentStep: b.percentStep,
+      days: b.days.map(d => ({ _id: uid(), name: d.name, rest: false, exercises: d.exercises.map(e => ({
+        _id: uid(), exercise: e.exercise, rest: e.rest, note: e.note || '', reference: '', sets: e.sets.map(s => ({ _id: uid(), ...s })) })) })) })) };
+  }
+
+  document.getElementById('btnGenerate').onclick = openGenerator;
+  document.getElementById('genClose').onclick = () => gdlg.close();
+  gdlg.addEventListener('click', ev => {
+    const t = ev.target.closest('button, [data-q]'); if (!t) return;
+    const d = t.dataset;
+    if (d.goal) { ans.goal = d.goal; renderGen(); }
+    else if (d.emph) { toggle(ans.emphasis, d.emph); renderGen(); }
+    else if (d.avoid) { toggle(ans.avoid, d.avoid); renderGen(); }
+    else if (d.preset) { ans.preset = d.preset; ans.equipment = PRESETS.find(p => p[0] === d.preset)[2].slice(); renderGen(); }
+    else if (d.equip) {
+      let cur = ans.equipment.length ? ans.equipment.slice() : FerrumGenerator.EQUIPMENT_OPTIONS.map(o => o[0]);
+      cur = cur.filter(x => x !== 'bodyweight'); toggle(cur, d.equip); ans.equipment = cur.length ? cur : ['bodyweight']; ans.preset = 'custom'; renderGen();
+    }
+    else if (d.rm) { ans.favorites = ans.favorites.filter(x => x !== d.rm); ans.dislikes = ans.dislikes.filter(x => x !== d.rm); renderGen(); }
+    else if (d.pick) { const key = d.pick; openPicker(id => { if (!ans[key].includes(id)) ans[key].push(id); renderGen(); }); }
+    else if (t.id === 'gGo') runGenerate();
+    else if (t.id === 'gReset') { ans = defaults(); renderGen(); }
+    else if (t.id === 'gBack') { generated = null; renderGen(); }
+    else if (t.id === 'gCustomize') { plan = toEditorPlan(generated); gdlg.close(); renderEditor(); toast('Opened in the editor. Change anything, then download.'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    else if (t.id === 'gDownload') { const keep = plan; plan = toEditorPlan(generated); const errs = validate(); if (!errs.length) download(); plan = keep; }
+  });
+  gdlg.addEventListener('change', ev => {
+    const q = ev.target.dataset.q; if (!q) return;
+    const v = ev.target.value; ans[q] = (q === 'name' || q === 'experience') ? v : Number(v);
+  });
+  gdlg.addEventListener('input', ev => { if (ev.target.dataset.q === 'name') ans.name = ev.target.value; });
+
+  window.ferrumDebug = { exportJSON: () => JSON.stringify(toFile(), null, 2), validate, getPlan: () => plan, generate: o => GEN.generate(o) };
   renderEditor();
 })();
 </script>

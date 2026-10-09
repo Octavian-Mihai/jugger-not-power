@@ -103,6 +103,7 @@
 		812F9F31352A236AC6CEDCB7 /* dumbbell-pullover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CCD2C60678DF3043533D249 /* dumbbell-pullover.jpg */; };
 		835FC17994DE04A4A3162545 /* clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 836F978BF8FFA3339F2F561E /* clean.jpg */; };
 		877C4FBB2FD242BFACCDF7F1 /* guide-guide-hip-flexors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0DD2E0F85E4285DE5F68B1 /* guide-guide-hip-flexors.jpg */; };
+		884ABE7E8CD14C758B093DFE /* BodyWeightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65201EA916EEC135C3F04DAF /* BodyWeightViews.swift */; };
 		88984F9303A39779DB7E684B /* guide-guide-abductors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F866F951BCA66E63B15B9E0A /* guide-guide-abductors.jpg */; };
 		8A10748F57693F5D5265C946 /* leg-extension.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C2177FED7F4ED05A1EFAB /* leg-extension.png */; };
 		8B170DBA1B0365BE91629ADA /* landmine-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB9C9B043C3F1DBD20D84C19 /* landmine-press.jpg */; };
@@ -268,6 +269,7 @@
 		60C5C650D2D26EBCC1370145 /* seated-cable-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "seated-cable-row.jpg"; sourceTree = "<group>"; };
 		626F716E545564F890C4BCA2 /* zercher-carry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-carry.jpg"; sourceTree = "<group>"; };
 		62F56A65A8410F99998F5EC2 /* cable-pullover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-pullover.jpg"; sourceTree = "<group>"; };
+		65201EA916EEC135C3F04DAF /* BodyWeightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyWeightViews.swift; sourceTree = "<group>"; };
 		671C2177FED7F4ED05A1EFAB /* leg-extension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leg-extension.png"; sourceTree = "<group>"; };
 		6814600A9E7FA578E0F5869B /* front-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "front-squat.jpg"; sourceTree = "<group>"; };
 		69E78FC9C17D57E301F5F218 /* guide-guide-anterior-delts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-anterior-delts.png"; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 		6D4DD9D7703542B83E463386 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65201EA916EEC135C3F04DAF /* BodyWeightViews.swift */,
 				B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */,
 				8F172B4CB3CAD6070CDCD7DC /* HistoryView.swift */,
 				A9E2FA2063D273C9CC14660E /* LibraryView.swift */,
@@ -906,6 +909,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884ABE7E8CD14C758B093DFE /* BodyWeightViews.swift in Sources */,
 				42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */,
 				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
 				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,

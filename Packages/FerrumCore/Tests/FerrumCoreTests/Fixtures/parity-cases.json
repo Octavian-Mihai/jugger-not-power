@@ -1,0 +1,1357 @@
+[
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "beginner"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "intermediate"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "advanced"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "beginner"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "intermediate"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "advanced"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 4,
+"experience": "beginner"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 4,
+"experience": "intermediate"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 4,
+"experience": "advanced"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "beginner"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "intermediate"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "advanced"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "beginner"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "intermediate"
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "beginner"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 3,
+"experience": "beginner"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 3,
+"experience": "intermediate"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 3,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "beginner"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "intermediate"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 5,
+"experience": "beginner"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 5,
+"experience": "intermediate"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 5,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 6,
+"experience": "beginner"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 6,
+"experience": "intermediate"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 6,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "beginner"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "intermediate"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "beginner"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "intermediate"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "beginner"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "intermediate"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 5,
+"experience": "beginner"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 5,
+"experience": "intermediate"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 5,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 6,
+"experience": "beginner"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 6,
+"experience": "intermediate"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 6,
+"experience": "advanced"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "intermediate"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "advanced"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "intermediate"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "advanced"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "intermediate"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "advanced"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 5,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 5,
+"experience": "intermediate"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 5,
+"experience": "advanced"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 6,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 6,
+"experience": "intermediate"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 6,
+"experience": "advanced"
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "intermediate",
+"equipment": [
+"barbell",
+"dumbbell",
+"kettlebell",
+"machine",
+"safety bar"
+],
+"favorites": [
+"farmers-walk",
+"landmine-squat",
+"preacher-curl",
+"zercher-squat"
+],
+"dislikes": [
+"back-squat",
+"barbell-hip-thrust",
+"cable-lateral-raise",
+"machine-row",
+"zercher-split-squat"
+],
+"emphasis": [
+"posterior-delts"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "advanced",
+"sessionMinutes": 60,
+"equipment": [
+"barbell",
+"cable",
+"dumbbell",
+"kettlebell",
+"machine",
+"smith machine"
+],
+"emphasis": [
+"biceps",
+"glutes",
+"hamstrings"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "intermediate",
+"sessionMinutes": 45,
+"favorites": [
+"kettlebell-clean",
+"machine-press",
+"sit-up"
+],
+"avoidPatterns": [
+"Carry"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "beginner",
+"equipment": [
+"band",
+"cable",
+"dumbbell",
+"kettlebell",
+"safety bar",
+"trap bar"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 5,
+"experience": "advanced",
+"equipment": [
+"band",
+"bodyweight",
+"kettlebell",
+"machine",
+"smith machine",
+"trap bar"
+],
+"dislikes": [
+"cossack-squat",
+"deadlift",
+"dip-machine",
+"kettlebell-clean"
+],
+"avoidPatterns": [
+"Chest Isolation",
+"Flexion"
+],
+"emphasis": [
+"lateral-delts",
+"lats"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 5,
+"experience": "advanced",
+"sessionMinutes": 45,
+"dislikes": [
+"dumbbell-curl",
+"forward-lunge",
+"landmine-press",
+"push-up"
+],
+"avoidPatterns": [
+"Flexion"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "advanced",
+"sessionMinutes": 60,
+"equipment": [
+"band",
+"cable",
+"kettlebell",
+"safety bar"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "advanced",
+"equipment": [
+"bodyweight",
+"dumbbell",
+"landmine",
+"trap bar"
+],
+"favorites": [
+"back-extension"
+],
+"dislikes": [
+"machine-press"
+],
+"emphasis": [
+"adductors",
+"core-and-abs",
+"triceps"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 6,
+"experience": "beginner",
+"sessionMinutes": 45,
+"favorites": [
+"cable-fly",
+"machine-chest-press",
+"power-snatch"
+],
+"dislikes": [
+"kettlebell-snatch",
+"reverse-wrist-curl",
+"shoulder-internal-rotation",
+"snatch-pull"
+],
+"avoidPatterns": [
+"Horizontal Pull"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "advanced",
+"sessionMinutes": 90,
+"equipment": [
+"band",
+"barbell",
+"bodyweight",
+"kettlebell",
+"safety bar",
+"smith machine"
+],
+"dislikes": [
+"barbell-hip-thrust",
+"push-up",
+"single-leg-romanian-deadlift"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "advanced"
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 3,
+"experience": "advanced",
+"sessionMinutes": 30,
+"dislikes": [
+"machine-chest-press",
+"machine-hip-adduction"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "beginner",
+"sessionMinutes": 45,
+"equipment": [
+"barbell",
+"machine",
+"trap bar"
+],
+"favorites": [
+"bulgarian-split-squat",
+"machine-shoulder-press",
+"sissy-squat"
+],
+"emphasis": [
+"hamstrings"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "advanced",
+"sessionMinutes": 75,
+"favorites": [
+"deadlift",
+"step-up"
+],
+"dislikes": [
+"dips",
+"pistol-squat",
+"power-snatch",
+"shoulder-internal-rotation",
+"zercher-reverse-lunge"
+],
+"emphasis": [
+"triceps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 5,
+"experience": "beginner",
+"equipment": [
+"machine",
+"safety bar",
+"smith machine"
+],
+"favorites": [
+"russian-twist",
+"skull-crusher",
+"spider-curl"
+],
+"avoidPatterns": [
+"Lunge / Split",
+"Vertical Pull"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 6,
+"experience": "beginner",
+"sessionMinutes": 90,
+"equipment": [
+"band",
+"barbell",
+"bodyweight",
+"cable"
+],
+"favorites": [
+"back-squat",
+"bulgarian-split-squat",
+"smith-machine-bench-press",
+"turkish-get-up"
+],
+"emphasis": [
+"adductors"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "beginner",
+"sessionMinutes": 30,
+"equipment": [
+"barbell",
+"dumbbell",
+"kettlebell",
+"smith machine",
+"trap bar"
+],
+"avoidPatterns": [
+"Lunge / Split",
+"Plyometric"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 6,
+"experience": "beginner",
+"dislikes": [
+"jefferson-curl",
+"machine-hip-adduction",
+"overhead-cable-triceps-extension",
+"zercher-lunge",
+"zercher-split-squat"
+],
+"emphasis": [
+"hamstrings",
+"lateral-delts",
+"traps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "beginner",
+"equipment": [
+"bodyweight",
+"cable",
+"dumbbell",
+"kettlebell",
+"machine",
+"smith machine"
+],
+"favorites": [
+"cable-lateral-raise"
+],
+"avoidPatterns": [
+"Clean"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "intermediate",
+"sessionMinutes": 60,
+"equipment": [
+"barbell",
+"kettlebell",
+"safety bar"
+],
+"favorites": [
+"dumbbell-shoulder-press"
+],
+"dislikes": [
+"barbell-curl",
+"front-squat",
+"leg-press",
+"plank",
+"upright-row"
+],
+"emphasis": [
+"anterior-delts",
+"erectors"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "beginner"
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 4,
+"experience": "beginner",
+"sessionMinutes": 45,
+"equipment": [
+"smith machine"
+],
+"emphasis": [
+"lateral-delts"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"sessionMinutes": 90,
+"equipment": [
+"band",
+"barbell",
+"cable"
+],
+"dislikes": [
+"romanian-deadlift"
+],
+"avoidPatterns": [
+"Delt Isolation"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 6,
+"experience": "beginner",
+"sessionMinutes": 90,
+"favorites": [
+"cable-curl"
+],
+"dislikes": [
+"kettlebell-high-pull"
+],
+"emphasis": [
+"glutes",
+"traps"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "advanced",
+"sessionMinutes": 75,
+"favorites": [
+"barbell-curl",
+"machine-press"
+],
+"dislikes": [
+"close-grip-bench-press",
+"machine-chest-press"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "advanced",
+"equipment": [
+"barbell",
+"dumbbell"
+],
+"dislikes": [
+"hip-internal-rotation",
+"one-arm-cable-row",
+"preacher-curl-machine",
+"rear-delt-fly",
+"upright-row"
+],
+"avoidPatterns": [
+"Accessory",
+"Lunge / Split"
+],
+"emphasis": [
+"adductors",
+"biceps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"sessionMinutes": 45,
+"equipment": [
+"dumbbell",
+"machine",
+"smith machine",
+"trap bar"
+],
+"favorites": [
+"landmine-squat"
+],
+"dislikes": [
+"reverse-lunge"
+],
+"emphasis": [
+"posterior-delts"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "beginner",
+"sessionMinutes": 90,
+"favorites": [
+"forward-lunge",
+"kettlebell-clean",
+"rear-delt-fly",
+"smith-machine-bench-press"
+],
+"emphasis": [
+"hamstrings",
+"hip-flexors",
+"tibialis"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 6,
+"experience": "advanced",
+"sessionMinutes": 30
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "beginner",
+"sessionMinutes": 60,
+"favorites": [
+"ab-crunch-machine",
+"assisted-pull-up",
+"machine-row",
+"turkish-get-up"
+],
+"emphasis": [
+"tibialis"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "beginner",
+"equipment": [
+"smith machine"
+],
+"favorites": [
+"dumbbell-curl",
+"hip-internal-rotation"
+],
+"dislikes": [
+"cable-rear-delt-fly",
+"one-arm-cable-row",
+"smith-machine-squat",
+"snatch-pull"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "beginner",
+"sessionMinutes": 60,
+"favorites": [
+"back-squat",
+"clean",
+"goblet-squat",
+"shoulder-external-rotation"
+],
+"emphasis": [
+"abductors",
+"glutes",
+"posterior-delts"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "advanced",
+"sessionMinutes": 30,
+"favorites": [
+"calf-raise",
+"kettlebell-high-pull",
+"shoulder-external-rotation",
+"smith-machine-squat"
+],
+"dislikes": [
+"landmine-squat",
+"smith-machine-squat"
+],
+"avoidPatterns": [
+"Chest Isolation",
+"Horizontal Push"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 2,
+"experience": "advanced",
+"sessionMinutes": 75,
+"favorites": [
+"glute-ham-raise"
+],
+"dislikes": [
+"barbell-shrug",
+"calf-raise",
+"close-grip-bench-press",
+"reverse-lunge"
+],
+"emphasis": [
+"biceps"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 4,
+"experience": "intermediate",
+"equipment": [
+"barbell",
+"smith machine"
+],
+"favorites": [
+"lateral-raise"
+],
+"dislikes": [
+"assisted-dip",
+"dumbbell-pullover",
+"lying-leg-curl",
+"machine-row",
+"smith-machine-squat"
+],
+"avoidPatterns": [
+"Vertical Pull"
+],
+"emphasis": [
+"traps"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 5,
+"experience": "advanced",
+"sessionMinutes": 60,
+"favorites": [
+"front-raise"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "advanced",
+"sessionMinutes": 90,
+"dislikes": [
+"zercher-carry"
+],
+"avoidPatterns": [
+"Horizontal Pull",
+"Knee Flexion"
+],
+"emphasis": [
+"erectors",
+"quadriceps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "intermediate",
+"sessionMinutes": 75,
+"equipment": [
+"band",
+"cable",
+"dumbbell",
+"machine",
+"smith machine",
+"trap bar"
+],
+"favorites": [
+"calf-raise",
+"lying-leg-curl",
+"zercher-lunge"
+],
+"avoidPatterns": [
+"Horizontal Pull"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 3,
+"experience": "intermediate",
+"sessionMinutes": 90,
+"equipment": [
+"landmine"
+],
+"favorites": [
+"cable-pullover",
+"overhead-press"
+],
+"dislikes": [
+"kettlebell-clean-and-jerk"
+],
+"avoidPatterns": [
+"Chest Isolation",
+"Vertical Pull"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"equipment": [
+"barbell",
+"bodyweight",
+"dumbbell",
+"landmine",
+"smith machine",
+"trap bar"
+],
+"favorites": [
+"clean-and-jerk",
+"hack-squat",
+"lat-pulldown",
+"lateral-raise"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 5,
+"experience": "beginner",
+"equipment": [
+"dumbbell",
+"safety bar"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "advanced",
+"equipment": [
+"band",
+"machine"
+],
+"emphasis": [
+"hamstrings",
+"tibialis"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 2,
+"experience": "beginner",
+"sessionMinutes": 90,
+"equipment": [
+"band",
+"barbell",
+"machine"
+],
+"favorites": [
+"face-pull",
+"hand-gripper",
+"hip-internal-rotation"
+],
+"emphasis": [
+"adductors"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"equipment": [
+"machine"
+],
+"favorites": [
+"barbell-curl",
+"belt-squat",
+"concentration-curl",
+"seated-leg-curl"
+],
+"avoidPatterns": [
+"Vertical Push"
+],
+"emphasis": [
+"forearms-and-grip",
+"quadriceps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"equipment": [
+"machine",
+"trap bar"
+],
+"favorites": [
+"dumbbell-curl",
+"shoulder-internal-rotation"
+],
+"dislikes": [
+"kettlebell-clean",
+"pendulum-squat",
+"rack-pull"
+],
+"emphasis": [
+"anterior-delts",
+"core-and-abs",
+"quadriceps"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "beginner",
+"equipment": [
+"barbell"
+],
+"favorites": [
+"belt-squat",
+"hand-gripper",
+"leg-press",
+"single-leg-romanian-deadlift"
+],
+"dislikes": [
+"shoulder-internal-rotation",
+"sit-up"
+],
+"avoidPatterns": [
+"Horizontal Pull",
+"Horizontal Push"
+],
+"emphasis": [
+"chest-pectorals"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 4,
+"experience": "beginner",
+"sessionMinutes": 30,
+"equipment": [
+"kettlebell",
+"landmine"
+],
+"dislikes": [
+"machine-row",
+"power-snatch",
+"reverse-squat",
+"seated-good-morning"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 4,
+"experience": "intermediate",
+"equipment": [
+"band",
+"barbell",
+"bodyweight",
+"landmine",
+"machine",
+"trap bar"
+],
+"favorites": [
+"concentration-curl"
+],
+"dislikes": [
+"dumbbell-bench-press"
+],
+"emphasis": [
+"anterior-delts",
+"biceps",
+"erectors"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "beginner",
+"equipment": [
+"barbell",
+"bodyweight",
+"dumbbell",
+"kettlebell",
+"machine",
+"safety bar"
+],
+"emphasis": [
+"calves",
+"core-and-abs"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 3,
+"experience": "beginner",
+"emphasis": [
+"forearms-and-grip",
+"glutes"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 6,
+"experience": "beginner",
+"sessionMinutes": 45,
+"equipment": [
+"bodyweight"
+],
+"favorites": [
+"lying-leg-curl",
+"romanian-deadlift",
+"safety-bar-squat"
+],
+"avoidPatterns": [
+"Delt Isolation"
+],
+"emphasis": [
+"glutes",
+"lats"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 3,
+"experience": "intermediate",
+"sessionMinutes": 45,
+"avoidPatterns": [
+"Glute Isolation",
+"Hinge"
+]
+},
+{
+"goal": "powerCombo",
+"daysPerWeek": 4,
+"experience": "advanced",
+"sessionMinutes": 75,
+"equipment": [
+"cable",
+"machine"
+],
+"favorites": [
+"front-squat",
+"smith-machine-bench-press"
+],
+"dislikes": [
+"kettlebell-high-pull",
+"sit-up"
+],
+"avoidPatterns": [
+"Triceps"
+],
+"emphasis": [
+"triceps"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "beginner",
+"favorites": [
+"bulgarian-split-squat",
+"dumbbell-curl",
+"machine-row"
+],
+"dislikes": [
+"good-morning",
+"pec-deck",
+"plank",
+"smith-machine-squat",
+"sumo-deadlift"
+],
+"emphasis": [
+"chest-pectorals",
+"forearms-and-grip",
+"triceps"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"sessionMinutes": 30,
+"equipment": [
+"band",
+"barbell",
+"machine"
+],
+"emphasis": [
+"lateral-delts",
+"posterior-delts",
+"rhomboids"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 5,
+"experience": "advanced",
+"sessionMinutes": 75,
+"equipment": [
+"bodyweight",
+"cable",
+"dumbbell",
+"safety bar"
+],
+"dislikes": [
+"jm-press",
+"rear-delt-fly",
+"wrist-curl"
+],
+"emphasis": [
+"abductors",
+"forearms-and-grip",
+"hamstrings"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "intermediate",
+"equipment": [
+"barbell",
+"cable",
+"landmine",
+"machine"
+],
+"favorites": [
+"close-grip-bench-press"
+]
+},
+{
+"goal": "powerbuilding",
+"daysPerWeek": 2,
+"experience": "beginner",
+"sessionMinutes": 75,
+"equipment": [
+"band",
+"cable",
+"kettlebell",
+"safety bar",
+"trap bar"
+],
+"favorites": [
+"pendulum-squat",
+"zercher-squat"
+],
+"dislikes": [
+"barbell-shrug",
+"step-up"
+],
+"emphasis": [
+"anterior-delts",
+"biceps"
+]
+},
+{
+"goal": "fullBody",
+"daysPerWeek": 2,
+"experience": "advanced",
+"favorites": [
+"close-grip-bench-press",
+"seated-good-morning"
+],
+"avoidPatterns": [
+"Anti-Extension"
+],
+"emphasis": [
+"forearms-and-grip",
+"lats",
+"quadriceps"
+]
+},
+{
+"goal": "powerlifting",
+"daysPerWeek": 3,
+"experience": "beginner",
+"favorites": [
+"decline-bench-press"
+],
+"dislikes": [
+"incline-dumbbell-curl",
+"skull-crusher",
+"tibialis-raise",
+"wrist-curl",
+"zercher-carry"
+]
+}
+]

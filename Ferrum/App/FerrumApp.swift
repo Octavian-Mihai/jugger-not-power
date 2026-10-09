@@ -10,6 +10,6 @@ struct FerrumApp: App {
                 .environment(store)
         }
         .modelContainer(for: [Profile.self, Program.self, WorkoutSession.self, LoggedSet.self,
-                              ReadinessEntry.self, CustomExercise.self])
+                              ReadinessEntry.self, CustomExercise.self, BodyWeightEntry.self])
     }
 }

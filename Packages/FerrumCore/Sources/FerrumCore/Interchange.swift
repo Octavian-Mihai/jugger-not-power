@@ -6,7 +6,8 @@ import Foundation
 /// { "format": "ferrum-program", "version": 1, "name": "My Program",
 ///   "blocks": [ { "name": "Block 1", "phase": "strength", "weeks": 4, "deloadLastWeek": true,
 ///                 "rirShiftStart": 0, "rirShiftEnd": -1, "percentStep": 0.025,
-///                 "days": [ { "name": "Squat day", "exercises": [
+///                 "days": [ { "name": "Rest day", "rest": true, "exercises": [] },
+///                           { "name": "Squat day", "exercises": [
 ///                    { "exercise": "back-squat", "rest": 180, "note": "", "reference": "squat",
 ///                      "sets": [ { "count": 4, "type": "percent", "pct": 0.75, "reps": 5 } ] } ] } ] } ] }
 /// ```
@@ -36,7 +37,7 @@ public enum ProgramInterchange {
         var percentStep: Double?
         var days: [FDay]
     }
-    struct FDay: Codable { var name: String; var exercises: [FExercise] }
+    struct FDay: Codable { var name: String; var rest: Bool?; var exercises: [FExercise] }
     struct FExercise: Codable {
         var exercise: String
         var rest: Int?
@@ -62,7 +63,7 @@ public enum ProgramInterchange {
             FBlock(name: b.name, phase: b.phase.rawValue, weeks: b.weeks, deloadLastWeek: b.deloadLastWeek,
                    rirShiftStart: b.rirShiftStart, rirShiftEnd: b.rirShiftEnd, percentStep: b.percentStep,
                    days: b.days.map { d in
-                FDay(name: d.name, exercises: d.exercises.map { e in
+                FDay(name: d.name, rest: d.isRest ? true : nil, exercises: d.exercises.map { e in
                     FExercise(exercise: e.exerciseID, rest: e.restSeconds, note: e.note, reference: e.reference?.rawValue,
                               sets: e.groups.map { g in
                         switch g.target {
@@ -104,7 +105,8 @@ public enum ProgramInterchange {
             var days: [PlannedDay] = []
             for (di, fd) in fb.days.enumerated() {
                 let dl = "\(bl), day \(di + 1)"
-                if fd.exercises.isEmpty { problems.append("\(dl): add at least one exercise.") }
+                let isRest = fd.rest ?? false
+                if fd.exercises.isEmpty && !isRest { problems.append("\(dl): add at least one exercise, or mark it as a rest day.") }
                 var exercises: [PlannedExercise] = []
                 for (ei, fe) in fd.exercises.enumerated() {
                     let el = "\(dl), exercise \(ei + 1)"
@@ -142,7 +144,7 @@ public enum ProgramInterchange {
                                                      restSeconds: min(max(fe.rest ?? 120, 0), 900),
                                                      note: fe.note ?? "", reference: reference))
                 }
-                days.append(PlannedDay(name: fd.name.isEmpty ? "Day \(di + 1)" : fd.name, exercises: exercises))
+                days.append(PlannedDay(name: fd.name.isEmpty ? (isRest ? "Rest day" : "Day \(di + 1)") : fd.name, exercises: isRest ? [] : exercises, isRest: isRest))
             }
             blocks.append(Block(name: fb.name.isEmpty ? bl : fb.name, phase: phase, weeks: min(max(fb.weeks, 1), 52), days: days,
                                 rirShiftStart: fb.rirShiftStart ?? 0, rirShiftEnd: fb.rirShiftEnd ?? 0,

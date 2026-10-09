@@ -74,7 +74,23 @@ public struct PlannedDay: Codable, Hashable, Identifiable, Sendable {
     public var id = UUID()
     public var name: String
     public var exercises: [PlannedExercise]
-    public init(name: String, exercises: [PlannedExercise] = []) { self.name = name; self.exercises = exercises }
+    /// A rest day has no exercises; it still takes a slot in the weekly rotation.
+    public var isRest: Bool = false
+
+    public init(name: String, exercises: [PlannedExercise] = [], isRest: Bool = false) {
+        self.name = name; self.exercises = exercises; self.isRest = isRest
+    }
+
+    public static func rest(named name: String = "Rest day") -> PlannedDay { PlannedDay(name: name, exercises: [], isRest: true) }
+
+    private enum CodingKeys: String, CodingKey { case id, name, exercises, isRest }
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        name = try c.decode(String.self, forKey: .name)
+        exercises = try c.decode([PlannedExercise].self, forKey: .exercises)
+        isRest = try c.decodeIfPresent(Bool.self, forKey: .isRest) ?? false
+    }
 }
 
 public struct Block: Codable, Hashable, Identifiable, Sendable {

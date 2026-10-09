@@ -28,6 +28,14 @@ struct SettingsView: View {
                     }
                     Button("Edit maxes") { showMaxes = true }
                 }
+                Section {
+                    Picker("Workout layout", selection: $profile.swipeWorkout) {
+                        Text("Scroll").tag(false); Text("Swipe").tag(true)
+                    }.pickerStyle(.segmented)
+                } header: { Text("During workouts") } footer: {
+                    Text(profile.swipeWorkout ? "One exercise per screen. Swipe left or right to move between them."
+                         : "All exercises in one list. Scroll down to move on.")
+                }
                 Section("Training") {
                     Stepper("\(profile.daysPerWeek) days per week", value: $profile.daysPerWeek, in: 2...6)
                     Picker("Experience", selection: $profile.experienceRaw) {
@@ -73,6 +81,7 @@ struct SettingsView: View {
         try? context.delete(model: LoggedSet.self)
         try? context.delete(model: ReadinessEntry.self)
         try? context.delete(model: CustomExercise.self)
+        try? context.delete(model: BodyWeightEntry.self)
         profile.onboarded = false
     }
 }

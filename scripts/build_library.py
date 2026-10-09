@@ -158,7 +158,7 @@ def main():
     # Compact library for the program-builder website (opens from file://, so ship it as a script).
     muscle_names = {m["id"]: m["name"] for m in muscles}
     web = [{"id": e["id"], "name": e["name"], "pattern": e["pattern"], "equipment": e["equipment"],
-            "muscles": [muscle_names.get(x, x) for x in e["primary"]]} for e in exercises]
+            "muscles": [muscle_names.get(x, x) for x in e["primary"]], "primary": e["primary"]} for e in exercises]
     web_dir = ROOT / "web"; web_dir.mkdir(exist_ok=True)
     (web_dir / "exercises-data.js").write_text("window.FERRUM_EXERCISES = " + json.dumps(web, ensure_ascii=False, separators=(",", ":")) + ";\n")
     guessed = [e["name"] for e in exercises if e["equipmentGuess"]]

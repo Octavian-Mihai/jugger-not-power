@@ -22,6 +22,7 @@ struct ProgressTab: View {
                 HStack { Label("Workout history", systemImage: "clock.arrow.circlepath").foregroundStyle(t.text); Spacer()
                     Image(systemName: "chevron.right").foregroundStyle(t.secondary) }.card()
             }.buttonStyle(.plain)
+            BodyWeightCard()
             improvementCard
             e1rmChart
             weeklyVolumeCard
@@ -31,7 +32,7 @@ struct ProgressTab: View {
     }
 
     private var summary: some View {
-        let finished = sessions.filter(\.isFinished)
+        let finished = sessions.filter { $0.isFinished && !$0.isRest }
         let weekAgo = Calendar.current.date(byAdding: .day, value: -7, to: .now) ?? .now
         return HStack(spacing: 12) {
             stat("\(finished.count)", "Sessions")

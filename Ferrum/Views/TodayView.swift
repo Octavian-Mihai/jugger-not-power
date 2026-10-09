@@ -13,6 +13,8 @@ struct TodayView: View {
     @Query private var allSets: [LoggedSet]
     @State private var showCheckIn = false
     @State private var showMaxes = false
+    @State private var showWeight = false
+    @Query(sort: \BodyWeightEntry.date, order: .reverse) private var weights: [BodyWeightEntry]
     @State private var workout: WorkoutSession?
 
     private var program: Program? { active.first }
@@ -33,10 +35,12 @@ struct TodayView: View {
             }
             if MainLift.allCases.contains(where: { profile.oneRepMaxKg($0) <= 0 }) { maxesCard }
             readinessCard
+            bodyWeightCard
             recent
         }
         .sheet(isPresented: $showCheckIn) { ReadinessSheet() }
         .sheet(isPresented: $showMaxes) { MaxesSheet(profile: profile) }
+        .sheet(isPresented: $showWeight) { BodyWeightSheet() }
         .fullScreenCover(item: $workout) { session in
             WorkoutView(session: session, profile: profile)
         }
@@ -73,6 +77,14 @@ struct TodayView: View {
                 let day = block.days[pos.dayIndex]
                 SectionHeader(text: "\(block.name) · Week \(pos.weekInBlock + 1) of \(block.weeks)\(pos.isDeload ? " · Deload" : "")")
                 Text(day.name).font(.largeTitle.bold()).foregroundStyle(t.text)
+                if day.isRest {
+                    Label("Recovery is part of the program. Eat, sleep and stay loose.", systemImage: "bed.double.fill")
+                        .foregroundStyle(t.secondary)
+                    Button("Take rest day") { takeRestDay(program, day: day, block: block, pos: pos) }.buttonStyle(PrimaryButton())
+                    if let next = nextTrainingDay(plan, pos: pos) {
+                        Text("Next up: \(next)").font(.caption).foregroundStyle(t.secondary)
+                    }
+                } else {
                 let resolved = Resolver.resolve(day: day, block: block, weekInBlock: pos.weekInBlock, isDeload: pos.isDeload,
                                                 context: store.loadContext(profile: profile, sets: allSets), library: store.library,
                                                 readiness: adjustment)
@@ -92,6 +104,7 @@ struct TodayView: View {
                 }
                 Button("Start workout") { start(program, resolved: resolved, day: day, block: block, pos: pos) }
                     .buttonStyle(PrimaryButton())
+                }
             }
         }.frame(maxWidth: .infinity, alignment: .leading).card()
     }
@@ -132,6 +145,24 @@ struct TodayView: View {
         }.frame(maxWidth: .infinity, alignment: .leading).card()
     }
 
+    private var bodyWeightCard: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            SectionHeader(text: "Body weight")
+            HStack(alignment: .firstTextBaseline) {
+                if let last = weights.first {
+                    Text(store.format(last.kg)).font(.title.bold()).foregroundStyle(t.text)
+                    Text(last.date.isToday ? "today" : last.date.formatted(.relative(presentation: .named)))
+                        .font(.caption).foregroundStyle(t.secondary)
+                } else {
+                    Text("Not logged yet").foregroundStyle(t.secondary)
+                }
+                Spacer()
+                Button(weights.first?.date.isToday == true ? "Update" : "Log weight") { showWeight = true }
+                    .font(.subheadline.weight(.semibold))
+            }
+        }.frame(maxWidth: .infinity, alignment: .leading).card()
+    }
+
     private func color(_ band: ReadinessBand) -> Color {
         switch band { case .great, .good: return t.good; case .moderate: return t.warn; case .low: return t.bad }
     }
@@ -143,12 +174,32 @@ struct TodayView: View {
                 Spacer()
                 NavigationLink { HistoryView() } label: { Text("See all").font(.subheadline.weight(.semibold)) }
             }
-            let done = sessions.filter(\.isFinished).prefix(5)
+            let done = sessions.filter { $0.isFinished }.prefix(5)
             if done.isEmpty { Text("Finished workouts appear here.").foregroundStyle(t.secondary) }
             ForEach(Array(done)) { s in
-                NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain)
+                if s.isRest { SessionRow(session: s) }
+                else { NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain) }
             }
         }
+    }
+
+    private func nextTrainingDay(_ plan: ProgramPlan, pos: PlanPosition) -> String? {
+        guard let program else { return nil }
+        for i in 1...6 {
+            let p = plan.position(completedSessions: program.completedSessions + i)
+            if p.isFinished { return nil }
+            let d = plan.blocks[p.blockIndex].days[p.dayIndex]
+            if !d.isRest { return d.name }
+        }
+        return nil
+    }
+
+    private func takeRestDay(_ program: Program, day: PlannedDay, block: Block, pos: PlanPosition) {
+        let s = WorkoutSession(programID: program.id, dayName: day.name, blockName: block.name,
+                               weekLabel: "Week \(pos.weekInBlock + 1)", readinessScore: todaysReadiness?.score ?? 0)
+        s.isRest = true; s.isFinished = true; s.finishedAt = .now
+        context.insert(s)
+        program.completedSessions += 1
     }
 
     // MARK: start

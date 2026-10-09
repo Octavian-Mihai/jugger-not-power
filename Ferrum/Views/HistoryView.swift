@@ -16,7 +16,8 @@ struct HistoryView: View {
                     Text("Finished workouts show up here.").foregroundStyle(t.secondary).card()
                 }
                 ForEach(sessions) { s in
-                    NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain)
+                    if s.isRest { SessionRow(session: s) }
+                    else { NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain) }
                 }
             }.padding(16)
         }
@@ -40,9 +41,13 @@ struct SessionRow: View {
                     .font(.caption).foregroundStyle(t.secondary)
             }
             Spacer()
-            VStack(alignment: .trailing, spacing: 3) {
-                Text("\(done.count) sets").font(.subheadline.weight(.semibold)).foregroundStyle(t.text)
-                Text(store.format(volume)).font(.caption).foregroundStyle(t.secondary)
+            if session.isRest {
+                Label("Rest", systemImage: "bed.double.fill").font(.subheadline).foregroundStyle(t.secondary)
+            } else {
+                VStack(alignment: .trailing, spacing: 3) {
+                    Text("\(done.count) sets").font(.subheadline.weight(.semibold)).foregroundStyle(t.text)
+                    Text(store.format(volume)).font(.caption).foregroundStyle(t.secondary)
+                }
             }
             Image(systemName: "chevron.right").font(.caption).foregroundStyle(t.secondary)
         }.card()

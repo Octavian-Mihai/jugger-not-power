@@ -15,17 +15,12 @@ struct WorkoutView: View {
     @State private var restTotal = 0
     @State private var confirmFinish = false
     @State private var infoExercise: ExerciseInfo?
+    @State private var page = 0
 
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottom) {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 20) {
-                        ForEach(session.exerciseIDsInOrder, id: \.self) { id in exerciseCard(id) }
-                        Button("Finish workout") { confirmFinish = true }.buttonStyle(PrimaryButton()).padding(.top, 8)
-                    }.padding(16).padding(.bottom, restEnd == nil ? 20 : 90)
-                }
-                .scrollDismissesKeyboard(.interactively)
+                if profile.swipeWorkout { pager } else { scroller }
                 if let restEnd { RestBar(end: restEnd, total: restTotal) { self.restEnd = nil } }
             }
             .background(t.bg.ignoresSafeArea())
@@ -34,6 +29,12 @@ struct WorkoutView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }
+                ToolbarItem(placement: .primaryAction) {
+                    Button { withAnimation { profile.swipeWorkout.toggle() } } label: {
+                        Image(systemName: profile.swipeWorkout ? "list.bullet" : "rectangle.stack")
+                    }
+                    .accessibilityLabel(profile.swipeWorkout ? "Switch to scrolling list" : "Switch to swipe mode")
+                }
             }
             .confirmationDialog("Finish this workout?", isPresented: $confirmFinish, titleVisibility: .visible) {
                 Button("Finish") { finish() }
@@ -43,6 +44,70 @@ struct WorkoutView: View {
             }
             .sheet(item: $infoExercise) { ExerciseDetailView(exercise: $0) }
         }
+    }
+
+    private var exerciseIDs: [String] { session.exerciseIDsInOrder }
+
+    /// All exercises in one scrolling list.
+    private var scroller: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                ForEach(exerciseIDs, id: \.self) { id in exerciseCard(id) }
+                Button("Finish workout") { confirmFinish = true }.buttonStyle(PrimaryButton()).padding(.top, 8)
+            }.padding(16).padding(.bottom, restEnd == nil ? 20 : 90)
+        }
+        .scrollDismissesKeyboard(.interactively)
+    }
+
+    /// One exercise per screen; swipe sideways (or use the arrows) to move on.
+    private var pager: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 14) {
+                Button { go(-1) } label: { Image(systemName: "chevron.left") }.disabled(page == 0)
+                VStack(spacing: 6) {
+                    Text("Exercise \(min(page, max(exerciseIDs.count - 1, 0)) + 1) of \(exerciseIDs.count)")
+                        .font(.subheadline.weight(.semibold)).foregroundStyle(t.text)
+                    HStack(spacing: 5) {
+                        ForEach(exerciseIDs.indices, id: \.self) { i in
+                            Capsule().fill(i == page ? t.accent : (exerciseDone(i) ? t.good : t.secondary.opacity(0.35)))
+                                .frame(height: 5)
+                        }
+                    }
+                }
+                Button { go(1) } label: { Image(systemName: "chevron.right") }.disabled(page >= exerciseIDs.count - 1)
+            }
+            .font(.title3.weight(.semibold))
+            .padding(.horizontal, 16).padding(.vertical, 10)
+            TabView(selection: $page) {
+                ForEach(Array(exerciseIDs.enumerated()), id: \.element) { i, id in
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 16) {
+                            exerciseCard(id)
+                            if i < exerciseIDs.count - 1 {
+                                Button { go(1) } label: { Label("Next exercise", systemImage: "arrow.right") }.buttonStyle(PrimaryButton(prominent: false))
+                            } else {
+                                Button("Finish workout") { confirmFinish = true }.buttonStyle(PrimaryButton())
+                            }
+                        }.padding(16).padding(.bottom, restEnd == nil ? 20 : 90)
+                    }
+                    .scrollDismissesKeyboard(.interactively)
+                    .tag(i)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+        }
+        .onAppear { page = min(page, max(exerciseIDs.count - 1, 0)) }
+    }
+
+    private func go(_ delta: Int) {
+        Keyboard.hide()
+        withAnimation { page = min(max(page + delta, 0), max(exerciseIDs.count - 1, 0)) }
+    }
+
+    private func exerciseDone(_ i: Int) -> Bool {
+        guard exerciseIDs.indices.contains(i) else { return false }
+        let sets = session.sets.filter { $0.exerciseID == exerciseIDs[i] }
+        return !sets.isEmpty && sets.allSatisfy(\.isDone)
     }
 
     private func exerciseCard(_ id: String) -> some View {

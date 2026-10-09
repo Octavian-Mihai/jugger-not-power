@@ -11,6 +11,7 @@ struct ProgramsView: View {
     @State private var showGenerator = false
     @State private var editing: Program?
     @State private var editingIsNew = false
+    @State private var pendingEdit: Program?
     @State private var importing = false
     @State private var importError: String?
     @Environment(Store.self) private var store
@@ -39,7 +40,9 @@ struct ProgramsView: View {
                     }
             }
         }
-        .sheet(isPresented: $showGenerator) { GeneratorView(profile: profile) }
+        .sheet(isPresented: $showGenerator, onDismiss: {
+            if let p = pendingEdit { pendingEdit = nil; editingIsNew = false; editing = p }
+        }) { GeneratorView(profile: profile, onCustomize: { pendingEdit = $0 }) }
         .fileImporter(isPresented: $importing, allowedContentTypes: [.json, .plainText, .data]) { result in
             importFile(result)
         }
@@ -144,6 +147,9 @@ struct ProgramDetailView: View {
                             Text("\(block.weeks) wks · \(block.phase.title)").font(.caption).foregroundStyle(t.secondary)
                         }
                         ForEach(block.days) { day in
+                            if day.isRest {
+                                Label(day.name, systemImage: "bed.double.fill").font(.headline).foregroundStyle(t.secondary)
+                            } else {
                             DisclosureGroup {
                                 ForEach(day.exercises) { ex in
                                     HStack {
@@ -153,6 +159,7 @@ struct ProgramDetailView: View {
                                     }.padding(.vertical, 2)
                                 }
                             } label: { Text(day.name).font(.headline).foregroundStyle(t.text) }
+                            }
                         }
                     }.card()
                 }

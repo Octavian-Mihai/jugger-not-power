@@ -75,21 +75,34 @@ struct SectionHeader: View {
     }
 }
 
+/// Exercise images sit on white so the ones without a background look consistent.
 struct ExerciseThumb: View {
-    @Environment(\.theme) private var t
     let file: String?
     var size: CGFloat = 56
     var body: some View {
-        Group {
+        ZStack {
+            Color.white
             if let img = ImageStore.image(file, maxDimension: size * 3) {
-                Image(uiImage: img).resizable().scaledToFill()
+                Image(uiImage: img).resizable().scaledToFit()
             } else {
-                Image(systemName: "dumbbell.fill").foregroundStyle(t.secondary)
+                Image(systemName: "dumbbell.fill").foregroundStyle(Color.gray)
             }
         }
         .frame(width: size, height: size)
-        .background(t.bg)
         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+    }
+}
+
+/// Full-width image on a white card.
+struct ExerciseHero: View {
+    let file: String?
+    var body: some View {
+        if let img = ImageStore.image(file, maxDimension: 1200) {
+            Image(uiImage: img).resizable().scaledToFit()
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        }
     }
 }
 

@@ -88,13 +88,14 @@ struct BlockEditor: View {
                     NavigationLink { DayEditor(day: $day) } label: {
                         VStack(alignment: .leading) {
                             Text(day.name)
-                            Text("\(day.exercises.count) exercises").font(.caption).foregroundStyle(t.secondary)
+                            Text(day.isRest ? "Rest day" : "\(day.exercises.count) exercises").font(.caption).foregroundStyle(t.secondary)
                         }
                     }
                 }
                 .onDelete { block.days.remove(atOffsets: $0) }
                 .onMove { block.days.move(fromOffsets: $0, toOffset: $1) }
                 Button { block.days.append(PlannedDay(name: "Day \(block.days.count + 1)")) } label: { Label("Add day", systemImage: "plus") }
+                Button { block.days.append(.rest()) } label: { Label("Add rest day", systemImage: "bed.double") }
                 Button { duplicateLast() } label: { Label("Duplicate last day", systemImage: "plus.square.on.square") }
                     .disabled(block.days.isEmpty)
             }
@@ -124,8 +125,13 @@ struct DayEditor: View {
 
     var body: some View {
         Form {
-            Section("Day") { TextField("Name", text: $day.name) }
-            Section("Exercises") {
+            Section("Day") {
+                TextField("Name", text: $day.name)
+                Toggle("Rest day", isOn: $day.isRest)
+            }
+            if day.isRest {
+                Section { Text("No training. This day still takes its place in the weekly rotation.").foregroundStyle(t.secondary) }
+            } else { Section("Exercises") {
                 ForEach($day.exercises) { $ex in
                     NavigationLink { ExerciseEditor(exercise: $ex) } label: {
                         HStack(spacing: 12) {
@@ -141,7 +147,7 @@ struct DayEditor: View {
                 .onDelete { day.exercises.remove(atOffsets: $0) }
                 .onMove { day.exercises.move(fromOffsets: $0, toOffset: $1) }
                 Button { picking = true } label: { Label("Add exercise", systemImage: "plus") }
-            }
+            } }
         }
         .scrollContentBackground(.hidden)
         .background(t.bg.ignoresSafeArea())

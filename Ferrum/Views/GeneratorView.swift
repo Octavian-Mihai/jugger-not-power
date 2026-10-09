@@ -8,6 +8,8 @@ private func join(_ s: Set<String>) -> String { s.sorted().joined(separator: ","
 /// Step-by-step questionnaire that builds a program around the lifter's answers.
 struct GeneratorView: View {
     let profile: Profile
+    /// Called when the lifter chooses to tweak the generated program in the builder.
+    var onCustomize: (Program) -> Void = { _ in }
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Environment(Store.self) private var store
@@ -54,7 +56,10 @@ struct GeneratorView: View {
                 HStack(spacing: 12) {
                     if step > 0 { Button("Back") { step -= 1 }.buttonStyle(PrimaryButton(prominent: false)) }
                     if step < titles.count - 1 { Button("Next") { step += 1 }.buttonStyle(PrimaryButton()) }
-                    else { Button("Create program") { create() }.buttonStyle(PrimaryButton()) }
+                    else {
+                        Button("Customize") { create(customize: true) }.buttonStyle(PrimaryButton(prominent: false))
+                        Button("Create") { create(customize: false) }.buttonStyle(PrimaryButton())
+                    }
                 }.padding(16)
             }
             .background(t.bg.ignoresSafeArea())
@@ -208,6 +213,8 @@ struct GeneratorView: View {
                     }.card()
                 }
             }
+            Text("Happy with it? Tap Create. Want to change exercises, sets or days first? Tap Customize to open it in the builder (it becomes a custom program).")
+                .font(.footnote).foregroundStyle(t.secondary)
             VStack(alignment: .leading, spacing: 4) {
                 Text("Name").font(.caption).foregroundStyle(t.secondary)
                 TextField(plan.name, text: $name).textFieldStyle(.roundedBorder)
@@ -254,7 +261,7 @@ struct GeneratorView: View {
         likes = csv(profile.prefLikes); dislikes = csv(profile.prefDislikes); avoid = csv(profile.prefAvoid)
     }
 
-    private func create() {
+    private func create(customize: Bool) {
         profile.daysPerWeek = days; profile.experience = experience; profile.prefMinutes = minutes
         profile.prefEquipment = join(equipment); profile.prefLikes = join(likes)
         profile.prefDislikes = join(dislikes); profile.prefAvoid = join(avoid)
@@ -262,6 +269,7 @@ struct GeneratorView: View {
         for other in programs { other.isActive = false }
         p.isActive = true
         context.insert(p)
+        if customize { onCustomize(p) }
         dismiss()
     }
 }

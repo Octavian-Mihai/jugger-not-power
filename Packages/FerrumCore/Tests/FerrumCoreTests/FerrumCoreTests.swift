@@ -291,4 +291,79 @@ final class FerrumCoreTests: XCTestCase {
         XCTAssertNil(plan.blocks[0].days[0].exercises[0].reference)
         XCTAssertEqual(plan.totalSessions, 8)
     }
+
+    // MARK: rest days + body weight
+    func testRestDayRoundTripAndLegacyDecode() throws {
+        var plan = ProgramPlan(name: "R", blocks: [Block(name: "b", phase: .general, weeks: 2, days: [
+            PlannedDay(name: "A", exercises: [PlannedExercise(exerciseID: "back-squat", groups: [SetGroup(count: 3, target: .percent(pct: 0.8, reps: 5))])]),
+            .rest(),
+        ])])
+        let back = try ProgramInterchange.importPlan(ProgramInterchange.export(plan), library: lib)
+        XCTAssertEqual(back.blocks[0].days.map(\.isRest), [false, true])
+        XCTAssertEqual(back.totalSessions, 4)
+        // Plans saved before rest days existed have no isRest key.
+        var json = try JSONSerialization.jsonObject(with: plan.encoded()) as! [String: Any]
+        var blocks = json["blocks"] as! [[String: Any]]
+        var days = blocks[0]["days"] as! [[String: Any]]
+        for i in days.indices { days[i].removeValue(forKey: "isRest") }
+        blocks[0]["days"] = days; json["blocks"] = blocks
+        plan = try ProgramPlan.decode(JSONSerialization.data(withJSONObject: json))
+        XCTAssertEqual(plan.blocks[0].days.map(\.isRest), [false, false])
+    }
+
+    func testRestDaysResolveToNothingAndKeepRotation() {
+        let plan = ProgramPlan(name: "R", blocks: [Block(name: "b", phase: .general, weeks: 1, days: [PlannedDay(name: "A"), .rest(), PlannedDay(name: "B")])])
+        XCTAssertEqual(plan.position(completedSessions: 1).dayIndex, 1)
+        XCTAssertTrue(plan.blocks[0].days[plan.position(completedSessions: 1).dayIndex].isRest)
+        XCTAssertEqual(plan.totalSessions, 3)
+    }
+
+    func testBodyWeightSmoothingAndChange() {
+        let cal = Calendar.current
+        let start = cal.startOfDay(for: Date())
+        let pts = (0..<14).map { BodyWeightPoint(date: cal.date(byAdding: .day, value: $0 - 13, to: start)!, kg: 80 + Double($0) * 0.1 + ($0 % 2 == 0 ? 0.4 : -0.4)) }
+        XCTAssertEqual(BodyWeight.daily(pts + [BodyWeightPoint(date: pts[0].date.addingTimeInterval(60), kg: 99)]).count, 14)
+        XCTAssertEqual(BodyWeight.daily(pts + [BodyWeightPoint(date: pts[0].date.addingTimeInterval(60), kg: 99)]).first?.kg, 99)
+        let avg = BodyWeight.movingAverage(pts)
+        XCTAssertEqual(avg.count, 14)
+        let swing = zip(pts, avg).map { abs($0.kg - $1.kg) }.max()!
+        XCTAssertGreaterThan(swing, 0)
+        let change = BodyWeight.change(pts, overDays: 7)!
+        XCTAssertEqual(change, 0.7, accuracy: 0.2)
+        XCTAssertNil(BodyWeight.change([pts[0]], overDays: 7))
+    }
+
+    // MARK: web parity
+    /// The website's JS generator is a port of this one. Both must produce identical programs for the shared cases.
+    func testGeneratorMatchesParityFixture() throws {
+        let dir = URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("Fixtures")
+        let cases = try JSONSerialization.jsonObject(with: Data(contentsOf: dir.appendingPathComponent("parity-cases.json"))) as! [[String: Any]]
+        let gen = ProgramGenerator(library: lib)
+        var results: [[String: Any]] = []
+        for c in cases {
+            let input = GeneratorInput(
+                goal: GoalKind(rawValue: c["goal"] as! String)!, daysPerWeek: c["daysPerWeek"] as! Int,
+                experience: Experience(rawValue: c["experience"] as! String)!, emphasis: (c["emphasis"] as? [String]) ?? [],
+                sessionMinutes: c["sessionMinutes"] as? Int, equipment: Set((c["equipment"] as? [String]) ?? []),
+                favorites: Set((c["favorites"] as? [String]) ?? []), dislikes: Set((c["dislikes"] as? [String]) ?? []),
+                avoidPatterns: Set((c["avoidPatterns"] as? [String]) ?? []))
+            let (plan, notes) = gen.generateWithNotes(input)
+            let program = try JSONSerialization.jsonObject(with: ProgramInterchange.export(plan))
+            results.append(["input": c, "program": program, "notes": notes])
+        }
+        let out = try JSONSerialization.data(withJSONObject: results, options: [.sortedKeys])
+        let file = dir.appendingPathComponent("parity.json")
+        if ProcessInfo.processInfo.environment["FERRUM_WRITE_PARITY"] != nil { try out.write(to: file) }
+        let expected = try JSONSerialization.jsonObject(with: Data(contentsOf: file)) as! [[String: Any]]
+        XCTAssertEqual(expected.count, results.count)
+        let a = try JSONSerialization.data(withJSONObject: expected, options: [.sortedKeys])
+        XCTAssertEqual(a, out, "Generator output changed. Re-run with FERRUM_WRITE_PARITY=1, then run `node web/parity.test.mjs` and update generator.js to match.")
+    }
+
+    func testImportsRestDayFromWebsite() throws {
+        let url = URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("Fixtures/web-rest-day.ferrum.json")
+        let plan = try ProgramInterchange.importPlan(try Data(contentsOf: url), library: lib)
+        XCTAssertEqual(plan.blocks[0].days.map(\.isRest), [false, false, true])
+        XCTAssertEqual(plan.totalSessions, 12)
+    }
 }

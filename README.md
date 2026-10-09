@@ -29,4 +29,6 @@ open Ferrum.xcodeproj
 Engine tests: `cd Packages/FerrumCore && swift test`.
 
 ## Program builder website
-`web/` is a standalone page for writing a program on a computer. Open `web/index.html` in a browser (no server or build step), build blocks, days and exercises, then **Download for Ferrum**. In the app: Programs → **Import from file**. The same menu exports any program as a `.ferrum.json` file. The file format is documented in `Packages/FerrumCore/Sources/FerrumCore/Interchange.swift`.
+`web/` is a standalone page for writing or generating a program on a computer. **Generate program** asks the same questions as the app (goal, days, session length, equipment, likes/dislikes) and ends with *Customize in editor* or *Download as is*. Open `web/index.html` in a browser (no server or build step), build blocks, days and exercises, then **Download for Ferrum**. In the app: Programs → **Import from file**. The same menu exports any program as a `.ferrum.json` file. The file format is documented in `Packages/FerrumCore/Sources/FerrumCore/Interchange.swift`.
+
+`web/generator.js` is a port of the Swift generator. Keep them in sync: `swift test` fails when Swift output drifts from `Fixtures/parity.json` (regenerate with `FERRUM_WRITE_PARITY=1 swift test --filter testGeneratorMatchesParityFixture`), then run `node web/parity.test.mjs` to confirm the JS still matches.

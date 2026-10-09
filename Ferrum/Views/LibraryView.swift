@@ -71,9 +71,7 @@ struct ExerciseDetailView: View {
         let best = Analytics.bestE1RM(sets.filter { $0.isDone && $0.exerciseID == exercise.id }.map(\.record), exerciseID: exercise.id)
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                if let img = ImageStore.image(exercise.image, maxDimension: 1200) {
-                    Image(uiImage: img).resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 16))
-                }
+                ExerciseHero(file: exercise.image)
                 Text(exercise.name).font(.largeTitle.bold()).foregroundStyle(t.text)
                 HStack { Chip(text: exercise.pattern, selected: true); Chip(text: exercise.equipment.capitalized) }
                 if !exercise.cue.isEmpty { Text(exercise.cue).foregroundStyle(t.text).card() }
@@ -108,9 +106,7 @@ struct MuscleGuideView: View {
             NavigationLink {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 14) {
-                        if let img = ImageStore.image(m.image.map { "guide-" + $0 }, maxDimension: 1200) {
-                            Image(uiImage: img).resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 16))
-                        }
+                        ExerciseHero(file: m.image.map { "guide-" + $0 })
                         Text(m.name).font(.largeTitle.bold()).foregroundStyle(t.text)
                         info("Role", m.role); info("Function", m.function)
                         info("Examples", m.examples.joined(separator: ", ")); info("Patterns", m.patterns.joined(separator: ", "))

@@ -19,6 +19,8 @@ final class Profile {
     var prefLikes: String = ""
     var prefDislikes: String = ""
     var prefAvoid: String = ""
+    /// Workout screen: false = one scrolling list, true = swipe between exercises.
+    var swipeWorkout: Bool = false
 
     init() {}
 
@@ -73,6 +75,7 @@ final class WorkoutSession {
     var weekLabel: String = ""
     var readinessScore: Int = 0
     var isFinished: Bool = false
+    var isRest: Bool = false
     var finishedAt: Date?
     @Relationship(deleteRule: .cascade, inverse: \LoggedSet.session) var sets: [LoggedSet] = []
 
@@ -150,4 +153,12 @@ final class CustomExercise {
         ExerciseInfo(id: id, name: name, pattern: pattern, primary: primaryMuscle.isEmpty ? [] : [primaryMuscle],
                      cue: "Custom exercise.", equipment: equipment)
     }
+}
+
+@Model
+final class BodyWeightEntry {
+    var date = Date()
+    var kg: Double = 0
+    init(kg: Double, date: Date = .now) { self.kg = kg; self.date = date }
+    var point: BodyWeightPoint { BodyWeightPoint(date: date, kg: kg) }
 }
