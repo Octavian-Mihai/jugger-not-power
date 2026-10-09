@@ -74,6 +74,7 @@
 		583E4D30C3C94B9785A7D660 /* wrist-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E23DEE33E57F40CB73A4C5 /* wrist-curl.jpg */; };
 		5BB29E107D5702CF0C8DACA2 /* guide-guide-posterior-delts.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EA23564D9276AD3218CB17 /* guide-guide-posterior-delts.png */; };
 		5C2D85346C64D930DED16250 /* dumbbell-fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 585D72EE4318E26A397A1627 /* dumbbell-fly.jpg */; };
+		5DD7799F4A1247C79036C468 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F172B4CB3CAD6070CDCD7DC /* HistoryView.swift */; };
 		615179C4110408FCC72718DB /* lying-leg-curl.png in Resources */ = {isa = PBXBuildFile; fileRef = 609EB140E6EFE51F12977397 /* lying-leg-curl.png */; };
 		632540E31F3B9491ED597AAD /* seated-cable-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60C5C650D2D26EBCC1370145 /* seated-cable-row.jpg */; };
 		6394C1771E1AB09E45A516E7 /* cable-pullover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62F56A65A8410F99998F5EC2 /* cable-pullover.jpg */; };
@@ -299,6 +300,7 @@
 		8C0254A3E91D1E562DCCD5B3 /* guide-guide-quadriceps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-quadriceps.png"; sourceTree = "<group>"; };
 		8CFA2304641C357DB217F139 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8DAE564D438D2A8057624394 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		8F172B4CB3CAD6070CDCD7DC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		929CCF234C75AB82D3F4ABB1 /* overhead-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overhead-press.png"; sourceTree = "<group>"; };
 		93E3EA71479549397DA1C27E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9464543DFD681B596EE50718 /* front-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "front-raise.jpg"; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */,
+				8F172B4CB3CAD6070CDCD7DC /* HistoryView.swift */,
 				A9E2FA2063D273C9CC14660E /* LibraryView.swift */,
 				A6E25F2531D6E2F50FE8236A /* MaxesEditor.swift */,
 				93E3EA71479549397DA1C27E /* OnboardingView.swift */,
@@ -906,6 +909,7 @@
 				42386FF63ADF3CC813DB883F /* DemoData.swift in Sources */,
 				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
 				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,
+				5DD7799F4A1247C79036C468 /* HistoryView.swift in Sources */,
 				8EAA76532E8E08C10B05EC8F /* Keyboard.swift in Sources */,
 				3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */,
 				35307FF40E664B9D13AE4120 /* MaxesEditor.swift in Sources */,

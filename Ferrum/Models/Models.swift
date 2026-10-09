@@ -13,6 +13,12 @@ final class Profile {
     var daysPerWeek: Int = 4
     var onboarded: Bool = false
     var themeRaw: String = ThemeKind.forge.rawValue
+    // Generator questionnaire answers, remembered for next time (comma-separated ids).
+    var prefMinutes: Int = 60
+    var prefEquipment: String = ""
+    var prefLikes: String = ""
+    var prefDislikes: String = ""
+    var prefAvoid: String = ""
 
     init() {}
 

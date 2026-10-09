@@ -186,4 +186,109 @@ final class FerrumCoreTests: XCTestCase {
         XCTAssertNil(Analytics.improvement([a], exerciseID: "back-squat"))
         XCTAssertEqual(Analytics.percentChangeHistory([a, b], exerciseID: "back-squat").first?.value, 0)
     }
+
+    // MARK: preferences
+    private func allIDs(_ plan: ProgramPlan) -> Set<String> {
+        Set(plan.blocks.flatMap { $0.days.flatMap { $0.exercises.map(\.exerciseID) } })
+    }
+
+    func testEquipmentIsRespectedForEveryCombination() {
+        let gen = ProgramGenerator(library: lib)
+        let sets: [Set<String>] = [["dumbbell"], ["machine", "cable"], ["barbell", "dumbbell"], ["bodyweight-only"], []]
+        for eq in sets {
+            for goal in GoalKind.allCases {
+                let plan = gen.generate(GeneratorInput(goal: goal, daysPerWeek: 4, equipment: eq))
+                for b in plan.blocks { for d in b.days {
+                    XCTAssertFalse(d.exercises.isEmpty, "\(eq) \(goal) \(d.name)")
+                } }
+                if !eq.isEmpty {
+                    for id in allIDs(plan) {
+                        let e = lib.exercise(id)!.equipment
+                        XCTAssertTrue(eq.contains(e) || ["bodyweight", "gripper", "ab wheel"].contains(e), "\(id) needs \(e) with \(eq)")
+                    }
+                }
+            }
+        }
+    }
+
+    func testDislikesAndAvoidedPatternsNeverAppear() {
+        let gen = ProgramGenerator(library: lib)
+        let plan = gen.generate(GeneratorInput(goal: .powerbuilding, daysPerWeek: 5,
+                                               dislikes: ["back-squat", "lateral-raise"], avoidPatterns: ["Vertical Push"]))
+        let ids = allIDs(plan)
+        XCTAssertFalse(ids.contains("back-squat"))
+        XCTAssertFalse(ids.contains("lateral-raise"))
+        XCTAssertFalse(ids.contains("overhead-press"))
+        XCTAssertFalse(ids.contains(where: { lib.exercise($0)?.pattern == "Vertical Push" }))
+    }
+
+    func testSwappedMainLiftDropsPercentPrescription() {
+        let gen = ProgramGenerator(library: lib)
+        let (plan, notes) = gen.generateWithNotes(GeneratorInput(goal: .powerlifting, daysPerWeek: 3, dislikes: ["back-squat"]))
+        XCTAssertFalse(notes.isEmpty)
+        let squatDay = plan.blocks[0].days[0]
+        XCTAssertNotEqual(squatDay.exercises[0].exerciseID, "back-squat")
+        if case .percent = squatDay.exercises[0].groups[0].target { XCTFail("percent on a swapped lift") }
+    }
+
+    func testFavoritesAreIncludedAndSessionLengthIsHonoured() {
+        let gen = ProgramGenerator(library: lib)
+        let plan = gen.generate(GeneratorInput(goal: .powerbuilding, daysPerWeek: 4, sessionMinutes: 60,
+                                               favorites: ["hammer-curl", "face-pull"]))
+        let ids = allIDs(plan)
+        XCTAssertTrue(ids.contains("hammer-curl")); XCTAssertTrue(ids.contains("face-pull"))
+        for b in plan.blocks { for d in b.days { XCTAssertLessThanOrEqual(d.estimatedMinutes, 60, "\(b.name) \(d.name)") } }
+        let short = gen.generate(GeneratorInput(goal: .powerbuilding, daysPerWeek: 4, sessionMinutes: 40))
+        let long = gen.generate(GeneratorInput(goal: .powerbuilding, daysPerWeek: 4, sessionMinutes: 90))
+        let avg: (ProgramPlan) -> Double = { p in
+            let days = p.blocks.flatMap(\.days); return Double(days.map(\.estimatedMinutes).reduce(0, +)) / Double(days.count)
+        }
+        XCTAssertLessThan(avg(short), avg(long))
+    }
+
+    // MARK: interchange
+    func testInterchangeRoundTrip() throws {
+        let gen = ProgramGenerator(library: lib)
+        for goal in GoalKind.allCases {
+            let plan = gen.generate(GeneratorInput(goal: goal, daysPerWeek: 4))
+            let data = try ProgramInterchange.export(plan)
+            let back = try ProgramInterchange.importPlan(data, library: lib)
+            XCTAssertEqual(back.name, plan.name)
+            XCTAssertEqual(back.blocks.count, plan.blocks.count)
+            for (a, b) in zip(plan.blocks, back.blocks) {
+                XCTAssertEqual(a.weeks, b.weeks); XCTAssertEqual(a.percentStep, b.percentStep)
+                XCTAssertEqual(a.days.map { $0.exercises.map { [$0.exerciseID] + $0.groups.map { "\($0.count)\($0.target)" } } },
+                               b.days.map { $0.exercises.map { [$0.exerciseID] + $0.groups.map { "\($0.count)\($0.target)" } } })
+            }
+            XCTAssertTrue(back.isCustom)
+        }
+    }
+
+    func testInterchangeRejectsBadFiles() {
+        func problems(_ json: String) -> [String] {
+            do { _ = try ProgramInterchange.importPlan(Data(json.utf8), library: lib); return [] }
+            catch let e as ProgramInterchange.ImportError { return e.problems }
+            catch { return ["other"] }
+        }
+        XCTAssertFalse(problems("not json").isEmpty)
+        XCTAssertFalse(problems(#"{"format":"other","version":1,"name":"x","blocks":[]}"#).isEmpty)
+        let bad = #"{"format":"ferrum-program","version":1,"name":"x","blocks":[{"name":"b","weeks":4,"days":[{"name":"d","exercises":[{"exercise":"nope","sets":[{"count":3,"type":"percent","pct":0.8}]}]}]}]}"#
+        let p = problems(bad)
+        XCTAssertTrue(p.contains { $0.contains("unknown exercise") })
+        XCTAssertTrue(p.contains { $0.contains("percent sets need") })
+        let ok = #"{"format":"ferrum-program","version":1,"name":"x","blocks":[{"name":"b","weeks":4,"days":[{"name":"d","exercises":[{"exercise":"back-squat","sets":[{"count":3,"type":"percent","pct":0.8,"reps":5}]}]}]}]}"#
+        XCTAssertTrue(problems(ok).isEmpty)
+    }
+
+    func testImportsFileExportedByWebsite() throws {
+        let url = URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("Fixtures/web-example.ferrum.json")
+        let plan = try ProgramInterchange.importPlan(try Data(contentsOf: url), library: lib)
+        XCTAssertEqual(plan.name, "Upper / Lower Strength")
+        XCTAssertEqual(plan.blocks[0].days.count, 2)
+        XCTAssertEqual(plan.blocks[0].days[0].exercises[0].exerciseID, "back-squat")
+        XCTAssertEqual(plan.blocks[0].percentStep, 0.025)
+        XCTAssertTrue(plan.blocks[0].deloadLastWeek)
+        XCTAssertNil(plan.blocks[0].days[0].exercises[0].reference)
+        XCTAssertEqual(plan.totalSessions, 8)
+    }
 }

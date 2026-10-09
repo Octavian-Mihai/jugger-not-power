@@ -18,6 +18,10 @@ struct ProgressTab: View {
     var body: some View {
         Screen(title: "Progress") {
             summary
+            NavigationLink { HistoryView() } label: {
+                HStack { Label("Workout history", systemImage: "clock.arrow.circlepath").foregroundStyle(t.text); Spacer()
+                    Image(systemName: "chevron.right").foregroundStyle(t.secondary) }.card()
+            }.buttonStyle(.plain)
             improvementCard
             e1rmChart
             weeklyVolumeCard

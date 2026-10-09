@@ -68,7 +68,7 @@ public enum Resolver {
                 for _ in 0..<count {
                     sets.append(resolveSet(target: group.target, index: sets.count, shift: shift, pctShift: pctShift,
                                            max1RM: max1RM, planned: planned, context: context,
-                                           loadMultiplier: readiness.loadMultiplier))
+                                           loadMultiplier: readiness.loadMultiplier, library: library))
                 }
             }
             return ResolvedExercise(id: planned.id, exerciseID: planned.exerciseID, restSeconds: planned.restSeconds,
@@ -76,8 +76,20 @@ public enum Resolver {
         }
     }
 
+    /// Fraction of the reference 1RM a first-time variation starts from. nil = unknown, lifter enters it.
+    private static func startFactor(for exerciseID: String, library: ExerciseLibrary) -> Double? {
+        switch library.exercise(exerciseID)?.pattern {
+        case "Squat": return 0.55
+        case "Hinge": return 0.5
+        case "Horizontal Push": return 0.55
+        case "Vertical Push": return 0.45
+        default: return nil
+        }
+    }
+
     private static func resolveSet(target: SetTarget, index: Int, shift: Double, pctShift: Double, max1RM: Double?,
-                                   planned: PlannedExercise, context: LoadContext, loadMultiplier: Double) -> ResolvedSet {
+                                   planned: PlannedExercise, context: LoadContext, loadMultiplier: Double,
+                                   library: ExerciseLibrary) -> ResolvedSet {
         let unit = context.unit
         let last = context.lastPerformance[planned.exerciseID]
         func e1RM() -> Double? {
@@ -104,9 +116,9 @@ public enum Resolver {
                 let s = Progression.doubleProgression(last: last.sets, low: low, high: high, targetRIR: r, unit: unit)
                 reps = s.reps; w = s.weight * loadMultiplier
                 w = w.map { unit.round($0) }
-            } else if let base = max1RM {
-                // No history: start a variation conservatively from the main lift.
-                w = rounded(Estimation.load(e1RM: base * 0.6, reps: (low + high) / 2, rir: r))
+            } else if let base = max1RM, let factor = startFactor(for: planned.exerciseID, library: library) {
+                // No history: start a compound variation conservatively from the main lift.
+                w = rounded(Estimation.load(e1RM: base * factor, reps: (low + high) / 2, rir: r))
                 reps = (low + high) / 2
             }
             return ResolvedSet(index: index, reps: reps, repsLow: low, targetRIR: r, weight: w, percent: nil, isRange: true)

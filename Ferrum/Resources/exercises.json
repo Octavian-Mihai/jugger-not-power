@@ -171,7 +171,7 @@
    "posterior-delts"
   ],
   "cue": "Drive the chest into the pad. Pull toward the lower ribs and lower under control; don’t bounce.",
-  "equipment": "barbell",
+  "equipment": "machine",
   "equipmentGuess": false,
   "image": "chest-supported-t-bar-row.jpg"
  },
@@ -448,7 +448,7 @@
    "adductors"
   ],
   "cue": "Hold the weight at chest height. Sit between the hips and keep the elbows inside the knees.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "goblet-squat.jpg"
  },
@@ -519,7 +519,7 @@
    "core-and-abs"
   ],
   "cue": "Shift side to side with one leg extended. Keep the working heel down and chest as tall as you can.",
-  "equipment": "barbell",
+  "equipment": "bodyweight",
   "equipmentGuess": false,
   "image": "cossack-squat.png"
  },
@@ -538,7 +538,7 @@
    "core-and-abs"
   ],
   "cue": "Most of the load on the front leg. Slight forward lean is fine; keep the front knee tracking over the toes.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "bulgarian-split-squat.jpg"
  },
@@ -753,7 +753,7 @@
    "core-and-abs"
   ],
   "cue": "Hinge at the hip over one leg, trailing leg reaching back for balance. Keep the hips square and the weight close.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "single-leg-romanian-deadlift.jpg"
  },
@@ -1014,7 +1014,7 @@
    "hamstrings"
   ],
   "cue": "Chin tucked, ribs down. Finish with a hard glute squeeze and a flat torso at the top.",
-  "equipment": "barbell",
+  "equipment": "bodyweight",
   "equipmentGuess": false,
   "image": "hip-thrust.png"
  },
@@ -1078,7 +1078,7 @@
   ],
   "secondary": [],
   "cue": "Neutral grip. Control both directions; this is also a forearm builder.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "hammer-curl.png"
  },
@@ -1092,7 +1092,7 @@
   ],
   "secondary": [],
   "cue": "Upper arms pinned to the pad. Curl through a full range and lower slowly; don’t hyperextend the elbows.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "preacher-curl.jpg"
  },
@@ -1148,7 +1148,7 @@
   ],
   "secondary": [],
   "cue": "Elbow braced. Curl to the shoulder and lower fully; no body English.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "concentration-curl.jpg"
  },
@@ -1162,7 +1162,7 @@
   ],
   "secondary": [],
   "cue": "Chest on the bench, arms hanging. Curl without swinging; control the stretch at the bottom.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "spider-curl.jpg"
  },
@@ -1352,7 +1352,7 @@
   ],
   "secondary": [],
   "cue": "Forearms supported, wrists hanging. Curl through a full range and don’t let the elbows take over.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "wrist-curl.jpg"
  },
@@ -1366,7 +1366,7 @@
   ],
   "secondary": [],
   "cue": "Forearms supported, palms down. Extend the wrists through a full range; keep it slow.",
-  "equipment": "barbell",
+  "equipment": "dumbbell",
   "equipmentGuess": false,
   "image": "reverse-wrist-curl.jpg"
  },
@@ -1869,7 +1869,7 @@
   ],
   "secondary": [],
   "cue": "Brace and lower as far as you can control. Catch with the hamstrings; don’t fold at the hips.",
-  "equipment": "barbell",
+  "equipment": "bodyweight",
   "equipmentGuess": false,
   "image": "nordic-curl.jpg"
  },

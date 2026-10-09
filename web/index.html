@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferrum Program Builder</title>
+<style>
+  :root {
+    --bg: #121214; --card: #1d1d21; --card2: #26262b; --text: #f4f4f6; --muted: #9a9aa3;
+    --accent: #ff6b1a; --on-accent: #101010; --good: #3ddc84; --bad: #ff5a5f; --line: #33333a;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f5f4f0; --card: #ffffff; --card2: #efeee9; --text: #1a1a1c; --muted: #6e6e75;
+      --accent: #e0560a; --on-accent: #ffffff; --good: #1e9e5a; --bad: #d6403f; --line: #dcdad2; color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 5; flex-wrap: wrap; }
+  .logo { font-weight: 900; letter-spacing: 4px; color: var(--accent); font-size: 20px; }
+  header .sub { color: var(--muted); }
+  header .spacer { flex: 1; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 20px; max-width: 1180px; margin: 0 auto; padding: 20px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } aside { order: -1; position: static !important; } }
+  aside { position: sticky; top: 76px; align-self: start; display: flex; flex-direction: column; gap: 14px; }
+  .card { background: var(--card); border-radius: 14px; padding: 16px; }
+  .card h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+  input, select, textarea { width: 100%; background: var(--card2); color: var(--text); border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px; font: inherit; }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  input[type=checkbox] { width: auto; }
+  button { font: inherit; cursor: pointer; border: 0; border-radius: 9px; padding: 8px 12px; background: var(--card2); color: var(--text); }
+  button:hover { filter: brightness(1.15); }
+  button.primary { background: var(--accent); color: var(--on-accent); font-weight: 700; }
+  button.primary:disabled { opacity: .4; cursor: not-allowed; }
+  button.ghost { background: transparent; color: var(--accent); padding: 6px 8px; }
+  button.icon { padding: 4px 8px; background: transparent; color: var(--muted); }
+  button.icon.danger:hover { color: var(--bad); }
+  .row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+  .row > * { flex: 1 1 90px; min-width: 0; }
+  .row > .fixed { flex: 0 0 auto; }
+  .block { margin-bottom: 18px; border-left: 4px solid var(--accent); }
+  .block-head, .day-head, .ex-head { display: flex; gap: 8px; align-items: center; }
+  .block-head input.title { font-size: 18px; font-weight: 700; background: transparent; border: 0; padding: 4px 0; }
+  .day { background: var(--card2); border-radius: 12px; padding: 12px; margin-top: 12px; }
+  .day-head input { font-weight: 700; background: transparent; border-color: transparent; }
+  .day-meta { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .ex { background: var(--card); border-radius: 10px; padding: 10px; margin-top: 10px; }
+  .ex-name { flex: 1; text-align: left; background: transparent; font-weight: 600; padding: 4px 0; }
+  .ex-name small { display: block; font-weight: 400; color: var(--muted); }
+  .sets { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
+  .set { display: grid; grid-template-columns: 62px 120px 1fr auto; gap: 8px; align-items: end; }
+  .set .fields { display: flex; gap: 8px; }
+  .set .fields > div { flex: 1; min-width: 0; }
+  @media (max-width: 560px) { .set { grid-template-columns: 1fr 1fr; } .set .fields { grid-column: 1 / -1; } }
+  details summary { cursor: pointer; color: var(--muted); font-size: 13px; margin: 8px 0 4px; }
+  .errors { color: var(--bad); font-size: 13px; margin: 0; padding-left: 18px; }
+  .ok { color: var(--good); font-size: 13px; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 99px; background: var(--card2); color: var(--muted); font-size: 12px; margin: 2px 4px 2px 0; }
+  .stat { display: flex; justify-content: space-between; padding: 4px 0; color: var(--muted); }
+  .stat b { color: var(--text); }
+  .empty { color: var(--muted); text-align: center; padding: 12px; }
+  dialog { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 16px; width: min(560px, 94vw); max-height: 86vh; padding: 0; }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  .dlg { display: flex; flex-direction: column; max-height: 86vh; }
+  .dlg header { position: static; padding: 12px 14px; }
+  .dlg .list { overflow: auto; padding: 4px 8px 12px; }
+  .opt { display: flex; width: 100%; justify-content: space-between; text-align: left; background: transparent; padding: 9px 10px; border-radius: 8px; }
+  .opt small { color: var(--muted); }
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding: 0 14px 8px; }
+  .chip { white-space: nowrap; background: var(--card2); padding: 4px 11px; border-radius: 99px; font-size: 13px; }
+  .chip.on { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+  .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--card2); border: 1px solid var(--line); padding: 10px 16px; border-radius: 10px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 20; }
+  .toast.show { opacity: 1; }
+  .hint { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <span class="logo">FERRUM</span><span class="sub">Program Builder</span>
+  <span class="spacer"></span>
+  <button id="btnExample">Load example</button>
+  <button id="btnImport">Open file…</button>
+  <input type="file" id="fileInput" accept=".json,application/json" hidden>
+  <button id="btnNew">New</button>
+</header>
+
+<main>
+  <section id="editor" aria-label="Program editor"></section>
+  <aside>
+    <div class="card">
+      <h3>Export</h3>
+      <div id="validation"></div>
+      <button class="primary" id="btnDownload" style="width:100%;margin-top:10px">Download for Ferrum</button>
+      <p class="hint">Save the file to iCloud Drive or Files, then in the app open Programs → Import from file.</p>
+    </div>
+    <div class="card">
+      <h3>Summary</h3>
+      <div id="summary"></div>
+    </div>
+    <div class="card">
+      <h3>Weight unit</h3>
+      <select id="unit"><option value="kg">Kilograms (kg)</option><option value="lb">Pounds (lb)</option></select>
+      <p class="hint">Only used for fixed-weight sets. The file always stores kilograms.</p>
+    </div>
+  </aside>
+</main>
+
+<dialog id="picker">
+  <div class="dlg">
+    <header><strong style="flex:1">Choose exercise</strong><button id="pickerClose">Close</button></header>
+    <div style="padding:0 14px 8px"><input id="pickerSearch" type="search" placeholder="Search exercises…" autocomplete="off"></div>
+    <div class="chips" id="pickerChips"></div>
+    <div class="list" id="pickerList"></div>
+  </div>
+</dialog>
+<div class="toast" id="toast"></div>
+
+<script src="exercises-data.js"></script>
+<script>
+(() => {
+  const LIB = window.FERRUM_EXERCISES;
+  const BY_ID = Object.fromEntries(LIB.map(e => [e.id, e]));
+  const PHASES = ['general', 'hypertrophy', 'strength', 'peaking'];
+  const KG = 2.2046226218;
+  const STORE = 'ferrum-builder-v1';
+
+  const uid = () => Math.random().toString(36).slice(2, 9);
+
+  // ---------- state
+  let unit = localStorage.getItem('ferrum-unit') || 'kg';
+  let plan = load() || blank();
+
+  function setGroup(type = 'range') {
+    const g = { _id: uid(), count: 3, type };
+    if (type === 'percent') Object.assign(g, { pct: 0.75, reps: 5 });
+    if (type === 'rir') Object.assign(g, { reps: 5, rir: 2 });
+    if (type === 'range') Object.assign(g, { low: 8, high: 12, rir: 2 });
+    if (type === 'fixed') Object.assign(g, { weight: 0, reps: 8 });
+    return g;
+  }
+  function exercise(id) {
+    const main = ['back-squat', 'barbell-bench-press', 'deadlift'].includes(id);
+    return { _id: uid(), exercise: id, rest: main ? 180 : 90, note: '', reference: '', sets: [main ? Object.assign(setGroup('percent'), { count: 4 }) : setGroup('range')] };
+  }
+  function day(n) { return { _id: uid(), name: 'Day ' + n, exercises: [] }; }
+  function block(n) {
+    return { _id: uid(), name: 'Block ' + n, phase: 'general', weeks: 4, deloadLastWeek: false, rirShiftStart: 0, rirShiftEnd: 0, percentStep: 0, days: [day(1)] };
+  }
+  function blank() { return { name: 'My Program', blocks: [block(1)] }; }
+
+  function example() {
+    const e = (id, sets, rest) => ({ ...exercise(id), rest, sets });
+    const g = (count, type, o) => ({ ...setGroup(type), count, ...o });
+    return {
+      name: 'Upper / Lower Strength',
+      blocks: [{
+        _id: uid(), name: 'Strength', phase: 'strength', weeks: 4, deloadLastWeek: true, rirShiftStart: 0, rirShiftEnd: -1, percentStep: 0.025,
+        days: [
+          { _id: uid(), name: 'Lower', exercises: [
+            e('back-squat', [g(4, 'percent', { pct: 0.75, reps: 5 })], 180),
+            e('romanian-deadlift', [g(3, 'range', { low: 6, high: 10, rir: 2 })], 150),
+            e('leg-press', [g(3, 'range', { low: 8, high: 12, rir: 2 })], 120),
+            e('calf-raise', [g(3, 'range', { low: 10, high: 15, rir: 1 })], 60) ] },
+          { _id: uid(), name: 'Upper', exercises: [
+            e('barbell-bench-press', [g(4, 'percent', { pct: 0.75, reps: 5 })], 180),
+            e('barbell-row', [g(3, 'range', { low: 6, high: 10, rir: 2 })], 120),
+            e('overhead-press', [g(3, 'rir', { reps: 6, rir: 2 })], 120),
+            e('lat-pulldown', [g(3, 'range', { low: 8, high: 12, rir: 2 })], 90) ] },
+        ] }]
+    };
+  }
+
+  function save() { try { localStorage.setItem(STORE, JSON.stringify(plan)); } catch (_) {} }
+  function load() { try { const s = JSON.parse(localStorage.getItem(STORE)); return s && s.blocks ? s : null; } catch (_) { return null; } }
+
+  // ---------- helpers
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = n => (Math.round(n * 10) / 10).toString();
+  const toast = msg => { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2400); };
+  const getPath = (o, p) => p.split('.').reduce((a, k) => a == null ? a : a[k], o);
+  function setPath(o, p, v) { const ks = p.split('.'); const last = ks.pop(); (ks.length ? getPath(o, ks.join('.')) : o)[last] = v; }
+  const totalSets = ex => ex.sets.reduce((a, s) => a + (Number(s.count) || 0), 0);
+  const dayMinutes = d => 5 + Math.round(d.exercises.reduce((a, e) => a + totalSets(e) * (40 + (Number(e.rest) || 0)), 0) / 60);
+
+  // ---------- validation (mirrors the app's importer)
+  function validate() {
+    const p = [];
+    if (!plan.name.trim()) p.push('Give the program a name.');
+    if (!plan.blocks.length) p.push('Add at least one block.');
+    plan.blocks.forEach((b, bi) => {
+      const bl = `Block ${bi + 1}`;
+      if (!(b.weeks >= 1 && b.weeks <= 52)) p.push(`${bl}: weeks must be 1–52.`);
+      if (!b.days.length) p.push(`${bl}: add a day.`);
+      b.days.forEach((d, di) => {
+        const dl = `${bl}, day ${di + 1}`;
+        if (!d.exercises.length) p.push(`${dl}: add an exercise.`);
+        d.exercises.forEach((e, ei) => {
+          const el = `${dl}, exercise ${ei + 1}`;
+          if (!BY_ID[e.exercise]) p.push(`${el}: choose an exercise.`);
+          if (!e.sets.length) p.push(`${el}: add a set group.`);
+          e.sets.forEach(s => {
+            if (!(s.count >= 1 && s.count <= 20)) p.push(`${el}: sets must be 1–20.`);
+            if (s.type === 'percent' && !(s.pct >= 0.2 && s.pct <= 1.2 && s.reps >= 1)) p.push(`${el}: check % and reps.`);
+            if (s.type === 'rir' && !(s.reps >= 1 && s.rir >= 0 && s.rir <= 10)) p.push(`${el}: check reps and RIR.`);
+            if (s.type === 'range' && !(s.low >= 1 && s.high >= s.low && s.rir >= 0 && s.rir <= 10)) p.push(`${el}: low must be ≤ high.`);
+            if (s.type === 'fixed' && !(s.weight >= 0 && s.reps >= 1)) p.push(`${el}: check weight and reps.`);
+          });
+        });
+      });
+    });
+    return [...new Set(p)];
+  }
+
+  // ---------- export / import
+  function toFile() {
+    return {
+      format: 'ferrum-program', version: 1, name: plan.name.trim(),
+      blocks: plan.blocks.map(b => ({
+        name: b.name, phase: b.phase, weeks: +b.weeks, deloadLastWeek: !!b.deloadLastWeek,
+        rirShiftStart: +b.rirShiftStart || 0, rirShiftEnd: +b.rirShiftEnd || 0, percentStep: +b.percentStep || 0,
+        days: b.days.map(d => ({ name: d.name, exercises: d.exercises.map(e => ({
+          exercise: e.exercise, rest: +e.rest || 0, note: e.note || '', reference: e.reference || null,
+          sets: e.sets.map(s => {
+            const base = { count: +s.count, type: s.type };
+            if (s.type === 'percent') return { ...base, pct: +s.pct, reps: +s.reps };
+            if (s.type === 'rir') return { ...base, reps: +s.reps, rir: +s.rir };
+            if (s.type === 'range') return { ...base, low: +s.low, high: +s.high, rir: +s.rir };
+            return { ...base, weight: unit === 'lb' ? +s.weight / KG : +s.weight, reps: +s.reps };
+          }) })) })) }))
+    };
+  }
+  function fromFile(f) {
+    if (!f || f.format !== 'ferrum-program' || !Array.isArray(f.blocks)) throw new Error('Not a Ferrum program file.');
+    return {
+      name: f.name || 'Imported program',
+      blocks: f.blocks.map(b => ({
+        _id: uid(), name: b.name || 'Block', phase: PHASES.includes(b.phase) ? b.phase : 'general', weeks: b.weeks || 4,
+        deloadLastWeek: !!b.deloadLastWeek, rirShiftStart: b.rirShiftStart || 0, rirShiftEnd: b.rirShiftEnd || 0, percentStep: b.percentStep || 0,
+        days: (b.days || []).map(d => ({ _id: uid(), name: d.name || 'Day', exercises: (d.exercises || []).map(e => ({
+          _id: uid(), exercise: e.exercise, rest: e.rest ?? 120, note: e.note || '', reference: e.reference || '',
+          sets: (e.sets || []).map(s => ({ _id: uid(), count: s.count, type: s.type === 'range' || s.type === 'rir' || s.type === 'percent' || s.type === 'fixed' ? s.type : 'range',
+            pct: s.pct, reps: s.reps, rir: s.rir, low: s.low, high: s.high, weight: s.weight != null ? (unit === 'lb' ? Math.round(s.weight * KG * 10) / 10 : s.weight) : 0 })) })) }))
+      }))
+    };
+  }
+  function download() {
+    const errs = validate();
+    if (errs.length) return toast('Fix the issues first.');
+    const blob = new Blob([JSON.stringify(toFile(), null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = plan.name.trim().replace(/[^\w\-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase() + '.ferrum.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    toast('Downloaded. Import it from the Programs tab in Ferrum.');
+  }
+
+  // ---------- rendering
+  const numInput = (path, v, o = {}) =>
+    `<input type="number" data-p="${path}" data-t="${o.int ? 'int' : 'num'}" value="${esc(v ?? '')}" ${o.min != null ? `min="${o.min}"` : ''} ${o.max != null ? `max="${o.max}"` : ''} ${o.step ? `step="${o.step}"` : 'step="any"'} inputmode="decimal">`;
+  const field = (label, html) => `<div><label>${label}</label>${html}</div>`;
+  const opts = (list, cur) => list.map(([v, t]) => `<option value="${v}" ${v === cur ? 'selected' : ''}>${esc(t)}</option>`).join('');
+
+  function renderSet(s, path) {
+    let fields = '';
+    if (s.type === 'percent') fields = field('% of 1RM', numInput(path + '.pct', s.pct != null ? Math.round(s.pct * 1000) / 10 : '', { min: 20, max: 120, step: 0.5 }).replace('data-t="num"', 'data-t="pct"')) + field('Reps', numInput(path + '.reps', s.reps, { int: 1, min: 1 }));
+    if (s.type === 'rir') fields = field('Reps', numInput(path + '.reps', s.reps, { int: 1, min: 1 })) + field('Target RIR', numInput(path + '.rir', s.rir, { min: 0, max: 10, step: 0.5 }));
+    if (s.type === 'range') fields = field('Low reps', numInput(path + '.low', s.low, { int: 1, min: 1 })) + field('High reps', numInput(path + '.high', s.high, { int: 1, min: 1 })) + field('Target RIR', numInput(path + '.rir', s.rir, { min: 0, max: 10, step: 0.5 }));
+    if (s.type === 'fixed') fields = field('Weight (' + unit + ')', numInput(path + '.weight', s.weight, { min: 0 })) + field('Reps', numInput(path + '.reps', s.reps, { int: 1, min: 1 }));
+    return `<div class="set">
+      ${field('Sets', numInput(path + '.count', s.count, { int: 1, min: 1, max: 20 }))}
+      ${field('Type', `<select data-type="${path}">${opts([['percent', '% of 1RM'], ['rir', 'RPE / RIR'], ['range', 'Rep range'], ['fixed', 'Fixed weight']], s.type)}</select>`)}
+      <div class="fields">${fields}</div>
+      <button class="icon danger" data-act="del" data-p="${path}" title="Remove set group">✕</button></div>`;
+  }
+
+  function renderExercise(e, path, n, total) {
+    const info = BY_ID[e.exercise];
+    return `<div class="ex">
+      <div class="ex-head">
+        <button class="ex-name" data-act="pick" data-p="${path}">${info ? esc(info.name) : '<span style="color:var(--bad)">Choose exercise…</span>'}
+          <small>${info ? esc(info.pattern + ' · ' + info.muscles.join(', ')) : ''}</small></button>
+        <button class="icon" data-act="up" data-p="${path}" ${n === 0 ? 'disabled' : ''} title="Move up">↑</button>
+        <button class="icon" data-act="down" data-p="${path}" ${n === total - 1 ? 'disabled' : ''} title="Move down">↓</button>
+        <button class="icon danger" data-act="del" data-p="${path}" title="Remove exercise">✕</button>
+      </div>
+      <div class="sets">${e.sets.map((s, i) => renderSet(s, `${path}.sets.${i}`)).join('')}</div>
+      <div class="row" style="margin-top:6px"><button class="ghost fixed" data-act="addset" data-p="${path}">+ Add set group</button></div>
+      <details><summary>Rest, reference lift &amp; notes</summary>
+        <div class="row">
+          ${field('Rest (seconds)', numInput(path + '.rest', e.rest, { int: 1, min: 0, max: 900, step: 15 }))}
+          ${field('% reference lift', `<select data-p="${path}.reference" data-t="str">${opts([['', 'Auto'], ['squat', 'Squat'], ['bench', 'Bench'], ['deadlift', 'Deadlift']], e.reference || '')}</select>`)}
+          ${field('Note', `<input type="text" data-p="${path}.note" data-t="str" value="${esc(e.note)}" placeholder="Tempo, pause, cue…">`)}
+        </div>
+      </details></div>`;
+  }
+
+  function renderDay(d, path, n, total) {
+    return `<div class="day">
+      <div class="day-head">
+        <input data-p="${path}.name" data-t="str" value="${esc(d.name)}" aria-label="Day name">
+        <span class="day-meta" data-meta="${path}">${d.exercises.length} ex · ~${dayMinutes(d)} min</span>
+        <button class="icon" data-act="up" data-p="${path}" ${n === 0 ? 'disabled' : ''}>↑</button>
+        <button class="icon" data-act="down" data-p="${path}" ${n === total - 1 ? 'disabled' : ''}>↓</button>
+        <button class="icon" data-act="dup" data-p="${path}" title="Duplicate day">⧉</button>
+        <button class="icon danger" data-act="del" data-p="${path}" title="Remove day">✕</button>
+      </div>
+      ${d.exercises.map((e, i) => renderExercise(e, `${path}.exercises.${i}`, i, d.exercises.length)).join('')}
+      <div class="row" style="margin-top:10px"><button class="ghost fixed" data-act="addex" data-p="${path}">+ Add exercise</button></div>
+    </div>`;
+  }
+
+  function renderBlock(b, i) {
+    const path = `blocks.${i}`;
+    return `<div class="card block">
+      <div class="block-head">
+        <input class="title" data-p="${path}.name" data-t="str" value="${esc(b.name)}" aria-label="Block name">
+        <button class="icon" data-act="up" data-p="${path}" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button class="icon" data-act="down" data-p="${path}" ${i === plan.blocks.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="icon" data-act="dup" data-p="${path}" title="Duplicate block">⧉</button>
+        <button class="icon danger" data-act="del" data-p="${path}" title="Remove block">✕</button>
+      </div>
+      <div class="row">
+        ${field('Phase', `<select data-p="${path}.phase" data-t="str">${opts(PHASES.map(p => [p, p[0].toUpperCase() + p.slice(1)]), b.phase)}</select>`)}
+        ${field('Weeks', numInput(path + '.weeks', b.weeks, { int: 1, min: 1, max: 52 }))}
+        <div class="fixed"><label>Deload last week</label><input type="checkbox" data-p="${path}.deloadLastWeek" data-t="bool" ${b.deloadLastWeek ? 'checked' : ''} style="width:20px;height:20px"></div>
+      </div>
+      <details><summary>Progression across the block</summary>
+        <div class="row">
+          ${field('RIR shift, week 1', numInput(path + '.rirShiftStart', b.rirShiftStart, { min: -3, max: 3, step: 0.5 }))}
+          ${field('RIR shift, last week', numInput(path + '.rirShiftEnd', b.rirShiftEnd, { min: -3, max: 3, step: 0.5 }))}
+          ${field('% added per week', numInput(path + '.percentStep', Math.round((b.percentStep || 0) * 1000) / 10, { min: 0, max: 5, step: 0.25 }).replace('data-t="num"', 'data-t="pct"'))}
+        </div>
+        <p class="hint">RIR shift moves every RIR / rep-range target across the block (negative = harder). “% added per week” raises % of 1RM sets each week.</p>
+      </details>
+      ${b.days.map((d, di) => renderDay(d, `${path}.days.${di}`, di, b.days.length)).join('')}
+      <div class="row" style="margin-top:12px"><button class="ghost fixed" data-act="addday" data-p="${path}">+ Add day</button></div>
+    </div>`;
+  }
+
+  function renderEditor() {
+    const ed = document.getElementById('editor');
+    ed.innerHTML = `<div class="card" style="margin-bottom:18px">
+        <label>Program name</label><input data-p="name" data-t="str" value="${esc(plan.name)}" style="font-size:18px;font-weight:700">
+      </div>
+      ${plan.blocks.map(renderBlock).join('')}
+      <button class="primary" data-act="addblock" data-p="" style="width:100%">+ Add block</button>`;
+    refresh();
+  }
+
+  function refresh() {
+    const errs = validate();
+    document.getElementById('validation').innerHTML = errs.length
+      ? `<ul class="errors">${errs.slice(0, 8).map(e => `<li>${esc(e)}</li>`).join('')}${errs.length > 8 ? `<li>…and ${errs.length - 8} more</li>` : ''}</ul>`
+      : '<div class="ok">✓ Ready to import into Ferrum</div>';
+    document.getElementById('btnDownload').disabled = errs.length > 0;
+    const weeks = plan.blocks.reduce((a, b) => a + (+b.weeks || 0), 0);
+    const sessions = plan.blocks.reduce((a, b) => a + (+b.weeks || 0) * b.days.length, 0);
+    const days = plan.blocks.flatMap(b => b.days);
+    const avg = days.length ? Math.round(days.reduce((a, d) => a + dayMinutes(d), 0) / days.length) : 0;
+    const muscles = {};
+    plan.blocks[0]?.days.forEach(d => d.exercises.forEach(e => { const info = BY_ID[e.exercise]; if (info) info.muscles.forEach(m => muscles[m] = (muscles[m] || 0) + totalSets(e)); }));
+    const top = Object.entries(muscles).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    document.getElementById('summary').innerHTML =
+      `<div class="stat"><span>Blocks</span><b>${plan.blocks.length}</b></div>
+       <div class="stat"><span>Length</span><b>${weeks} weeks</b></div>
+       <div class="stat"><span>Sessions</span><b>${sessions}</b></div>
+       <div class="stat"><span>Avg session</span><b>~${avg} min</b></div>
+       ${top.length ? `<div style="margin-top:8px"><label>Sets per cycle in block 1 (primary muscle)</label>${top.map(([m, n]) => `<span class="pill">${esc(m)} · ${n}</span>`).join('')}</div>` : ''}`;
+    document.querySelectorAll('[data-meta]').forEach(el => { const d = getPath(plan, el.dataset.meta); if (d) el.textContent = `${d.exercises.length} ex · ~${dayMinutes(d)} min`; });
+    save();
+  }
+
+  // ---------- events
+  const ed = document.getElementById('editor');
+  ed.addEventListener('input', ev => {
+    const t = ev.target; const p = t.dataset.p; if (!p) return;
+    let v;
+    switch (t.dataset.t) {
+      case 'bool': v = t.checked; break;
+      case 'str': v = t.value; break;
+      case 'int': v = t.value === '' ? '' : Math.round(Number(t.value)); break;
+      case 'pct': v = t.value === '' ? '' : Number(t.value) / 100; break;
+      default: v = t.value === '' ? '' : Number(t.value);
+    }
+    setPath(plan, p, v); refresh();
+  });
+  ed.addEventListener('change', ev => {
+    const t = ev.target;
+    if (t.dataset.type) {   // set type changed: rebuild that group with sensible defaults
+      const s = getPath(plan, t.dataset.type); const n = setGroup(t.value); n._id = s._id; n.count = s.count;
+      setPath(plan, t.dataset.type, n); renderEditor();
+    } else if (t.tagName === 'SELECT' && t.dataset.p) { renderEditor(); }
+  });
+  ed.addEventListener('click', ev => {
+    const b = ev.target.closest('[data-act]'); if (!b || b.disabled) return;
+    const act = b.dataset.act, p = b.dataset.p;
+    const parts = p ? p.split('.') : [];
+    const idx = parts.length ? Number(parts.pop()) : 0;
+    const arr = parts.length ? getPath(plan, parts.join('.')) : null;
+    const clone = o => JSON.parse(JSON.stringify(o), (k, v) => k === '_id' ? uid() : v);
+    switch (act) {
+      case 'up': [arr[idx - 1], arr[idx]] = [arr[idx], arr[idx - 1]]; break;
+      case 'down': [arr[idx + 1], arr[idx]] = [arr[idx], arr[idx + 1]]; break;
+      case 'del': arr.splice(idx, 1); break;
+      case 'dup': { const c = clone(arr[idx]); c.name += ' copy'; arr.splice(idx + 1, 0, c); break; }
+      case 'addblock': plan.blocks.push(block(plan.blocks.length + 1)); break;
+      case 'addday': { const bl = getPath(plan, p); bl.days.push(day(bl.days.length + 1)); break; }
+      case 'addset': getPath(plan, p).sets.push(setGroup('range')); break;
+      case 'addex': openPicker(id => { getPath(plan, p).exercises.push(exercise(id)); renderEditor(); }); return;
+      case 'pick': openPicker(id => { const e = getPath(plan, p); e.exercise = id; renderEditor(); }); return;
+    }
+    renderEditor();
+  });
+
+  // ---------- picker
+  const dlg = document.getElementById('picker');
+  let pickCb = null, pickPattern = '';
+  function openPicker(cb) {
+    pickCb = cb; pickPattern = '';
+    const patterns = [...new Set(LIB.map(e => e.pattern))];
+    document.getElementById('pickerChips').innerHTML = ['', ...patterns].map(p => `<button class="chip ${p === '' ? 'on' : ''}" data-pat="${esc(p)}">${p || 'All'}</button>`).join('');
+    document.getElementById('pickerSearch').value = '';
+    renderPickerList(); dlg.showModal(); document.getElementById('pickerSearch').focus();
+  }
+  function renderPickerList() {
+    const q = document.getElementById('pickerSearch').value.toLowerCase().trim();
+    const rows = LIB.filter(e => (!pickPattern || e.pattern === pickPattern) && (!q || e.name.toLowerCase().includes(q) || e.muscles.join(' ').toLowerCase().includes(q)));
+    document.getElementById('pickerList').innerHTML = rows.length
+      ? rows.map(e => `<button class="opt" data-id="${e.id}"><span>${esc(e.name)}<br><small>${esc(e.muscles.join(', '))}</small></span><small>${esc(e.equipment)}</small></button>`).join('')
+      : '<div class="empty">No matches</div>';
+  }
+  document.getElementById('pickerSearch').addEventListener('input', renderPickerList);
+  document.getElementById('pickerChips').addEventListener('click', ev => {
+    const c = ev.target.closest('[data-pat]'); if (!c) return;
+    pickPattern = c.dataset.pat;
+    document.querySelectorAll('#pickerChips .chip').forEach(x => x.classList.toggle('on', x === c));
+    renderPickerList();
+  });
+  document.getElementById('pickerList').addEventListener('click', ev => {
+    const o = ev.target.closest('[data-id]'); if (!o) return;
+    dlg.close(); if (pickCb) pickCb(o.dataset.id);
+  });
+  document.getElementById('pickerClose').onclick = () => dlg.close();
+
+  // ---------- header + side controls
+  document.getElementById('btnDownload').onclick = download;
+  document.getElementById('btnNew').onclick = () => { if (confirm('Start a new program? Unsaved changes in the current one are lost.')) { plan = blank(); renderEditor(); } };
+  document.getElementById('btnExample').onclick = () => { if (confirm('Replace the current program with the example?')) { plan = example(); renderEditor(); } };
+  document.getElementById('btnImport').onclick = () => document.getElementById('fileInput').click();
+  document.getElementById('fileInput').addEventListener('change', async ev => {
+    const f = ev.target.files[0]; ev.target.value = ''; if (!f) return;
+    try { plan = fromFile(JSON.parse(await f.text())); renderEditor(); toast('Opened ' + f.name); }
+    catch (e) { toast('Could not open that file: ' + e.message); }
+  });
+  const unitSel = document.getElementById('unit'); unitSel.value = unit;
+  unitSel.onchange = () => {
+    const next = unitSel.value; if (next === unit) return;
+    plan.blocks.forEach(b => b.days.forEach(d => d.exercises.forEach(e => e.sets.forEach(s => {
+      if (s.type === 'fixed') s.weight = Math.round((next === 'lb' ? s.weight * KG : s.weight / KG) * 10) / 10;
+    }))));
+    unit = next; localStorage.setItem('ferrum-unit', unit); renderEditor();
+  };
+
+  window.ferrumDebug = { exportJSON: () => JSON.stringify(toFile(), null, 2), validate };
+  renderEditor();
+})();
+</script>
+</body>
+</html>

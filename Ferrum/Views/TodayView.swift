@@ -138,18 +138,15 @@ struct TodayView: View {
 
     private var recent: some View {
         VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(text: "Recent sessions")
+            HStack {
+                SectionHeader(text: "Recent sessions")
+                Spacer()
+                NavigationLink { HistoryView() } label: { Text("See all").font(.subheadline.weight(.semibold)) }
+            }
             let done = sessions.filter(\.isFinished).prefix(5)
             if done.isEmpty { Text("Finished workouts appear here.").foregroundStyle(t.secondary) }
             ForEach(Array(done)) { s in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(s.dayName).foregroundStyle(t.text).font(.subheadline.weight(.semibold))
-                        Text(s.date.formatted(date: .abbreviated, time: .omitted)).font(.caption).foregroundStyle(t.secondary)
-                    }
-                    Spacer()
-                    Text("\(s.sets.filter(\.isDone).count) sets").font(.caption).foregroundStyle(t.secondary)
-                }.card()
+                NavigationLink { SessionDetailView(session: s) } label: { SessionRow(session: s) }.buttonStyle(.plain)
             }
         }
     }

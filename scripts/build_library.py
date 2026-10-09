@@ -14,6 +14,15 @@ def slug(s):
 
 ALIASES = {"chest": "chest-pectorals"}
 
+# Name-based inference is a first guess; these ids are corrected by hand.
+EQUIPMENT_OVERRIDES = {
+    "chest-supported-t-bar-row": "machine", "goblet-squat": "dumbbell", "cossack-squat": "bodyweight",
+    "bulgarian-split-squat": "dumbbell", "single-leg-romanian-deadlift": "dumbbell",
+    "hip-thrust": "bodyweight", "hammer-curl": "dumbbell", "concentration-curl": "dumbbell",
+    "spider-curl": "dumbbell", "wrist-curl": "dumbbell", "reverse-wrist-curl": "dumbbell",
+    "nordic-curl": "bodyweight", "preacher-curl": "dumbbell",
+}
+
 def equipment_for(name, pattern):
     n = name.lower()
     rules = [
@@ -119,6 +128,7 @@ def main():
         eid = slug(name)
         c = catalog.get(eid)
         eq, uncertain = equipment_for(name, pattern)
+        if eid in EQUIPMENT_OVERRIDES: eq = EQUIPMENT_OVERRIDES[eid]
         if not c:
             warnings.append(f"no catalog entry: {name}")
             c = {"primary": [], "secondary": [], "cue": ""}
@@ -145,6 +155,12 @@ def main():
     (OUT / "exercises.json").write_text(json.dumps(exercises, indent=1, ensure_ascii=False))
     (OUT / "muscles.json").write_text(json.dumps(muscles, indent=1, ensure_ascii=False))
     (OUT / "rir.json").write_text(json.dumps(parse_rir(), indent=1, ensure_ascii=False))
+    # Compact library for the program-builder website (opens from file://, so ship it as a script).
+    muscle_names = {m["id"]: m["name"] for m in muscles}
+    web = [{"id": e["id"], "name": e["name"], "pattern": e["pattern"], "equipment": e["equipment"],
+            "muscles": [muscle_names.get(x, x) for x in e["primary"]]} for e in exercises]
+    web_dir = ROOT / "web"; web_dir.mkdir(exist_ok=True)
+    (web_dir / "exercises-data.js").write_text("window.FERRUM_EXERCISES = " + json.dumps(web, ensure_ascii=False, separators=(",", ":")) + ";\n")
     guessed = [e["name"] for e in exercises if e["equipmentGuess"]]
     print(f"{len(exercises)} exercises, {len(muscles)} muscles")
     print(f"equipment guessed (review): {guessed}")

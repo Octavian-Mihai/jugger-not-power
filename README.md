@@ -27,3 +27,6 @@ xcodegen generate
 open Ferrum.xcodeproj
 ```
 Engine tests: `cd Packages/FerrumCore && swift test`.
+
+## Program builder website
+`web/` is a standalone page for writing a program on a computer. Open `web/index.html` in a browser (no server or build step), build blocks, days and exercises, then **Download for Ferrum**. In the app: Programs → **Import from file**. The same menu exports any program as a `.ferrum.json` file. The file format is documented in `Packages/FerrumCore/Sources/FerrumCore/Interchange.swift`.
