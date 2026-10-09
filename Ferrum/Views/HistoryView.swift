@@ -88,6 +88,11 @@ struct SessionDetailView: View {
         }
         .background(t.bg.ignoresSafeArea())
         .navigationTitle(session.dayName).navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                NavigationLink { WorkoutSummaryView(session: session) { dismiss() } } label: { Label("Summary", systemImage: "chart.bar.doc.horizontal") }
+            }
+        }
         .confirmationDialog("Delete this workout?", isPresented: $confirmDelete, titleVisibility: .visible) {
             Button("Delete", role: .destructive) { context.delete(session); dismiss() }
         } message: { Text("Its sets are removed from your progress charts too.") }

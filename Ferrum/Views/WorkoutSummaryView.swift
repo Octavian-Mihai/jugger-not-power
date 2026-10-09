@@ -43,13 +43,46 @@ struct WorkoutSummaryView: View {
                 if !prs.isEmpty { prSection }
                 muscleSection
                 exerciseSection
-                ShareLink(item: shareText) { Label("Share summary", systemImage: "square.and.arrow.up") }
-                    .font(.subheadline.weight(.semibold)).padding(.top, 4)
+                shareButton
                 Button("Done", action: onDone).buttonStyle(PrimaryButton()).padding(.top, 8)
             }
             .padding(16)
         }
         .background(t.bg.ignoresSafeArea())
+    }
+
+    // MARK: share
+
+    @State private var shareImage: UIImage?
+
+    /// Sends the summary as a picture, so it lands in Messages (or anywhere else) looking the same as it does here.
+    @ViewBuilder private var shareButton: some View {
+        Group {
+            if let shareImage {
+                ShareLink(item: Image(uiImage: shareImage),
+                          subject: Text("\(session.dayName) workout"),
+                          message: Text(shareText),
+                          preview: SharePreview("\(session.dayName) · \(done.count) sets", image: Image(uiImage: shareImage))) {
+                    Label("Share as image", systemImage: "square.and.arrow.up")
+                }
+            } else {
+                Label("Preparing image…", systemImage: "square.and.arrow.up").foregroundStyle(t.secondary)
+            }
+        }
+        .font(.subheadline.weight(.semibold)).padding(.top, 4)
+        .task(id: session.persistentModelID) { renderShareImage() }
+    }
+
+    private func renderShareImage() {
+        let card = ShareCard(session: session, sets: done, volumeText: volumeText(volume),
+                             prs: prs.map { ($0.id, $0.e1RM) }, setLine: setLine)
+            .environment(store)
+            .environment(\.theme, t)
+            .environment(\.colorScheme, t.dark ? .dark : .light)
+        let renderer = ImageRenderer(content: card)
+        renderer.scale = 3
+        renderer.proposedSize = .init(width: 390, height: nil)
+        shareImage = renderer.uiImage
     }
 
     // MARK: sections
@@ -192,5 +225,69 @@ struct WorkoutSummaryView: View {
         }
         if !prs.isEmpty { lines.append("PRs: " + prs.map { store.library.name(for: $0.id) }.joined(separator: ", ")) }
         return lines.joined(separator: "\n")
+    }
+}
+
+/// The picture that gets shared: compact, self-contained, always the same width.
+private struct ShareCard: View {
+    let session: WorkoutSession
+    let sets: [LoggedSet]
+    let volumeText: String
+    let prs: [(id: String, e1RM: Double)]
+    let setLine: ([LoggedSet]) -> String
+    @Environment(Store.self) private var store
+    @Environment(\.theme) private var t
+
+    private var exerciseIDs: [String] { session.exerciseIDsInOrder.filter { id in sets.contains { $0.exerciseID == id } } }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Text("FERRUM").font(.caption.weight(.black)).tracking(3).foregroundStyle(t.accent)
+                Spacer()
+                Text(session.date.formatted(date: .abbreviated, time: .omitted)).font(.caption).foregroundStyle(t.secondary)
+            }
+            Text(session.dayName).font(.system(size: 34, weight: .black)).foregroundStyle(t.text)
+
+            HStack(spacing: 10) {
+                tile("\(sets.count)", "sets")
+                tile(session.duration.map { "\(max(1, Int($0 / 60)))m" } ?? "—", "time")
+                tile(volumeText, store.unit.label)
+                if !prs.isEmpty { tile("\(prs.count)", prs.count == 1 ? "PR" : "PRs", highlight: true) }
+            }
+
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(exerciseIDs.prefix(8), id: \.self) { id in
+                    HStack(alignment: .top, spacing: 10) {
+                        ExerciseThumb(file: store.library.exercise(id)?.image, size: 36)
+                        VStack(alignment: .leading, spacing: 2) {
+                            HStack(spacing: 6) {
+                                Text(store.library.name(for: id)).font(.subheadline.weight(.semibold)).foregroundStyle(t.text)
+                                if prs.contains(where: { $0.id == id }) {
+                                    Text("PR").font(.system(size: 9, weight: .heavy)).padding(.horizontal, 5).padding(.vertical, 1)
+                                        .background(t.good, in: Capsule()).foregroundStyle(.black)
+                                }
+                            }
+                            Text(setLine(sets.filter { $0.exerciseID == id })).font(.caption).foregroundStyle(t.secondary)
+                        }
+                    }
+                }
+                if exerciseIDs.count > 8 {
+                    Text("+ \(exerciseIDs.count - 8) more exercises").font(.caption).foregroundStyle(t.secondary)
+                }
+            }
+        }
+        .padding(20)
+        .frame(width: 390, alignment: .leading)
+        .background(t.bg)
+    }
+
+    private func tile(_ value: String, _ label: String, highlight: Bool = false) -> some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(value).font(.title3.bold()).foregroundStyle(highlight ? t.good : t.accent).lineLimit(1).minimumScaleFactor(0.6)
+            Text(label).font(.caption2).foregroundStyle(t.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading).padding(10)
+        .background(t.card, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
     }
 }
