@@ -31,7 +31,7 @@
   "cue": "Set the scaps, then pull the handle to the upper chest. Elbows stay in; don’t lean way back.",
   "equipment": "cable",
   "equipmentGuess": false,
-  "image": "close-grip-lat-pulldown.jpeg"
+  "image": "close-grip-lat-pulldown.jpg"
  },
  {
   "id": "wide-grip-lat-pulldown",
@@ -282,7 +282,7 @@
   "cue": "Brace before you descend. Sit between the hips, keep mid-foot pressure, and stand without collapsing the chest.",
   "equipment": "barbell",
   "equipmentGuess": false,
-  "image": "back-squat.jpeg"
+  "image": "back-squat.jpg"
  },
  {
   "id": "front-squat",
@@ -703,7 +703,7 @@
   "cue": "Balance on one leg, extend the other forward. Sit as deep as you can control and stand without collapsing.",
   "equipment": "bodyweight",
   "equipmentGuess": false,
-  "image": "pistol-squat.jpeg"
+  "image": "pistol-squat.jpg"
  },
  {
   "id": "glute-ham-raise",
@@ -1450,7 +1450,7 @@
   "cue": "Set the scaps and keep a slight arch. Lower to the upper chest with control; don’t bounce or flare the elbows out wide.",
   "equipment": "barbell",
   "equipmentGuess": false,
-  "image": "incline-barbell-bench-press.jpeg"
+  "image": "incline-barbell-bench-press.jpg"
  },
  {
   "id": "incline-dumbbell-press",
@@ -1552,7 +1552,7 @@
   "cue": "Set the seat so the handles line up under the shoulders. Lean forward for more chest; stay upright for triceps.",
   "equipment": "machine",
   "equipmentGuess": false,
-  "image": "dip-machine.jpeg"
+  "image": "dip-machine.jpg"
  },
  {
   "id": "push-up",

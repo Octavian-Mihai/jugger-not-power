@@ -1,0 +1,34 @@
+name: Ferrum
+options:
+  bundleIdPrefix: app.ferrum
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1,2"
+packages:
+  FerrumCore:
+    path: Packages/FerrumCore
+targets:
+  Ferrum:
+    type: application
+    platform: iOS
+    sources:
+      - Ferrum
+    dependencies:
+      - package: FerrumCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.ferrum.ios
+        PRODUCT_NAME: Ferrum
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_CFBundleDisplayName: Ferrum
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor

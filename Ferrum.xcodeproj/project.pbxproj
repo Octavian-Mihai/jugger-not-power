@@ -1,0 +1,1126 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C73D6E69714D48419D6EC6 /* preacher-curl-machine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0657E32A2D237B791FCC87B8 /* preacher-curl-machine.jpg */; };
+		016BC93946EA16B2DA448A59 /* seated-leg-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F20692EDCCCE1DA440B4BEE9 /* seated-leg-curl.jpg */; };
+		018E2D508A4E1FABEFEAA05A /* ab-wheel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAE98C340871451E482B5640 /* ab-wheel.jpg */; };
+		0544C4C4F8359A778E1A7C4B /* concentration-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1B2CB4717FE063857527F /* concentration-curl.jpg */; };
+		061E7F3A7DC608DA158A326F /* guide-guide-rhomboids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C167AA379AF61914BC1F9627 /* guide-guide-rhomboids.jpg */; };
+		07159C2E0F6099C099684723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8556A66EDA813108355FC317 /* Assets.xcassets */; };
+		071637BF3B9BD942A8E62501 /* zercher-squat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5679DB1CA5E4D5C6D404A2B1 /* zercher-squat.png */; };
+		07FBE8A40195EA91C574205B /* one-arm-dumbbell-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A66F4B2BAD4FC1E01140A /* one-arm-dumbbell-row.jpg */; };
+		0A7DA7E72998198BDA5B3DC8 /* reverse-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE3C6CFAA0B917FA7DC69A89 /* reverse-curl.jpg */; };
+		0AC14B80ABBF7E373950134B /* machine-hip-abduction.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C244859D2D2FA93FB6FC4336 /* machine-hip-abduction.jpg */; };
+		0D4352512B66BA95A63563B4 /* turkish-get-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFA295F41684CA056CBF5BD5 /* turkish-get-up.jpg */; };
+		1180FC766CB7E44448B78CB5 /* guide-guide-biceps.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8130BC30CDDF4CC10DA496D /* guide-guide-biceps.jpg */; };
+		125246340F64359F1AE9C52E /* glute-kickback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A85CB998B9C1A2E2121F52C4 /* glute-kickback.jpg */; };
+		13F23C01B31834E931A8005D /* reverse-pec-deck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1F27A6B0559266CC4782BBF /* reverse-pec-deck.jpg */; };
+		13FF0EDD864378C691E567FA /* back-extension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6812C44B4E59814A6089A5 /* back-extension.jpg */; };
+		15175676B65B7C518C0766CF /* incline-barbell-bench-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1524A0376B295FCE46F1EEFC /* incline-barbell-bench-press.jpg */; };
+		151C36651336D8B3D61558CD /* tricep-pushdown.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C3B7F98E559A826D4819F8 /* tricep-pushdown.png */; };
+		17E9A2B3A7F38629856C71D4 /* romanian-deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = 75412835A6427795EAB5C19B /* romanian-deadlift.png */; };
+		1862AD434E8FAF9CA8035030 /* reverse-wrist-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7D66E47A6B12BB36977F58 /* reverse-wrist-curl.jpg */; };
+		1A99C82CFE712778E2A3BD98 /* reverse-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DE13E648AE7A7E820FF106 /* reverse-lunge.jpg */; };
+		1BAC043BBEAC3499A8509D71 /* hand-gripper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B6EA2ECAFA0559C4E194ABF /* hand-gripper.jpg */; };
+		205E48E16DA480A4D4B0961F /* pec-deck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31FCD70549D194C87EC1E43F /* pec-deck.jpg */; };
+		209330561700F39C302F8A37 /* ab-crunch-machine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79CB2821EBC68362A097585E /* ab-crunch-machine.jpg */; };
+		2285FED86237AEDA8EF61B0D /* guide-guide-core-abs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F50DDA755BBB1911DAF9604D /* guide-guide-core-abs.jpg */; };
+		267A530A40DFFE3D93680690 /* pendulum-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C74CB009778BFE947F706273 /* pendulum-squat.jpg */; };
+		29BD3E2EECF892A358DF0741 /* skull-crusher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C45F3F6EF38131AC9492D16 /* skull-crusher.jpg */; };
+		2A13FCBFC8354ECB12B484CF /* back-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB47EA8C7C692AA914E43E63 /* back-squat.jpg */; };
+		2A5ABCC5B0AC932A6007B510 /* incline-dumbbell-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0655356FB8A826099685EE62 /* incline-dumbbell-press.jpg */; };
+		2B5FA5B8DA1C586F0BE79556 /* rir.json in Resources */ = {isa = PBXBuildFile; fileRef = B9F7E69860D3AF3BBCFA35E4 /* rir.json */; };
+		2BF4D1AEF74FAA8514FCACC1 /* inverted-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B4DAB00B3FA4652B3A0D7C8 /* inverted-row.jpg */; };
+		2C37475F41CF78D62CB7242F /* zercher-jefferson-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94A7EDA5F8E1CFA5DA45CE62 /* zercher-jefferson-curl.jpg */; };
+		3586EAF869EC48E288732659 /* deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = D61DA05253CCA3E77C19A88D /* deadlift.png */; };
+		3658F0D8526B19C4BA503E05 /* guide-guide-forearms-grip.png in Resources */ = {isa = PBXBuildFile; fileRef = F24FBD3373CDF21A0CABF4C1 /* guide-guide-forearms-grip.png */; };
+		36B5753DDB852D4D2D490DDD /* front-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9464543DFD681B596EE50718 /* front-raise.jpg */; };
+		36D363F29C2FA73EA7BF45B3 /* goblet-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBA8E7A07E8B5978F7256D /* goblet-squat.jpg */; };
+		380280540466E170B8ACF34C /* tibialis-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CCA29E0B7E45BCA3681E537 /* tibialis-raise.jpg */; };
+		38945F82BE3D33E4675D61E1 /* belt-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6482C0EB50C4D353133916 /* belt-squat.jpg */; };
+		39BBA0EAA90A1DA880A82318 /* bulgarian-split-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE8C6458A85F6494182ADF /* bulgarian-split-squat.jpg */; };
+		3C1024B678FC6EEE441A546C /* zercher-deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E081A52281AC747B9DD6AC8E /* zercher-deadlift.jpg */; };
+		3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E2FA2063D273C9CC14660E /* LibraryView.swift */; };
+		3EDC1993FA380964BFEB7551 /* cable-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACCC1E5A692BF7FAFC4EDF6B /* cable-curl.jpg */; };
+		3FA335D5E11F8A4092467C85 /* hip-thrust.png in Resources */ = {isa = PBXBuildFile; fileRef = A26AE64C5D6E1F996C9DF9AD /* hip-thrust.png */; };
+		405599580B51BA4A88D922B3 /* clean-and-jerk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35CE34C97B021A3C43A87F72 /* clean-and-jerk.jpg */; };
+		40E36B218C04247AE3F8C036 /* sit-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B384C0A52BEF0AE987917039 /* sit-up.jpg */; };
+		415A357DDEADC3600C77A60C /* reverse-hyper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE16B12AAFAB2BF76B79A385 /* reverse-hyper.jpg */; };
+		43270057D78EB22EAE5DD480 /* machine-shoulder-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADCD4BF8B47814B88E12825C /* machine-shoulder-press.jpg */; };
+		43B0974A8D4467AC354BA53C /* guide-guide-triceps.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FB0852783A51547DAF15BBF /* guide-guide-triceps.jpg */; };
+		4462190F846A03E547A926E0 /* ProgramsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F448AD430FA7E12F51667 /* ProgramsView.swift */; };
+		44EB07886EE78D336DC0CCB5 /* chest-supported-t-bar-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E240374F11E00C79D28B4FA1 /* chest-supported-t-bar-row.jpg */; };
+		4582D0C774358587D0E555D0 /* kettlebell-high-pull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D53993D832F7EC8E379C3CA /* kettlebell-high-pull.jpg */; };
+		46C22D048B0C1F9679490A9A /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE564D438D2A8057624394 /* TodayView.swift */; };
+		46DC0A2AD4BF40700FD3DDDC /* dip-machine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EA68E514E2EAA0FDF467BA2 /* dip-machine.jpg */; };
+		4BED4EF943E481C7D9757192 /* zercher-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C654BED5BA1FC92A4880C4BD /* zercher-lunge.jpg */; };
+		4BFE460ACA57EA7BC78C4123 /* cable-lateral-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E06C4AF935BCDFE98A31F3BF /* cable-lateral-raise.jpg */; };
+		50CAAFB7046E333A787CEF57 /* incline-dumbbell-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0153A70754E1BF01FF9A74F0 /* incline-dumbbell-curl.jpg */; };
+		520A5A0DCFC56D3C89E30265 /* wide-grip-lat-pulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98F4965B53473E61E3F34ED /* wide-grip-lat-pulldown.jpg */; };
+		5296B91041D520D93B9B283C /* landmine-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B571F84F8ACF0F4A3C7305F7 /* landmine-squat.jpg */; };
+		529E0C2CA07AB3F7A9947BF2 /* barbell-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 232B09AC95493F23BFA81D11 /* barbell-curl.jpg */; };
+		5377E5024DE5593379874358 /* machine-row.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FAC312CFE3A051B19E4CB5 /* machine-row.png */; };
+		55B38641DD62918C7307D50D /* landmine-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF37AC0196100D1604D55868 /* landmine-row.jpg */; };
+		55CDDE60B38BCFC322454092 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9675A49E1819DAFA47696 /* RootView.swift */; };
+		56D9308DC3C503F3BA61CAF6 /* single-leg-romanian-deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1660EF92D5A6B5B7719A467 /* single-leg-romanian-deadlift.jpg */; };
+		583E4D30C3C94B9785A7D660 /* wrist-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E23DEE33E57F40CB73A4C5 /* wrist-curl.jpg */; };
+		5BB29E107D5702CF0C8DACA2 /* guide-guide-posterior-delts.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EA23564D9276AD3218CB17 /* guide-guide-posterior-delts.png */; };
+		5C2D85346C64D930DED16250 /* dumbbell-fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 585D72EE4318E26A397A1627 /* dumbbell-fly.jpg */; };
+		615179C4110408FCC72718DB /* lying-leg-curl.png in Resources */ = {isa = PBXBuildFile; fileRef = 609EB140E6EFE51F12977397 /* lying-leg-curl.png */; };
+		632540E31F3B9491ED597AAD /* seated-cable-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60C5C650D2D26EBCC1370145 /* seated-cable-row.jpg */; };
+		6394C1771E1AB09E45A516E7 /* cable-pullover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62F56A65A8410F99998F5EC2 /* cable-pullover.jpg */; };
+		641EE9F7BE1D1ADAF7ACC1F2 /* reverse-squat.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B57C0D937848A9F5D2BC9D /* reverse-squat.png */; };
+		645D2EBF09C8A2CC3D70EF1C /* rear-delt-fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4FBEB5502F95926ED5265CE2 /* rear-delt-fly.jpg */; };
+		67A50C036A0F3B79DC6D825D /* machine-chest-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6B453F5B88C02583DCCCCF /* machine-chest-press.png */; };
+		68D442522A4C57F01CA14602 /* lat-pulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B804A9C7F7A6D75DD2EC11AC /* lat-pulldown.jpg */; };
+		6906804D8873B2514D1F82E5 /* kettlebell-clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFD4066098E103C6315BD5F0 /* kettlebell-clean.jpg */; };
+		69C0059EAB6AF0EE195C95D0 /* forward-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FC389610E859E448BDE07D1 /* forward-lunge.jpg */; };
+		69C238DFB34FC992E937E779 /* step-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02B6267AB165C504F1600C41 /* step-up.jpg */; };
+		6AB943E2B746AF11B2E209A5 /* cable-crunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB43269614032231BAB0C6 /* cable-crunch.jpg */; };
+		6F255CD433578E45899BF514 /* kettlebell-clean-and-jerk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC15DA9923AF95408BADB825 /* kettlebell-clean-and-jerk.jpg */; };
+		721A9CAAC02A1275BE9B0EF2 /* ProgramBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E9833A0BB132099E41D6E /* ProgramBuilderView.swift */; };
+		725F48A8E9A0BCD71C311FAE /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABB4BC37E52622F101A17B /* WorkoutView.swift */; };
+		7425069C83A402D566E12C69 /* lateral-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C69ECE55F6D44F37F83E50DE /* lateral-raise.jpg */; };
+		747F09801B381AC951D775B3 /* barbell-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC23B96143B9AD2E0BB5A166 /* barbell-row.jpg */; };
+		751460D1D097A24691A2F431 /* spider-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 599878AED7897082E0CE8EF4 /* spider-curl.jpg */; };
+		7A1975C394C4E82E26F3C9AF /* guide-guide-tibialis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F6358D1C0B59672905C18B5 /* guide-guide-tibialis.jpg */; };
+		7A34E98F13B2EA90967D91FF /* guide-guide-quadriceps.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0254A3E91D1E562DCCD5B3 /* guide-guide-quadriceps.png */; };
+		7BA53D694DB9F967D3E04980 /* barbell-shrug.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED6D52B7E391F3A2304D454 /* barbell-shrug.png */; };
+		7C0E3878109D83590A461077 /* box-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4F2FC7FCF323AD95A3F94F5 /* box-squat.jpg */; };
+		7E96AB4316F1C0F4FAB74727 /* dumbbell-shoulder-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9469A2A59FE360BD17384FC /* dumbbell-shoulder-press.jpg */; };
+		7F3FABDEE2EA4DD12739AAFD /* hammer-curl.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DF845B1AC369FB04C5DEFB /* hammer-curl.png */; };
+		7FA51E27CC845ADBE21CD33E /* machine-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB4FAB86F7E409948C1F7620 /* machine-press.jpg */; };
+		80173608B0621678021A2CD1 /* snatch-pull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD0F5C57AFF0B4C9450FABEF /* snatch-pull.jpg */; };
+		812F9F31352A236AC6CEDCB7 /* dumbbell-pullover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CCD2C60678DF3043533D249 /* dumbbell-pullover.jpg */; };
+		835FC17994DE04A4A3162545 /* clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 836F978BF8FFA3339F2F561E /* clean.jpg */; };
+		877C4FBB2FD242BFACCDF7F1 /* guide-guide-hip-flexors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0DD2E0F85E4285DE5F68B1 /* guide-guide-hip-flexors.jpg */; };
+		88984F9303A39779DB7E684B /* guide-guide-abductors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F866F951BCA66E63B15B9E0A /* guide-guide-abductors.jpg */; };
+		8A10748F57693F5D5265C946 /* leg-extension.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C2177FED7F4ED05A1EFAB /* leg-extension.png */; };
+		8B170DBA1B0365BE91629ADA /* landmine-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB9C9B043C3F1DBD20D84C19 /* landmine-press.jpg */; };
+		8C13BCF164CAEAF61E98569C /* face-pull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E77F6571D2E281DFA4C7BD /* face-pull.jpg */; };
+		8DD47D2DA4A6A4C5189EBB98 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3EA71479549397DA1C27E /* OnboardingView.swift */; };
+		8E722E428D9BAF6CC1A80E36 /* ReadinessSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8F424629600436335E8EF /* ReadinessSheet.swift */; };
+		9119C8405132C0765CB2999F /* calf-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B44FF48E56C908B8CEBB628 /* calf-raise.jpg */; };
+		9127EA5F8FBC84E7466B3A93 /* shoulder-external-rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41AC96071B05AA1181C8B928 /* shoulder-external-rotation.jpg */; };
+		920489FE06D198E07C1C563B /* guide-guide-erectors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AADFE019BF15B4DDA710D046 /* guide-guide-erectors.jpg */; };
+		9399C73EEDE2194028DF0A53 /* zercher-split-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB004868B0CB643221762875 /* zercher-split-squat.jpg */; };
+		93F1FAF0D5ECC696869AA587 /* FerrumCore in Frameworks */ = {isa = PBXBuildFile; productRef = EE8EDA4ADB7809687BD84184 /* FerrumCore */; };
+		9499B885EB0660E96E6704D9 /* dumbbell-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16D425154DA458FCC8D13091 /* dumbbell-curl.jpg */; };
+		99DE850550FAA39E90968B06 /* barbell-bench-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 138BE39E1DBC76C9DCAB899D /* barbell-bench-press.jpg */; };
+		9A0F79F7F1BCDDB90D325853 /* ProgressTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C53CC3FB254574663A74D /* ProgressTab.swift */; };
+		9A4B4A4D340659D5A9BAC509 /* exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = F95BD4085B688B34C4391D8F /* exercises.json */; };
+		9BEBC3567730D9838E01FCB3 /* decline-bench-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 560900C15F001B9BEF2EBA06 /* decline-bench-press.png */; };
+		9C86167C3C66C8E20B89107F /* kettlebell-swing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB0B57F42C4A3B26932EC1CF /* kettlebell-swing.jpg */; };
+		9EFA03AE1AABF813996A4C1C /* sissy-squat.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C8068AC1D804FF914C9B00 /* sissy-squat.png */; };
+		9F5F42BF4AA9BDDE818D374D /* kettlebell-snatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D6878C4CE5AF8BA52DEEF5 /* kettlebell-snatch.png */; };
+		A16B9CA7E449C10B843B7290 /* deficit-deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D5A24E196D5DF70893F2F6F /* deficit-deadlift.jpg */; };
+		A17DEC89D8BFC265C1E88C07 /* landmine-rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E6DC53DFFBDC902DA038BA5 /* landmine-rotation.jpg */; };
+		A1893C323057BD9400E284A7 /* leg-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B673ED033DDB84090C5A4FC /* leg-press.jpg */; };
+		A2A5677D5A3E20325DE881A7 /* assisted-dip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99062551ED9EF3849BB20D8A /* assisted-dip.jpg */; };
+		A31F9B07A0B44C553D44808E /* box-jump.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CD9265ACA1F8F495D2135A /* box-jump.png */; };
+		A606FE0F6303218A09567B7F /* pull-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE23240539E1E3068A941112 /* pull-up.jpg */; };
+		A6AAF8E2F5EB27A88E67AAF3 /* chest-supported-dumbbell-row.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CFAEE467FADF0DD5BE93E18 /* chest-supported-dumbbell-row.png */; };
+		A98E620364B5BF6DC3019609 /* hip-external-rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7941B43A8A92B5387C44476A /* hip-external-rotation.jpg */; };
+		AA36EA85A95E0A7086D7D768 /* farmers-walk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0ECE65535CA5A91326B1E99 /* farmers-walk.jpg */; };
+		ACEDF6897758735F0AECA241 /* assisted-pull-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 388FEF7CF2981DE17655EE30 /* assisted-pull-up.jpg */; };
+		B0063400B32A220CCBE718F7 /* cossack-squat.png in Resources */ = {isa = PBXBuildFile; fileRef = 22FE0B051B39D2EF03E80CF9 /* cossack-squat.png */; };
+		B0C5E93D41683443C0C08472 /* dumbbell-bench-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A6DF1F0E7E65CC56016E223 /* dumbbell-bench-press.png */; };
+		B0CE0CDB0C2B317619990DF7 /* guide-guide-anterior-delts.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E78FC9C17D57E301F5F218 /* guide-guide-anterior-delts.png */; };
+		B4148A354AFA35B69493F860 /* power-snatch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A74C02524790AE7FA5A2DA1C /* power-snatch.jpg */; };
+		B47DBC155A5137E48A494045 /* muscles.json in Resources */ = {isa = PBXBuildFile; fileRef = EE65F6FB2C640B8C8B8E4E0E /* muscles.json */; };
+		B4C0DA88B1EE085FC1E086B1 /* dumbbell-shrug.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2456659E7FA73A1E2D3B35CF /* dumbbell-shrug.jpg */; };
+		B63ADEC0C09A9BF11D7325AB /* one-arm-cable-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 752AE9988E0CC7CB65276C11 /* one-arm-cable-row.jpg */; };
+		B6B8FB7407800197EDA45E27 /* smith-machine-bench-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A7E70A6D36390DF8B103E96 /* smith-machine-bench-press.jpg */; };
+		B7D75979B8BDF71A48939A56 /* smith-machine-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB25003342F7E250D52F3011 /* smith-machine-squat.jpg */; };
+		B901BA14F9D218F60458C727 /* zercher-reverse-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7470F7B3E5265CC6C0AB8B66 /* zercher-reverse-lunge.jpg */; };
+		B91F92E16EA22178A07F1525 /* safety-bar-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AE13BF0D0E9146B2409D45A /* safety-bar-squat.jpg */; };
+		BA253CA7D0BE2E4C533C582D /* chin-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67D0F49AD596D0B02B7DB45 /* chin-up.jpg */; };
+		BC68CF3FC5B52442BF988A7E /* jefferson-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D72A17E0706D2F11722A323 /* jefferson-curl.jpg */; };
+		BC8FBB7534294F72F145F59D /* close-grip-bench-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31A0ECBC19E4594DC5696665 /* close-grip-bench-press.jpg */; };
+		BD98495FB9E01853CAFF6263 /* walking-lunge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E20093C138502AEEE0D6A58 /* walking-lunge.jpg */; };
+		BE8F1F0C788E1B52A466AF6F /* cable-fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 536CC57705D1D79CE951C5C9 /* cable-fly.jpg */; };
+		BFD88206609498071F00DF35 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59301CDAD3BB6C23299B768B /* NumberField.swift */; };
+		C248688C202DDB1693326F29 /* seated-good-morning.png in Resources */ = {isa = PBXBuildFile; fileRef = C8EE30310E3141F03F5D28C4 /* seated-good-morning.png */; };
+		C3E4BB1F975E8AB6BCD835CB /* hip-internal-rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5A47A7138CF95AA82EA8CF8 /* hip-internal-rotation.jpg */; };
+		C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */; };
+		C6AFA02981C59776419BE89A /* guide-guide-chest-pectorals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57CF80769F1C989E16BC0076 /* guide-guide-chest-pectorals.jpg */; };
+		C84BF927E4EEC4DB1538FFBC /* nordic-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B7421A398DCEE9A56F7D8F1 /* nordic-curl.jpg */; };
+		C8EEC92864A4AC37E53D0919 /* preacher-curl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B26D39689D476B27F2D2F94 /* preacher-curl.jpg */; };
+		CA46A00896E87F10A20EC37E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA2304641C357DB217F139 /* SettingsView.swift */; };
+		CEB91E74057B7B71F5DB56B8 /* cable-woodchop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78297712BBF6D075805776DB /* cable-woodchop.jpg */; };
+		CFC7ABEDA66496725501CC60 /* overhead-cable-triceps-extension.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CD2D72E9BFC1DC72738A02 /* overhead-cable-triceps-extension.png */; };
+		D0C3D20453F5DB1C93C23279 /* zercher-step-up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64D7F005FE54D82B0B006D2 /* zercher-step-up.jpg */; };
+		D0D113B0EEA2DE59AFA9C470 /* guide-guide-lateral-delts.png in Resources */ = {isa = PBXBuildFile; fileRef = B04BC2F8EF44737DDF282B70 /* guide-guide-lateral-delts.png */; };
+		D348DA3F455E318ACC1942AB /* hack-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20D423664373C12EB4A6D0E5 /* hack-squat.jpg */; };
+		D897F4CF3443287A2267B20C /* rack-pull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 174B3E646B5E81204B8C5D88 /* rack-pull.jpg */; };
+		D8EE36F764292955C6FD7C8B /* guide-guide-calves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A120B0F5C505389F560DF6C5 /* guide-guide-calves.jpg */; };
+		D9E9CEE2BAA1CDCE54FFCC4D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3942E5365C19C503B2B9D /* Store.swift */; };
+		DA0D2D5794B0D18A75FC927C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D885BD9302A488E1675886 /* Models.swift */; };
+		DC66C9821A3B2EC664879105 /* guide-guide-glutes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5776238891A960BB378ED893 /* guide-guide-glutes.jpg */; };
+		DCA869D0F95E1BF012AC5464 /* close-grip-lat-pulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41BA80C63A483AD3C398FE18 /* close-grip-lat-pulldown.jpg */; };
+		DE297CCEF15ED30827904862 /* guide-guide-hamstrings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F13FEFBA5628DCB454ECE41 /* guide-guide-hamstrings.jpg */; };
+		DE6320FBDA3A16F60E601E67 /* shoulder-internal-rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B7B6B1DE0AE6E59EE82C3C /* shoulder-internal-rotation.png */; };
+		DF972AE7F160DC40AEB08843 /* hanging-leg-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 599BD41E5D4027085A5E729E /* hanging-leg-raise.jpg */; };
+		E204ADC702A4C8BB5960A89F /* guide-guide-adductors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 260100C98402CF53B66D710E /* guide-guide-adductors.jpg */; };
+		E232DDBD6AA7BB22B00D1AE5 /* zercher-carry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 626F716E545564F890C4BCA2 /* zercher-carry.jpg */; };
+		E33BDB623E33B7EDDDA5D682 /* glute-ham-raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB4463ADDADD3408BA2ACF4 /* glute-ham-raise.jpg */; };
+		E575391356E4C3599A44E614 /* machine-hip-adduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C64FCF31ABFA557CCBE692C /* machine-hip-adduction.png */; };
+		E5DA762E57E623718490463B /* upright-row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1660127146B16F11C4644ADB /* upright-row.jpg */; };
+		E69FE44E7E6D37F8A2BF45A0 /* plank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A47DB148FECF0ED3DF168BAE /* plank.jpg */; };
+		E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A3D3553022AF8A35FA741 /* FerrumApp.swift */; };
+		E80F21FD945BADD6A1DF6CF8 /* barbell-hip-thrust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C53D4197B93F78D1264AC321 /* barbell-hip-thrust.jpg */; };
+		EA54ED8FC67733BC74129E4E /* dips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D1C345D4E8B5D786D3FC3 /* dips.jpg */; };
+		EB42E8532B700617AA28577B /* good-morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0BAAA07BF294735EF92A094 /* good-morning.jpg */; };
+		EC46584DE38590FDB2315D5B /* cable-rear-delt-fly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498D0961673440CB731801C /* cable-rear-delt-fly.jpg */; };
+		EE03025524DE2614CB5057BF /* pistol-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8280CD688FE5985D71F48188 /* pistol-squat.jpg */; };
+		EFA67DF309F0E9446366A21E /* front-squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6814600A9E7FA578E0F5869B /* front-squat.jpg */; };
+		F003C1C257668433C4163103 /* kettlebell-push-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543B563784EEF9620DD81F09 /* kettlebell-push-press.jpg */; };
+		F3F5AB611FBE819E5DC1EFB6 /* overhead-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 929CCF234C75AB82D3F4ABB1 /* overhead-press.png */; };
+		F56A0448CE920D1E373D0C20 /* trap-bar-deadlift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88EFD227F9FAB75F5F6035B5 /* trap-bar-deadlift.jpg */; };
+		F5FEBD8385FB45EC18D7149F /* guide-guide-traps.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36035A0E23A1B55C76FE6A37 /* guide-guide-traps.jpg */; };
+		F65370525E8067D5A3BB9198 /* sumo-deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C486248FFFB952486E4EDA /* sumo-deadlift.png */; };
+		F6C0A0D7B7A43E94A5E86902 /* snatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CA71B4AE8F6700F1B3A0DB /* snatch.png */; };
+		F995465FFB0B762AEAE5AB32 /* guide-guide-lats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1623788A90942AD229D435A /* guide-guide-lats.jpg */; };
+		FC682378C3F8850A3DFE80D5 /* jm-press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6F2E0247043525996259571 /* jm-press.jpg */; };
+		FDAA4C15880976C257C9B8A9 /* push-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA1202E3061DF992EF56946 /* push-up.png */; };
+		FDC601D98725E285A5C2D017 /* russian-twist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 081E870C081CB7A5EE8F43A3 /* russian-twist.jpg */; };
+		FDDC02766F84B6776B6D2F59 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ED869299A0C29B7C16F69 /* Theme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0153A70754E1BF01FF9A74F0 /* incline-dumbbell-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "incline-dumbbell-curl.jpg"; sourceTree = "<group>"; };
+		01B3942E5365C19C503B2B9D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		02B6267AB165C504F1600C41 /* step-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "step-up.jpg"; sourceTree = "<group>"; };
+		0655356FB8A826099685EE62 /* incline-dumbbell-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "incline-dumbbell-press.jpg"; sourceTree = "<group>"; };
+		0657E32A2D237B791FCC87B8 /* preacher-curl-machine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preacher-curl-machine.jpg"; sourceTree = "<group>"; };
+		081E870C081CB7A5EE8F43A3 /* russian-twist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "russian-twist.jpg"; sourceTree = "<group>"; };
+		0B673ED033DDB84090C5A4FC /* leg-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leg-press.jpg"; sourceTree = "<group>"; };
+		0C45F3F6EF38131AC9492D16 /* skull-crusher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "skull-crusher.jpg"; sourceTree = "<group>"; };
+		0C64FCF31ABFA557CCBE692C /* machine-hip-adduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "machine-hip-adduction.png"; sourceTree = "<group>"; };
+		0CFAEE467FADF0DD5BE93E18 /* chest-supported-dumbbell-row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chest-supported-dumbbell-row.png"; sourceTree = "<group>"; };
+		0DB4463ADDADD3408BA2ACF4 /* glute-ham-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "glute-ham-raise.jpg"; sourceTree = "<group>"; };
+		10E511BBE67C8F5B976E7133 /* FerrumCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FerrumCore; path = Packages/FerrumCore; sourceTree = SOURCE_ROOT; };
+		138BE39E1DBC76C9DCAB899D /* barbell-bench-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbell-bench-press.jpg"; sourceTree = "<group>"; };
+		1524A0376B295FCE46F1EEFC /* incline-barbell-bench-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "incline-barbell-bench-press.jpg"; sourceTree = "<group>"; };
+		1660127146B16F11C4644ADB /* upright-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upright-row.jpg"; sourceTree = "<group>"; };
+		16D425154DA458FCC8D13091 /* dumbbell-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-curl.jpg"; sourceTree = "<group>"; };
+		174B3E646B5E81204B8C5D88 /* rack-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rack-pull.jpg"; sourceTree = "<group>"; };
+		187A66F4B2BAD4FC1E01140A /* one-arm-dumbbell-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "one-arm-dumbbell-row.jpg"; sourceTree = "<group>"; };
+		1A7E70A6D36390DF8B103E96 /* smith-machine-bench-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smith-machine-bench-press.jpg"; sourceTree = "<group>"; };
+		1B7421A398DCEE9A56F7D8F1 /* nordic-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nordic-curl.jpg"; sourceTree = "<group>"; };
+		1E6DC53DFFBDC902DA038BA5 /* landmine-rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landmine-rotation.jpg"; sourceTree = "<group>"; };
+		1ED6D52B7E391F3A2304D454 /* barbell-shrug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbell-shrug.png"; sourceTree = "<group>"; };
+		20D423664373C12EB4A6D0E5 /* hack-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hack-squat.jpg"; sourceTree = "<group>"; };
+		21DE13E648AE7A7E820FF106 /* reverse-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-lunge.jpg"; sourceTree = "<group>"; };
+		21E77F6571D2E281DFA4C7BD /* face-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face-pull.jpg"; sourceTree = "<group>"; };
+		22FE0B051B39D2EF03E80CF9 /* cossack-squat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cossack-squat.png"; sourceTree = "<group>"; };
+		232B09AC95493F23BFA81D11 /* barbell-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbell-curl.jpg"; sourceTree = "<group>"; };
+		2456659E7FA73A1E2D3B35CF /* dumbbell-shrug.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-shrug.jpg"; sourceTree = "<group>"; };
+		25CD2D72E9BFC1DC72738A02 /* overhead-cable-triceps-extension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overhead-cable-triceps-extension.png"; sourceTree = "<group>"; };
+		25D6878C4CE5AF8BA52DEEF5 /* kettlebell-snatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kettlebell-snatch.png"; sourceTree = "<group>"; };
+		260100C98402CF53B66D710E /* guide-guide-adductors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-adductors.jpg"; sourceTree = "<group>"; };
+		2B44FF48E56C908B8CEBB628 /* calf-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calf-raise.jpg"; sourceTree = "<group>"; };
+		2C7D66E47A6B12BB36977F58 /* reverse-wrist-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-wrist-curl.jpg"; sourceTree = "<group>"; };
+		2D5A24E196D5DF70893F2F6F /* deficit-deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "deficit-deadlift.jpg"; sourceTree = "<group>"; };
+		2F13FEFBA5628DCB454ECE41 /* guide-guide-hamstrings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-hamstrings.jpg"; sourceTree = "<group>"; };
+		31A0ECBC19E4594DC5696665 /* close-grip-bench-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "close-grip-bench-press.jpg"; sourceTree = "<group>"; };
+		31FCD70549D194C87EC1E43F /* pec-deck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pec-deck.jpg"; sourceTree = "<group>"; };
+		34D885BD9302A488E1675886 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		35CE34C97B021A3C43A87F72 /* clean-and-jerk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "clean-and-jerk.jpg"; sourceTree = "<group>"; };
+		36035A0E23A1B55C76FE6A37 /* guide-guide-traps.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-traps.jpg"; sourceTree = "<group>"; };
+		388FEF7CF2981DE17655EE30 /* assisted-pull-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "assisted-pull-up.jpg"; sourceTree = "<group>"; };
+		39DF845B1AC369FB04C5DEFB /* hammer-curl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hammer-curl.png"; sourceTree = "<group>"; };
+		3A6482C0EB50C4D353133916 /* belt-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "belt-squat.jpg"; sourceTree = "<group>"; };
+		3E20093C138502AEEE0D6A58 /* walking-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "walking-lunge.jpg"; sourceTree = "<group>"; };
+		3EA68E514E2EAA0FDF467BA2 /* dip-machine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dip-machine.jpg"; sourceTree = "<group>"; };
+		41AC96071B05AA1181C8B928 /* shoulder-external-rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shoulder-external-rotation.jpg"; sourceTree = "<group>"; };
+		41BA80C63A483AD3C398FE18 /* close-grip-lat-pulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "close-grip-lat-pulldown.jpg"; sourceTree = "<group>"; };
+		436F448AD430FA7E12F51667 /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
+		49B7B6B1DE0AE6E59EE82C3C /* shoulder-internal-rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoulder-internal-rotation.png"; sourceTree = "<group>"; };
+		49C9675A49E1819DAFA47696 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4B6EA2ECAFA0559C4E194ABF /* hand-gripper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hand-gripper.jpg"; sourceTree = "<group>"; };
+		4D72A17E0706D2F11722A323 /* jefferson-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jefferson-curl.jpg"; sourceTree = "<group>"; };
+		4FBEB5502F95926ED5265CE2 /* rear-delt-fly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rear-delt-fly.jpg"; sourceTree = "<group>"; };
+		536CC57705D1D79CE951C5C9 /* cable-fly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-fly.jpg"; sourceTree = "<group>"; };
+		543B563784EEF9620DD81F09 /* kettlebell-push-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kettlebell-push-press.jpg"; sourceTree = "<group>"; };
+		54C486248FFFB952486E4EDA /* sumo-deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sumo-deadlift.png"; sourceTree = "<group>"; };
+		560900C15F001B9BEF2EBA06 /* decline-bench-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "decline-bench-press.png"; sourceTree = "<group>"; };
+		5679DB1CA5E4D5C6D404A2B1 /* zercher-squat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zercher-squat.png"; sourceTree = "<group>"; };
+		5776238891A960BB378ED893 /* guide-guide-glutes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-glutes.jpg"; sourceTree = "<group>"; };
+		57CF80769F1C989E16BC0076 /* guide-guide-chest-pectorals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-chest-pectorals.jpg"; sourceTree = "<group>"; };
+		585D72EE4318E26A397A1627 /* dumbbell-fly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-fly.jpg"; sourceTree = "<group>"; };
+		59301CDAD3BB6C23299B768B /* NumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
+		599878AED7897082E0CE8EF4 /* spider-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spider-curl.jpg"; sourceTree = "<group>"; };
+		599BD41E5D4027085A5E729E /* hanging-leg-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hanging-leg-raise.jpg"; sourceTree = "<group>"; };
+		5B4DAB00B3FA4652B3A0D7C8 /* inverted-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "inverted-row.jpg"; sourceTree = "<group>"; };
+		5C8D1C345D4E8B5D786D3FC3 /* dips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dips.jpg; sourceTree = "<group>"; };
+		609EB140E6EFE51F12977397 /* lying-leg-curl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lying-leg-curl.png"; sourceTree = "<group>"; };
+		60C5C650D2D26EBCC1370145 /* seated-cable-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "seated-cable-row.jpg"; sourceTree = "<group>"; };
+		626F716E545564F890C4BCA2 /* zercher-carry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-carry.jpg"; sourceTree = "<group>"; };
+		62F56A65A8410F99998F5EC2 /* cable-pullover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-pullover.jpg"; sourceTree = "<group>"; };
+		671C2177FED7F4ED05A1EFAB /* leg-extension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leg-extension.png"; sourceTree = "<group>"; };
+		6814600A9E7FA578E0F5869B /* front-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "front-squat.jpg"; sourceTree = "<group>"; };
+		69E78FC9C17D57E301F5F218 /* guide-guide-anterior-delts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-anterior-delts.png"; sourceTree = "<group>"; };
+		6AE13BF0D0E9146B2409D45A /* safety-bar-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "safety-bar-squat.jpg"; sourceTree = "<group>"; };
+		7470F7B3E5265CC6C0AB8B66 /* zercher-reverse-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-reverse-lunge.jpg"; sourceTree = "<group>"; };
+		752AE9988E0CC7CB65276C11 /* one-arm-cable-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "one-arm-cable-row.jpg"; sourceTree = "<group>"; };
+		75412835A6427795EAB5C19B /* romanian-deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "romanian-deadlift.png"; sourceTree = "<group>"; };
+		78297712BBF6D075805776DB /* cable-woodchop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-woodchop.jpg"; sourceTree = "<group>"; };
+		7941B43A8A92B5387C44476A /* hip-external-rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hip-external-rotation.jpg"; sourceTree = "<group>"; };
+		79CB2821EBC68362A097585E /* ab-crunch-machine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ab-crunch-machine.jpg"; sourceTree = "<group>"; };
+		7ABB43269614032231BAB0C6 /* cable-crunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-crunch.jpg"; sourceTree = "<group>"; };
+		7BA1202E3061DF992EF56946 /* push-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push-up.png"; sourceTree = "<group>"; };
+		7BA1B2CB4717FE063857527F /* concentration-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "concentration-curl.jpg"; sourceTree = "<group>"; };
+		7C0ED869299A0C29B7C16F69 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7D0DD2E0F85E4285DE5F68B1 /* guide-guide-hip-flexors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-hip-flexors.jpg"; sourceTree = "<group>"; };
+		7D53993D832F7EC8E379C3CA /* kettlebell-high-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kettlebell-high-pull.jpg"; sourceTree = "<group>"; };
+		7DFBA8E7A07E8B5978F7256D /* goblet-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "goblet-squat.jpg"; sourceTree = "<group>"; };
+		7FC389610E859E448BDE07D1 /* forward-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "forward-lunge.jpg"; sourceTree = "<group>"; };
+		8280CD688FE5985D71F48188 /* pistol-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pistol-squat.jpg"; sourceTree = "<group>"; };
+		836F978BF8FFA3339F2F561E /* clean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clean.jpg; sourceTree = "<group>"; };
+		8498D0961673440CB731801C /* cable-rear-delt-fly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-rear-delt-fly.jpg"; sourceTree = "<group>"; };
+		8556A66EDA813108355FC317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87FAC312CFE3A051B19E4CB5 /* machine-row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "machine-row.png"; sourceTree = "<group>"; };
+		88EFD227F9FAB75F5F6035B5 /* trap-bar-deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trap-bar-deadlift.jpg"; sourceTree = "<group>"; };
+		89CA71B4AE8F6700F1B3A0DB /* snatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snatch.png; sourceTree = "<group>"; };
+		8A6DF1F0E7E65CC56016E223 /* dumbbell-bench-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dumbbell-bench-press.png"; sourceTree = "<group>"; };
+		8B4E9833A0BB132099E41D6E /* ProgramBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramBuilderView.swift; sourceTree = "<group>"; };
+		8B6B453F5B88C02583DCCCCF /* machine-chest-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "machine-chest-press.png"; sourceTree = "<group>"; };
+		8C0254A3E91D1E562DCCD5B3 /* guide-guide-quadriceps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-quadriceps.png"; sourceTree = "<group>"; };
+		8CFA2304641C357DB217F139 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8DAE564D438D2A8057624394 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		929CCF234C75AB82D3F4ABB1 /* overhead-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overhead-press.png"; sourceTree = "<group>"; };
+		93E3EA71479549397DA1C27E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9464543DFD681B596EE50718 /* front-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "front-raise.jpg"; sourceTree = "<group>"; };
+		94A7EDA5F8E1CFA5DA45CE62 /* zercher-jefferson-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-jefferson-curl.jpg"; sourceTree = "<group>"; };
+		99062551ED9EF3849BB20D8A /* assisted-dip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "assisted-dip.jpg"; sourceTree = "<group>"; };
+		9B26D39689D476B27F2D2F94 /* preacher-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preacher-curl.jpg"; sourceTree = "<group>"; };
+		9B6812C44B4E59814A6089A5 /* back-extension.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "back-extension.jpg"; sourceTree = "<group>"; };
+		9CCA29E0B7E45BCA3681E537 /* tibialis-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tibialis-raise.jpg"; sourceTree = "<group>"; };
+		9CCD2C60678DF3043533D249 /* dumbbell-pullover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-pullover.jpg"; sourceTree = "<group>"; };
+		9D0C53CC3FB254574663A74D /* ProgressTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTab.swift; sourceTree = "<group>"; };
+		9F6358D1C0B59672905C18B5 /* guide-guide-tibialis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-tibialis.jpg"; sourceTree = "<group>"; };
+		9FB0852783A51547DAF15BBF /* guide-guide-triceps.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-triceps.jpg"; sourceTree = "<group>"; };
+		A0E23DEE33E57F40CB73A4C5 /* wrist-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wrist-curl.jpg"; sourceTree = "<group>"; };
+		A120B0F5C505389F560DF6C5 /* guide-guide-calves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-calves.jpg"; sourceTree = "<group>"; };
+		A1623788A90942AD229D435A /* guide-guide-lats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-lats.jpg"; sourceTree = "<group>"; };
+		A26AE64C5D6E1F996C9DF9AD /* hip-thrust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hip-thrust.png"; sourceTree = "<group>"; };
+		A47DB148FECF0ED3DF168BAE /* plank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plank.jpg; sourceTree = "<group>"; };
+		A64D7F005FE54D82B0B006D2 /* zercher-step-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-step-up.jpg"; sourceTree = "<group>"; };
+		A74C02524790AE7FA5A2DA1C /* power-snatch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "power-snatch.jpg"; sourceTree = "<group>"; };
+		A85CB998B9C1A2E2121F52C4 /* glute-kickback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "glute-kickback.jpg"; sourceTree = "<group>"; };
+		A9E2FA2063D273C9CC14660E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		AADFE019BF15B4DDA710D046 /* guide-guide-erectors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-erectors.jpg"; sourceTree = "<group>"; };
+		AB0B57F42C4A3B26932EC1CF /* kettlebell-swing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kettlebell-swing.jpg"; sourceTree = "<group>"; };
+		AB9C9B043C3F1DBD20D84C19 /* landmine-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landmine-press.jpg"; sourceTree = "<group>"; };
+		ACCC1E5A692BF7FAFC4EDF6B /* cable-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-curl.jpg"; sourceTree = "<group>"; };
+		ADCD4BF8B47814B88E12825C /* machine-shoulder-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "machine-shoulder-press.jpg"; sourceTree = "<group>"; };
+		B04BC2F8EF44737DDF282B70 /* guide-guide-lateral-delts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-lateral-delts.png"; sourceTree = "<group>"; };
+		B0ECE65535CA5A91326B1E99 /* farmers-walk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "farmers-walk.jpg"; sourceTree = "<group>"; };
+		B384C0A52BEF0AE987917039 /* sit-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sit-up.jpg"; sourceTree = "<group>"; };
+		B571F84F8ACF0F4A3C7305F7 /* landmine-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landmine-squat.jpg"; sourceTree = "<group>"; };
+		B67D0F49AD596D0B02B7DB45 /* chin-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chin-up.jpg"; sourceTree = "<group>"; };
+		B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
+		B804A9C7F7A6D75DD2EC11AC /* lat-pulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lat-pulldown.jpg"; sourceTree = "<group>"; };
+		B9F7E69860D3AF3BBCFA35E4 /* rir.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rir.json; sourceTree = "<group>"; };
+		BB47EA8C7C692AA914E43E63 /* back-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "back-squat.jpg"; sourceTree = "<group>"; };
+		BCABB4BC37E52622F101A17B /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		BD5A1CCC800C7053D4181A21 /* Ferrum.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Ferrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE23240539E1E3068A941112 /* pull-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pull-up.jpg"; sourceTree = "<group>"; };
+		BE3C6CFAA0B917FA7DC69A89 /* reverse-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-curl.jpg"; sourceTree = "<group>"; };
+		BF37AC0196100D1604D55868 /* landmine-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landmine-row.jpg"; sourceTree = "<group>"; };
+		C0BAAA07BF294735EF92A094 /* good-morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "good-morning.jpg"; sourceTree = "<group>"; };
+		C167AA379AF61914BC1F9627 /* guide-guide-rhomboids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-rhomboids.jpg"; sourceTree = "<group>"; };
+		C244859D2D2FA93FB6FC4336 /* machine-hip-abduction.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "machine-hip-abduction.jpg"; sourceTree = "<group>"; };
+		C4F2FC7FCF323AD95A3F94F5 /* box-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "box-squat.jpg"; sourceTree = "<group>"; };
+		C53D4197B93F78D1264AC321 /* barbell-hip-thrust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbell-hip-thrust.jpg"; sourceTree = "<group>"; };
+		C654BED5BA1FC92A4880C4BD /* zercher-lunge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-lunge.jpg"; sourceTree = "<group>"; };
+		C69ECE55F6D44F37F83E50DE /* lateral-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lateral-raise.jpg"; sourceTree = "<group>"; };
+		C6F2E0247043525996259571 /* jm-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jm-press.jpg"; sourceTree = "<group>"; };
+		C74CB009778BFE947F706273 /* pendulum-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pendulum-squat.jpg"; sourceTree = "<group>"; };
+		C8EE30310E3141F03F5D28C4 /* seated-good-morning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seated-good-morning.png"; sourceTree = "<group>"; };
+		C9469A2A59FE360BD17384FC /* dumbbell-shoulder-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dumbbell-shoulder-press.jpg"; sourceTree = "<group>"; };
+		C98F4965B53473E61E3F34ED /* wide-grip-lat-pulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wide-grip-lat-pulldown.jpg"; sourceTree = "<group>"; };
+		C9C3B7F98E559A826D4819F8 /* tricep-pushdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tricep-pushdown.png"; sourceTree = "<group>"; };
+		CAE98C340871451E482B5640 /* ab-wheel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ab-wheel.jpg"; sourceTree = "<group>"; };
+		CB4FAB86F7E409948C1F7620 /* machine-press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "machine-press.jpg"; sourceTree = "<group>"; };
+		CFEE8C6458A85F6494182ADF /* bulgarian-split-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bulgarian-split-squat.jpg"; sourceTree = "<group>"; };
+		D4EA23564D9276AD3218CB17 /* guide-guide-posterior-delts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-posterior-delts.png"; sourceTree = "<group>"; };
+		D52A3D3553022AF8A35FA741 /* FerrumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerrumApp.swift; sourceTree = "<group>"; };
+		D61DA05253CCA3E77C19A88D /* deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deadlift.png; sourceTree = "<group>"; };
+		D8130BC30CDDF4CC10DA496D /* guide-guide-biceps.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-biceps.jpg"; sourceTree = "<group>"; };
+		D9CD9265ACA1F8F495D2135A /* box-jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-jump.png"; sourceTree = "<group>"; };
+		DB25003342F7E250D52F3011 /* smith-machine-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smith-machine-squat.jpg"; sourceTree = "<group>"; };
+		DD0F5C57AFF0B4C9450FABEF /* snatch-pull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "snatch-pull.jpg"; sourceTree = "<group>"; };
+		DE16B12AAFAB2BF76B79A385 /* reverse-hyper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-hyper.jpg"; sourceTree = "<group>"; };
+		E06C4AF935BCDFE98A31F3BF /* cable-lateral-raise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cable-lateral-raise.jpg"; sourceTree = "<group>"; };
+		E081A52281AC747B9DD6AC8E /* zercher-deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-deadlift.jpg"; sourceTree = "<group>"; };
+		E1660EF92D5A6B5B7719A467 /* single-leg-romanian-deadlift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "single-leg-romanian-deadlift.jpg"; sourceTree = "<group>"; };
+		E240374F11E00C79D28B4FA1 /* chest-supported-t-bar-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chest-supported-t-bar-row.jpg"; sourceTree = "<group>"; };
+		E2C8068AC1D804FF914C9B00 /* sissy-squat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sissy-squat.png"; sourceTree = "<group>"; };
+		E6B57C0D937848A9F5D2BC9D /* reverse-squat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reverse-squat.png"; sourceTree = "<group>"; };
+		E7B8F424629600436335E8EF /* ReadinessSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadinessSheet.swift; sourceTree = "<group>"; };
+		EC15DA9923AF95408BADB825 /* kettlebell-clean-and-jerk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kettlebell-clean-and-jerk.jpg"; sourceTree = "<group>"; };
+		EE65F6FB2C640B8C8B8E4E0E /* muscles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = muscles.json; sourceTree = "<group>"; };
+		EFA295F41684CA056CBF5BD5 /* turkish-get-up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "turkish-get-up.jpg"; sourceTree = "<group>"; };
+		EFD4066098E103C6315BD5F0 /* kettlebell-clean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kettlebell-clean.jpg"; sourceTree = "<group>"; };
+		F1F27A6B0559266CC4782BBF /* reverse-pec-deck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "reverse-pec-deck.jpg"; sourceTree = "<group>"; };
+		F20692EDCCCE1DA440B4BEE9 /* seated-leg-curl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "seated-leg-curl.jpg"; sourceTree = "<group>"; };
+		F24FBD3373CDF21A0CABF4C1 /* guide-guide-forearms-grip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-guide-forearms-grip.png"; sourceTree = "<group>"; };
+		F50DDA755BBB1911DAF9604D /* guide-guide-core-abs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-core-abs.jpg"; sourceTree = "<group>"; };
+		F5A47A7138CF95AA82EA8CF8 /* hip-internal-rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hip-internal-rotation.jpg"; sourceTree = "<group>"; };
+		F866F951BCA66E63B15B9E0A /* guide-guide-abductors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "guide-guide-abductors.jpg"; sourceTree = "<group>"; };
+		F95BD4085B688B34C4391D8F /* exercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exercises.json; sourceTree = "<group>"; };
+		FB004868B0CB643221762875 /* zercher-split-squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zercher-split-squat.jpg"; sourceTree = "<group>"; };
+		FC23B96143B9AD2E0BB5A166 /* barbell-row.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barbell-row.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53C10209B81D8903470B8C15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F1FAF0D5ECC696869AA587 /* FerrumCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C30D8E28486C80D78A65F68 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D52A3D3553022AF8A35FA741 /* FerrumApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		50941328EC3DAF8C8E4EC791 /* ExerciseImages */ = {
+			isa = PBXGroup;
+			children = (
+				79CB2821EBC68362A097585E /* ab-crunch-machine.jpg */,
+				CAE98C340871451E482B5640 /* ab-wheel.jpg */,
+				99062551ED9EF3849BB20D8A /* assisted-dip.jpg */,
+				388FEF7CF2981DE17655EE30 /* assisted-pull-up.jpg */,
+				9B6812C44B4E59814A6089A5 /* back-extension.jpg */,
+				BB47EA8C7C692AA914E43E63 /* back-squat.jpg */,
+				138BE39E1DBC76C9DCAB899D /* barbell-bench-press.jpg */,
+				232B09AC95493F23BFA81D11 /* barbell-curl.jpg */,
+				C53D4197B93F78D1264AC321 /* barbell-hip-thrust.jpg */,
+				FC23B96143B9AD2E0BB5A166 /* barbell-row.jpg */,
+				1ED6D52B7E391F3A2304D454 /* barbell-shrug.png */,
+				3A6482C0EB50C4D353133916 /* belt-squat.jpg */,
+				D9CD9265ACA1F8F495D2135A /* box-jump.png */,
+				C4F2FC7FCF323AD95A3F94F5 /* box-squat.jpg */,
+				CFEE8C6458A85F6494182ADF /* bulgarian-split-squat.jpg */,
+				7ABB43269614032231BAB0C6 /* cable-crunch.jpg */,
+				ACCC1E5A692BF7FAFC4EDF6B /* cable-curl.jpg */,
+				536CC57705D1D79CE951C5C9 /* cable-fly.jpg */,
+				E06C4AF935BCDFE98A31F3BF /* cable-lateral-raise.jpg */,
+				62F56A65A8410F99998F5EC2 /* cable-pullover.jpg */,
+				8498D0961673440CB731801C /* cable-rear-delt-fly.jpg */,
+				78297712BBF6D075805776DB /* cable-woodchop.jpg */,
+				2B44FF48E56C908B8CEBB628 /* calf-raise.jpg */,
+				0CFAEE467FADF0DD5BE93E18 /* chest-supported-dumbbell-row.png */,
+				E240374F11E00C79D28B4FA1 /* chest-supported-t-bar-row.jpg */,
+				B67D0F49AD596D0B02B7DB45 /* chin-up.jpg */,
+				35CE34C97B021A3C43A87F72 /* clean-and-jerk.jpg */,
+				836F978BF8FFA3339F2F561E /* clean.jpg */,
+				31A0ECBC19E4594DC5696665 /* close-grip-bench-press.jpg */,
+				41BA80C63A483AD3C398FE18 /* close-grip-lat-pulldown.jpg */,
+				7BA1B2CB4717FE063857527F /* concentration-curl.jpg */,
+				22FE0B051B39D2EF03E80CF9 /* cossack-squat.png */,
+				D61DA05253CCA3E77C19A88D /* deadlift.png */,
+				560900C15F001B9BEF2EBA06 /* decline-bench-press.png */,
+				2D5A24E196D5DF70893F2F6F /* deficit-deadlift.jpg */,
+				3EA68E514E2EAA0FDF467BA2 /* dip-machine.jpg */,
+				5C8D1C345D4E8B5D786D3FC3 /* dips.jpg */,
+				8A6DF1F0E7E65CC56016E223 /* dumbbell-bench-press.png */,
+				16D425154DA458FCC8D13091 /* dumbbell-curl.jpg */,
+				585D72EE4318E26A397A1627 /* dumbbell-fly.jpg */,
+				9CCD2C60678DF3043533D249 /* dumbbell-pullover.jpg */,
+				C9469A2A59FE360BD17384FC /* dumbbell-shoulder-press.jpg */,
+				2456659E7FA73A1E2D3B35CF /* dumbbell-shrug.jpg */,
+				21E77F6571D2E281DFA4C7BD /* face-pull.jpg */,
+				B0ECE65535CA5A91326B1E99 /* farmers-walk.jpg */,
+				7FC389610E859E448BDE07D1 /* forward-lunge.jpg */,
+				9464543DFD681B596EE50718 /* front-raise.jpg */,
+				6814600A9E7FA578E0F5869B /* front-squat.jpg */,
+				0DB4463ADDADD3408BA2ACF4 /* glute-ham-raise.jpg */,
+				A85CB998B9C1A2E2121F52C4 /* glute-kickback.jpg */,
+				7DFBA8E7A07E8B5978F7256D /* goblet-squat.jpg */,
+				C0BAAA07BF294735EF92A094 /* good-morning.jpg */,
+				F866F951BCA66E63B15B9E0A /* guide-guide-abductors.jpg */,
+				260100C98402CF53B66D710E /* guide-guide-adductors.jpg */,
+				69E78FC9C17D57E301F5F218 /* guide-guide-anterior-delts.png */,
+				D8130BC30CDDF4CC10DA496D /* guide-guide-biceps.jpg */,
+				A120B0F5C505389F560DF6C5 /* guide-guide-calves.jpg */,
+				57CF80769F1C989E16BC0076 /* guide-guide-chest-pectorals.jpg */,
+				F50DDA755BBB1911DAF9604D /* guide-guide-core-abs.jpg */,
+				AADFE019BF15B4DDA710D046 /* guide-guide-erectors.jpg */,
+				F24FBD3373CDF21A0CABF4C1 /* guide-guide-forearms-grip.png */,
+				5776238891A960BB378ED893 /* guide-guide-glutes.jpg */,
+				2F13FEFBA5628DCB454ECE41 /* guide-guide-hamstrings.jpg */,
+				7D0DD2E0F85E4285DE5F68B1 /* guide-guide-hip-flexors.jpg */,
+				B04BC2F8EF44737DDF282B70 /* guide-guide-lateral-delts.png */,
+				A1623788A90942AD229D435A /* guide-guide-lats.jpg */,
+				D4EA23564D9276AD3218CB17 /* guide-guide-posterior-delts.png */,
+				8C0254A3E91D1E562DCCD5B3 /* guide-guide-quadriceps.png */,
+				C167AA379AF61914BC1F9627 /* guide-guide-rhomboids.jpg */,
+				9F6358D1C0B59672905C18B5 /* guide-guide-tibialis.jpg */,
+				36035A0E23A1B55C76FE6A37 /* guide-guide-traps.jpg */,
+				9FB0852783A51547DAF15BBF /* guide-guide-triceps.jpg */,
+				20D423664373C12EB4A6D0E5 /* hack-squat.jpg */,
+				39DF845B1AC369FB04C5DEFB /* hammer-curl.png */,
+				4B6EA2ECAFA0559C4E194ABF /* hand-gripper.jpg */,
+				599BD41E5D4027085A5E729E /* hanging-leg-raise.jpg */,
+				7941B43A8A92B5387C44476A /* hip-external-rotation.jpg */,
+				F5A47A7138CF95AA82EA8CF8 /* hip-internal-rotation.jpg */,
+				A26AE64C5D6E1F996C9DF9AD /* hip-thrust.png */,
+				1524A0376B295FCE46F1EEFC /* incline-barbell-bench-press.jpg */,
+				0153A70754E1BF01FF9A74F0 /* incline-dumbbell-curl.jpg */,
+				0655356FB8A826099685EE62 /* incline-dumbbell-press.jpg */,
+				5B4DAB00B3FA4652B3A0D7C8 /* inverted-row.jpg */,
+				4D72A17E0706D2F11722A323 /* jefferson-curl.jpg */,
+				C6F2E0247043525996259571 /* jm-press.jpg */,
+				EC15DA9923AF95408BADB825 /* kettlebell-clean-and-jerk.jpg */,
+				EFD4066098E103C6315BD5F0 /* kettlebell-clean.jpg */,
+				7D53993D832F7EC8E379C3CA /* kettlebell-high-pull.jpg */,
+				543B563784EEF9620DD81F09 /* kettlebell-push-press.jpg */,
+				25D6878C4CE5AF8BA52DEEF5 /* kettlebell-snatch.png */,
+				AB0B57F42C4A3B26932EC1CF /* kettlebell-swing.jpg */,
+				AB9C9B043C3F1DBD20D84C19 /* landmine-press.jpg */,
+				1E6DC53DFFBDC902DA038BA5 /* landmine-rotation.jpg */,
+				BF37AC0196100D1604D55868 /* landmine-row.jpg */,
+				B571F84F8ACF0F4A3C7305F7 /* landmine-squat.jpg */,
+				B804A9C7F7A6D75DD2EC11AC /* lat-pulldown.jpg */,
+				C69ECE55F6D44F37F83E50DE /* lateral-raise.jpg */,
+				671C2177FED7F4ED05A1EFAB /* leg-extension.png */,
+				0B673ED033DDB84090C5A4FC /* leg-press.jpg */,
+				609EB140E6EFE51F12977397 /* lying-leg-curl.png */,
+				8B6B453F5B88C02583DCCCCF /* machine-chest-press.png */,
+				C244859D2D2FA93FB6FC4336 /* machine-hip-abduction.jpg */,
+				0C64FCF31ABFA557CCBE692C /* machine-hip-adduction.png */,
+				CB4FAB86F7E409948C1F7620 /* machine-press.jpg */,
+				87FAC312CFE3A051B19E4CB5 /* machine-row.png */,
+				ADCD4BF8B47814B88E12825C /* machine-shoulder-press.jpg */,
+				1B7421A398DCEE9A56F7D8F1 /* nordic-curl.jpg */,
+				752AE9988E0CC7CB65276C11 /* one-arm-cable-row.jpg */,
+				187A66F4B2BAD4FC1E01140A /* one-arm-dumbbell-row.jpg */,
+				25CD2D72E9BFC1DC72738A02 /* overhead-cable-triceps-extension.png */,
+				929CCF234C75AB82D3F4ABB1 /* overhead-press.png */,
+				31FCD70549D194C87EC1E43F /* pec-deck.jpg */,
+				C74CB009778BFE947F706273 /* pendulum-squat.jpg */,
+				8280CD688FE5985D71F48188 /* pistol-squat.jpg */,
+				A47DB148FECF0ED3DF168BAE /* plank.jpg */,
+				A74C02524790AE7FA5A2DA1C /* power-snatch.jpg */,
+				0657E32A2D237B791FCC87B8 /* preacher-curl-machine.jpg */,
+				9B26D39689D476B27F2D2F94 /* preacher-curl.jpg */,
+				BE23240539E1E3068A941112 /* pull-up.jpg */,
+				7BA1202E3061DF992EF56946 /* push-up.png */,
+				174B3E646B5E81204B8C5D88 /* rack-pull.jpg */,
+				4FBEB5502F95926ED5265CE2 /* rear-delt-fly.jpg */,
+				BE3C6CFAA0B917FA7DC69A89 /* reverse-curl.jpg */,
+				DE16B12AAFAB2BF76B79A385 /* reverse-hyper.jpg */,
+				21DE13E648AE7A7E820FF106 /* reverse-lunge.jpg */,
+				F1F27A6B0559266CC4782BBF /* reverse-pec-deck.jpg */,
+				E6B57C0D937848A9F5D2BC9D /* reverse-squat.png */,
+				2C7D66E47A6B12BB36977F58 /* reverse-wrist-curl.jpg */,
+				75412835A6427795EAB5C19B /* romanian-deadlift.png */,
+				081E870C081CB7A5EE8F43A3 /* russian-twist.jpg */,
+				6AE13BF0D0E9146B2409D45A /* safety-bar-squat.jpg */,
+				60C5C650D2D26EBCC1370145 /* seated-cable-row.jpg */,
+				C8EE30310E3141F03F5D28C4 /* seated-good-morning.png */,
+				F20692EDCCCE1DA440B4BEE9 /* seated-leg-curl.jpg */,
+				41AC96071B05AA1181C8B928 /* shoulder-external-rotation.jpg */,
+				49B7B6B1DE0AE6E59EE82C3C /* shoulder-internal-rotation.png */,
+				E1660EF92D5A6B5B7719A467 /* single-leg-romanian-deadlift.jpg */,
+				E2C8068AC1D804FF914C9B00 /* sissy-squat.png */,
+				B384C0A52BEF0AE987917039 /* sit-up.jpg */,
+				0C45F3F6EF38131AC9492D16 /* skull-crusher.jpg */,
+				1A7E70A6D36390DF8B103E96 /* smith-machine-bench-press.jpg */,
+				DB25003342F7E250D52F3011 /* smith-machine-squat.jpg */,
+				DD0F5C57AFF0B4C9450FABEF /* snatch-pull.jpg */,
+				89CA71B4AE8F6700F1B3A0DB /* snatch.png */,
+				599878AED7897082E0CE8EF4 /* spider-curl.jpg */,
+				02B6267AB165C504F1600C41 /* step-up.jpg */,
+				54C486248FFFB952486E4EDA /* sumo-deadlift.png */,
+				9CCA29E0B7E45BCA3681E537 /* tibialis-raise.jpg */,
+				88EFD227F9FAB75F5F6035B5 /* trap-bar-deadlift.jpg */,
+				C9C3B7F98E559A826D4819F8 /* tricep-pushdown.png */,
+				EFA295F41684CA056CBF5BD5 /* turkish-get-up.jpg */,
+				1660127146B16F11C4644ADB /* upright-row.jpg */,
+				3E20093C138502AEEE0D6A58 /* walking-lunge.jpg */,
+				C98F4965B53473E61E3F34ED /* wide-grip-lat-pulldown.jpg */,
+				A0E23DEE33E57F40CB73A4C5 /* wrist-curl.jpg */,
+				626F716E545564F890C4BCA2 /* zercher-carry.jpg */,
+				E081A52281AC747B9DD6AC8E /* zercher-deadlift.jpg */,
+				94A7EDA5F8E1CFA5DA45CE62 /* zercher-jefferson-curl.jpg */,
+				C654BED5BA1FC92A4880C4BD /* zercher-lunge.jpg */,
+				7470F7B3E5265CC6C0AB8B66 /* zercher-reverse-lunge.jpg */,
+				FB004868B0CB643221762875 /* zercher-split-squat.jpg */,
+				5679DB1CA5E4D5C6D404A2B1 /* zercher-squat.png */,
+				A64D7F005FE54D82B0B006D2 /* zercher-step-up.jpg */,
+			);
+			path = ExerciseImages;
+			sourceTree = "<group>";
+		};
+		5CAA00A72C14628982698D4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34D885BD9302A488E1675886 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D4DD9D7703542B83E463386 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6DBEC47A5DFD1E5BFD75217 /* GeneratorView.swift */,
+				A9E2FA2063D273C9CC14660E /* LibraryView.swift */,
+				93E3EA71479549397DA1C27E /* OnboardingView.swift */,
+				8B4E9833A0BB132099E41D6E /* ProgramBuilderView.swift */,
+				436F448AD430FA7E12F51667 /* ProgramsView.swift */,
+				9D0C53CC3FB254574663A74D /* ProgressTab.swift */,
+				E7B8F424629600436335E8EF /* ReadinessSheet.swift */,
+				49C9675A49E1819DAFA47696 /* RootView.swift */,
+				8CFA2304641C357DB217F139 /* SettingsView.swift */,
+				8DAE564D438D2A8057624394 /* TodayView.swift */,
+				BCABB4BC37E52622F101A17B /* WorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		872942A5EECEB30F355E4305 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F95BD4085B688B34C4391D8F /* exercises.json */,
+				EE65F6FB2C640B8C8B8E4E0E /* muscles.json */,
+				B9F7E69860D3AF3BBCFA35E4 /* rir.json */,
+				50941328EC3DAF8C8E4EC791 /* ExerciseImages */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7062E344B1109456B832ED8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				10E511BBE67C8F5B976E7133 /* FerrumCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		B9509CBDF8D43FA1165EEBAF = {
+			isa = PBXGroup;
+			children = (
+				F1F346B78F35E1F51E260AD8 /* Ferrum */,
+				A7062E344B1109456B832ED8 /* Packages */,
+				F1348FE0C2B7FEFF2E2AB4F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDDAE590D5DD30F0AE4A1114 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				59301CDAD3BB6C23299B768B /* NumberField.swift */,
+				01B3942E5365C19C503B2B9D /* Store.swift */,
+				7C0ED869299A0C29B7C16F69 /* Theme.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F1348FE0C2B7FEFF2E2AB4F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD5A1CCC800C7053D4181A21 /* Ferrum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1F346B78F35E1F51E260AD8 /* Ferrum */ = {
+			isa = PBXGroup;
+			children = (
+				8556A66EDA813108355FC317 /* Assets.xcassets */,
+				4C30D8E28486C80D78A65F68 /* App */,
+				5CAA00A72C14628982698D4D /* Models */,
+				872942A5EECEB30F355E4305 /* Resources */,
+				BDDAE590D5DD30F0AE4A1114 /* Support */,
+				6D4DD9D7703542B83E463386 /* Views */,
+			);
+			path = Ferrum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E167A611B76EBDA31543BFD6 /* Ferrum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B70AD35EB230C034379DB48 /* Build configuration list for PBXNativeTarget "Ferrum" */;
+			buildPhases = (
+				B2F7733CA91872BE7FAB82FE /* Sources */,
+				0E3539E2ABBEF7D5E0D35043 /* Resources */,
+				53C10209B81D8903470B8C15 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ferrum;
+			packageProductDependencies = (
+				EE8EDA4ADB7809687BD84184 /* FerrumCore */,
+			);
+			productName = Ferrum;
+			productReference = BD5A1CCC800C7053D4181A21 /* Ferrum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFAC1DBD4E86E9A48025B650 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 0616A743A7C4A826882BAF5D /* Build configuration list for PBXProject "Ferrum" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B9509CBDF8D43FA1165EEBAF;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4AC01B4B00CC4B89BBCDC162 /* XCLocalSwiftPackageReference "Packages/FerrumCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F1348FE0C2B7FEFF2E2AB4F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E167A611B76EBDA31543BFD6 /* Ferrum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E3539E2ABBEF7D5E0D35043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07159C2E0F6099C099684723 /* Assets.xcassets in Resources */,
+				209330561700F39C302F8A37 /* ab-crunch-machine.jpg in Resources */,
+				018E2D508A4E1FABEFEAA05A /* ab-wheel.jpg in Resources */,
+				A2A5677D5A3E20325DE881A7 /* assisted-dip.jpg in Resources */,
+				ACEDF6897758735F0AECA241 /* assisted-pull-up.jpg in Resources */,
+				13FF0EDD864378C691E567FA /* back-extension.jpg in Resources */,
+				2A13FCBFC8354ECB12B484CF /* back-squat.jpg in Resources */,
+				99DE850550FAA39E90968B06 /* barbell-bench-press.jpg in Resources */,
+				529E0C2CA07AB3F7A9947BF2 /* barbell-curl.jpg in Resources */,
+				E80F21FD945BADD6A1DF6CF8 /* barbell-hip-thrust.jpg in Resources */,
+				747F09801B381AC951D775B3 /* barbell-row.jpg in Resources */,
+				7BA53D694DB9F967D3E04980 /* barbell-shrug.png in Resources */,
+				38945F82BE3D33E4675D61E1 /* belt-squat.jpg in Resources */,
+				A31F9B07A0B44C553D44808E /* box-jump.png in Resources */,
+				7C0E3878109D83590A461077 /* box-squat.jpg in Resources */,
+				39BBA0EAA90A1DA880A82318 /* bulgarian-split-squat.jpg in Resources */,
+				6AB943E2B746AF11B2E209A5 /* cable-crunch.jpg in Resources */,
+				3EDC1993FA380964BFEB7551 /* cable-curl.jpg in Resources */,
+				BE8F1F0C788E1B52A466AF6F /* cable-fly.jpg in Resources */,
+				4BFE460ACA57EA7BC78C4123 /* cable-lateral-raise.jpg in Resources */,
+				6394C1771E1AB09E45A516E7 /* cable-pullover.jpg in Resources */,
+				EC46584DE38590FDB2315D5B /* cable-rear-delt-fly.jpg in Resources */,
+				CEB91E74057B7B71F5DB56B8 /* cable-woodchop.jpg in Resources */,
+				9119C8405132C0765CB2999F /* calf-raise.jpg in Resources */,
+				A6AAF8E2F5EB27A88E67AAF3 /* chest-supported-dumbbell-row.png in Resources */,
+				44EB07886EE78D336DC0CCB5 /* chest-supported-t-bar-row.jpg in Resources */,
+				BA253CA7D0BE2E4C533C582D /* chin-up.jpg in Resources */,
+				405599580B51BA4A88D922B3 /* clean-and-jerk.jpg in Resources */,
+				835FC17994DE04A4A3162545 /* clean.jpg in Resources */,
+				BC8FBB7534294F72F145F59D /* close-grip-bench-press.jpg in Resources */,
+				DCA869D0F95E1BF012AC5464 /* close-grip-lat-pulldown.jpg in Resources */,
+				0544C4C4F8359A778E1A7C4B /* concentration-curl.jpg in Resources */,
+				B0063400B32A220CCBE718F7 /* cossack-squat.png in Resources */,
+				3586EAF869EC48E288732659 /* deadlift.png in Resources */,
+				9BEBC3567730D9838E01FCB3 /* decline-bench-press.png in Resources */,
+				A16B9CA7E449C10B843B7290 /* deficit-deadlift.jpg in Resources */,
+				46DC0A2AD4BF40700FD3DDDC /* dip-machine.jpg in Resources */,
+				EA54ED8FC67733BC74129E4E /* dips.jpg in Resources */,
+				B0C5E93D41683443C0C08472 /* dumbbell-bench-press.png in Resources */,
+				9499B885EB0660E96E6704D9 /* dumbbell-curl.jpg in Resources */,
+				5C2D85346C64D930DED16250 /* dumbbell-fly.jpg in Resources */,
+				812F9F31352A236AC6CEDCB7 /* dumbbell-pullover.jpg in Resources */,
+				7E96AB4316F1C0F4FAB74727 /* dumbbell-shoulder-press.jpg in Resources */,
+				B4C0DA88B1EE085FC1E086B1 /* dumbbell-shrug.jpg in Resources */,
+				9A4B4A4D340659D5A9BAC509 /* exercises.json in Resources */,
+				8C13BCF164CAEAF61E98569C /* face-pull.jpg in Resources */,
+				AA36EA85A95E0A7086D7D768 /* farmers-walk.jpg in Resources */,
+				69C0059EAB6AF0EE195C95D0 /* forward-lunge.jpg in Resources */,
+				36B5753DDB852D4D2D490DDD /* front-raise.jpg in Resources */,
+				EFA67DF309F0E9446366A21E /* front-squat.jpg in Resources */,
+				E33BDB623E33B7EDDDA5D682 /* glute-ham-raise.jpg in Resources */,
+				125246340F64359F1AE9C52E /* glute-kickback.jpg in Resources */,
+				36D363F29C2FA73EA7BF45B3 /* goblet-squat.jpg in Resources */,
+				EB42E8532B700617AA28577B /* good-morning.jpg in Resources */,
+				88984F9303A39779DB7E684B /* guide-guide-abductors.jpg in Resources */,
+				E204ADC702A4C8BB5960A89F /* guide-guide-adductors.jpg in Resources */,
+				B0CE0CDB0C2B317619990DF7 /* guide-guide-anterior-delts.png in Resources */,
+				1180FC766CB7E44448B78CB5 /* guide-guide-biceps.jpg in Resources */,
+				D8EE36F764292955C6FD7C8B /* guide-guide-calves.jpg in Resources */,
+				C6AFA02981C59776419BE89A /* guide-guide-chest-pectorals.jpg in Resources */,
+				2285FED86237AEDA8EF61B0D /* guide-guide-core-abs.jpg in Resources */,
+				920489FE06D198E07C1C563B /* guide-guide-erectors.jpg in Resources */,
+				3658F0D8526B19C4BA503E05 /* guide-guide-forearms-grip.png in Resources */,
+				DC66C9821A3B2EC664879105 /* guide-guide-glutes.jpg in Resources */,
+				DE297CCEF15ED30827904862 /* guide-guide-hamstrings.jpg in Resources */,
+				877C4FBB2FD242BFACCDF7F1 /* guide-guide-hip-flexors.jpg in Resources */,
+				D0D113B0EEA2DE59AFA9C470 /* guide-guide-lateral-delts.png in Resources */,
+				F995465FFB0B762AEAE5AB32 /* guide-guide-lats.jpg in Resources */,
+				5BB29E107D5702CF0C8DACA2 /* guide-guide-posterior-delts.png in Resources */,
+				7A34E98F13B2EA90967D91FF /* guide-guide-quadriceps.png in Resources */,
+				061E7F3A7DC608DA158A326F /* guide-guide-rhomboids.jpg in Resources */,
+				7A1975C394C4E82E26F3C9AF /* guide-guide-tibialis.jpg in Resources */,
+				F5FEBD8385FB45EC18D7149F /* guide-guide-traps.jpg in Resources */,
+				43B0974A8D4467AC354BA53C /* guide-guide-triceps.jpg in Resources */,
+				D348DA3F455E318ACC1942AB /* hack-squat.jpg in Resources */,
+				7F3FABDEE2EA4DD12739AAFD /* hammer-curl.png in Resources */,
+				1BAC043BBEAC3499A8509D71 /* hand-gripper.jpg in Resources */,
+				DF972AE7F160DC40AEB08843 /* hanging-leg-raise.jpg in Resources */,
+				A98E620364B5BF6DC3019609 /* hip-external-rotation.jpg in Resources */,
+				C3E4BB1F975E8AB6BCD835CB /* hip-internal-rotation.jpg in Resources */,
+				3FA335D5E11F8A4092467C85 /* hip-thrust.png in Resources */,
+				15175676B65B7C518C0766CF /* incline-barbell-bench-press.jpg in Resources */,
+				50CAAFB7046E333A787CEF57 /* incline-dumbbell-curl.jpg in Resources */,
+				2A5ABCC5B0AC932A6007B510 /* incline-dumbbell-press.jpg in Resources */,
+				2BF4D1AEF74FAA8514FCACC1 /* inverted-row.jpg in Resources */,
+				BC68CF3FC5B52442BF988A7E /* jefferson-curl.jpg in Resources */,
+				FC682378C3F8850A3DFE80D5 /* jm-press.jpg in Resources */,
+				6F255CD433578E45899BF514 /* kettlebell-clean-and-jerk.jpg in Resources */,
+				6906804D8873B2514D1F82E5 /* kettlebell-clean.jpg in Resources */,
+				4582D0C774358587D0E555D0 /* kettlebell-high-pull.jpg in Resources */,
+				F003C1C257668433C4163103 /* kettlebell-push-press.jpg in Resources */,
+				9F5F42BF4AA9BDDE818D374D /* kettlebell-snatch.png in Resources */,
+				9C86167C3C66C8E20B89107F /* kettlebell-swing.jpg in Resources */,
+				8B170DBA1B0365BE91629ADA /* landmine-press.jpg in Resources */,
+				A17DEC89D8BFC265C1E88C07 /* landmine-rotation.jpg in Resources */,
+				55B38641DD62918C7307D50D /* landmine-row.jpg in Resources */,
+				5296B91041D520D93B9B283C /* landmine-squat.jpg in Resources */,
+				68D442522A4C57F01CA14602 /* lat-pulldown.jpg in Resources */,
+				7425069C83A402D566E12C69 /* lateral-raise.jpg in Resources */,
+				8A10748F57693F5D5265C946 /* leg-extension.png in Resources */,
+				A1893C323057BD9400E284A7 /* leg-press.jpg in Resources */,
+				615179C4110408FCC72718DB /* lying-leg-curl.png in Resources */,
+				67A50C036A0F3B79DC6D825D /* machine-chest-press.png in Resources */,
+				0AC14B80ABBF7E373950134B /* machine-hip-abduction.jpg in Resources */,
+				E575391356E4C3599A44E614 /* machine-hip-adduction.png in Resources */,
+				7FA51E27CC845ADBE21CD33E /* machine-press.jpg in Resources */,
+				5377E5024DE5593379874358 /* machine-row.png in Resources */,
+				43270057D78EB22EAE5DD480 /* machine-shoulder-press.jpg in Resources */,
+				B47DBC155A5137E48A494045 /* muscles.json in Resources */,
+				C84BF927E4EEC4DB1538FFBC /* nordic-curl.jpg in Resources */,
+				B63ADEC0C09A9BF11D7325AB /* one-arm-cable-row.jpg in Resources */,
+				07FBE8A40195EA91C574205B /* one-arm-dumbbell-row.jpg in Resources */,
+				CFC7ABEDA66496725501CC60 /* overhead-cable-triceps-extension.png in Resources */,
+				F3F5AB611FBE819E5DC1EFB6 /* overhead-press.png in Resources */,
+				205E48E16DA480A4D4B0961F /* pec-deck.jpg in Resources */,
+				267A530A40DFFE3D93680690 /* pendulum-squat.jpg in Resources */,
+				EE03025524DE2614CB5057BF /* pistol-squat.jpg in Resources */,
+				E69FE44E7E6D37F8A2BF45A0 /* plank.jpg in Resources */,
+				B4148A354AFA35B69493F860 /* power-snatch.jpg in Resources */,
+				00C73D6E69714D48419D6EC6 /* preacher-curl-machine.jpg in Resources */,
+				C8EEC92864A4AC37E53D0919 /* preacher-curl.jpg in Resources */,
+				A606FE0F6303218A09567B7F /* pull-up.jpg in Resources */,
+				FDAA4C15880976C257C9B8A9 /* push-up.png in Resources */,
+				D897F4CF3443287A2267B20C /* rack-pull.jpg in Resources */,
+				645D2EBF09C8A2CC3D70EF1C /* rear-delt-fly.jpg in Resources */,
+				0A7DA7E72998198BDA5B3DC8 /* reverse-curl.jpg in Resources */,
+				415A357DDEADC3600C77A60C /* reverse-hyper.jpg in Resources */,
+				1A99C82CFE712778E2A3BD98 /* reverse-lunge.jpg in Resources */,
+				13F23C01B31834E931A8005D /* reverse-pec-deck.jpg in Resources */,
+				641EE9F7BE1D1ADAF7ACC1F2 /* reverse-squat.png in Resources */,
+				1862AD434E8FAF9CA8035030 /* reverse-wrist-curl.jpg in Resources */,
+				2B5FA5B8DA1C586F0BE79556 /* rir.json in Resources */,
+				17E9A2B3A7F38629856C71D4 /* romanian-deadlift.png in Resources */,
+				FDC601D98725E285A5C2D017 /* russian-twist.jpg in Resources */,
+				B91F92E16EA22178A07F1525 /* safety-bar-squat.jpg in Resources */,
+				632540E31F3B9491ED597AAD /* seated-cable-row.jpg in Resources */,
+				C248688C202DDB1693326F29 /* seated-good-morning.png in Resources */,
+				016BC93946EA16B2DA448A59 /* seated-leg-curl.jpg in Resources */,
+				9127EA5F8FBC84E7466B3A93 /* shoulder-external-rotation.jpg in Resources */,
+				DE6320FBDA3A16F60E601E67 /* shoulder-internal-rotation.png in Resources */,
+				56D9308DC3C503F3BA61CAF6 /* single-leg-romanian-deadlift.jpg in Resources */,
+				9EFA03AE1AABF813996A4C1C /* sissy-squat.png in Resources */,
+				40E36B218C04247AE3F8C036 /* sit-up.jpg in Resources */,
+				29BD3E2EECF892A358DF0741 /* skull-crusher.jpg in Resources */,
+				B6B8FB7407800197EDA45E27 /* smith-machine-bench-press.jpg in Resources */,
+				B7D75979B8BDF71A48939A56 /* smith-machine-squat.jpg in Resources */,
+				80173608B0621678021A2CD1 /* snatch-pull.jpg in Resources */,
+				F6C0A0D7B7A43E94A5E86902 /* snatch.png in Resources */,
+				751460D1D097A24691A2F431 /* spider-curl.jpg in Resources */,
+				69C238DFB34FC992E937E779 /* step-up.jpg in Resources */,
+				F65370525E8067D5A3BB9198 /* sumo-deadlift.png in Resources */,
+				380280540466E170B8ACF34C /* tibialis-raise.jpg in Resources */,
+				F56A0448CE920D1E373D0C20 /* trap-bar-deadlift.jpg in Resources */,
+				151C36651336D8B3D61558CD /* tricep-pushdown.png in Resources */,
+				0D4352512B66BA95A63563B4 /* turkish-get-up.jpg in Resources */,
+				E5DA762E57E623718490463B /* upright-row.jpg in Resources */,
+				BD98495FB9E01853CAFF6263 /* walking-lunge.jpg in Resources */,
+				520A5A0DCFC56D3C89E30265 /* wide-grip-lat-pulldown.jpg in Resources */,
+				583E4D30C3C94B9785A7D660 /* wrist-curl.jpg in Resources */,
+				E232DDBD6AA7BB22B00D1AE5 /* zercher-carry.jpg in Resources */,
+				3C1024B678FC6EEE441A546C /* zercher-deadlift.jpg in Resources */,
+				2C37475F41CF78D62CB7242F /* zercher-jefferson-curl.jpg in Resources */,
+				4BED4EF943E481C7D9757192 /* zercher-lunge.jpg in Resources */,
+				B901BA14F9D218F60458C727 /* zercher-reverse-lunge.jpg in Resources */,
+				9399C73EEDE2194028DF0A53 /* zercher-split-squat.jpg in Resources */,
+				071637BF3B9BD942A8E62501 /* zercher-squat.png in Resources */,
+				D0C3D20453F5DB1C93C23279 /* zercher-step-up.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2F7733CA91872BE7FAB82FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7332984F655F6573763AAD9 /* FerrumApp.swift in Sources */,
+				C62DD105B96A24165A920FD0 /* GeneratorView.swift in Sources */,
+				3CD863281AFFE06F7F59753D /* LibraryView.swift in Sources */,
+				DA0D2D5794B0D18A75FC927C /* Models.swift in Sources */,
+				BFD88206609498071F00DF35 /* NumberField.swift in Sources */,
+				8DD47D2DA4A6A4C5189EBB98 /* OnboardingView.swift in Sources */,
+				721A9CAAC02A1275BE9B0EF2 /* ProgramBuilderView.swift in Sources */,
+				4462190F846A03E547A926E0 /* ProgramsView.swift in Sources */,
+				9A0F79F7F1BCDDB90D325853 /* ProgressTab.swift in Sources */,
+				8E722E428D9BAF6CC1A80E36 /* ReadinessSheet.swift in Sources */,
+				55CDDE60B38BCFC322454092 /* RootView.swift in Sources */,
+				CA46A00896E87F10A20EC37E /* SettingsView.swift in Sources */,
+				D9E9CEE2BAA1CDCE54FFCC4D /* Store.swift in Sources */,
+				FDDC02766F84B6776B6D2F59 /* Theme.swift in Sources */,
+				46C22D048B0C1F9679490A9A /* TodayView.swift in Sources */,
+				725F48A8E9A0BCD71C311FAE /* WorkoutView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B0AF8238531B454433F0E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ferrum;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.ferrum.ios;
+				PRODUCT_NAME = Ferrum;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B400C174FF50223E635EA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64084275350572F05FBAF1BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C6E5E7B4933A5C9C007E5FF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Ferrum;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.ferrum.ios;
+				PRODUCT_NAME = Ferrum;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0616A743A7C4A826882BAF5D /* Build configuration list for PBXProject "Ferrum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B400C174FF50223E635EA0C /* Debug */,
+				64084275350572F05FBAF1BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6B70AD35EB230C034379DB48 /* Build configuration list for PBXNativeTarget "Ferrum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6E5E7B4933A5C9C007E5FF6 /* Debug */,
+				3B0AF8238531B454433F0E3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4AC01B4B00CC4B89BBCDC162 /* XCLocalSwiftPackageReference "Packages/FerrumCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FerrumCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE8EDA4ADB7809687BD84184 /* FerrumCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FerrumCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BFAC1DBD4E86E9A48025B650 /* Project object */;
+}

@@ -44,6 +44,12 @@ def equipment_for(name, pattern):
     return "bodyweight", True  # uncertain
 
 # ---- muscles
+def real_suffix(path):
+    head = path.read_bytes()[:12]
+    if head.startswith(b"\x89PNG"): return ".png"
+    if head.startswith(b"\xff\xd8"): return ".jpg"
+    return path.suffix.lower()
+
 def parse_muscles():
     text = (SRC / "muscles.md").read_text()
     out = []
@@ -122,7 +128,7 @@ def main():
         src = SRC / img
         image = None
         if src.exists():
-            image = f"{eid}{src.suffix.lower()}"
+            image = f"{eid}{real_suffix(src)}"
             shutil.copy(src, IMG_OUT / image)
         else:
             warnings.append(f"missing image: {img}")
@@ -132,7 +138,10 @@ def main():
     for m in muscles:
         if m["image"]:
             src = SRC / "guide-images" / m["image"]
-            if src.exists(): shutil.copy(src, IMG_OUT / ("guide-" + m["image"]))
+            if src.exists(): 
+                name = "guide-" + Path(m["image"]).stem + real_suffix(src)
+                shutil.copy(src, IMG_OUT / name)
+                m["image"] = name[len("guide-"):]
     (OUT / "exercises.json").write_text(json.dumps(exercises, indent=1, ensure_ascii=False))
     (OUT / "muscles.json").write_text(json.dumps(muscles, indent=1, ensure_ascii=False))
     (OUT / "rir.json").write_text(json.dumps(parse_rir(), indent=1, ensure_ascii=False))

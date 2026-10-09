@@ -98,7 +98,7 @@ public enum Resolver {
             return ResolvedSet(index: index, reps: reps, repsLow: reps, targetRIR: r, weight: w, percent: nil, isRange: false)
         case .repRange(let low, let high, let rir):
             let r = Swift.max(rir + shift, 0)
-            var reps = high
+            var reps = (low + high) / 2
             var w: Double?
             if let last, !last.sets.isEmpty {
                 let s = Progression.doubleProgression(last: last.sets, low: low, high: high, targetRIR: r, unit: unit)
