@@ -70,7 +70,23 @@ struct PressFeedback: ViewModifier {
     }
 }
 
+/// Digits roll to their new value instead of snapping. Skipped under Reduce Motion.
+struct NumericChange<V: Equatable>: ViewModifier {
+    let value: V
+    var animated = true
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    func body(content: Content) -> some View {
+        content
+            .contentTransition(.numericText())
+            .animation(reduceMotion || !animated ? nil : .snappy(duration: 0.3), value: value)
+    }
+}
+
 extension View {
+    func numericChange<V: Equatable>(_ value: V, animated: Bool = true) -> some View {
+        modifier(NumericChange(value: value, animated: animated))
+    }
+
     func pressFeedback(_ isPressed: Bool, scale: CGFloat = 0.97, dim: Double = 0.8) -> some View {
         modifier(PressFeedback(isPressed: isPressed, scale: scale, dim: dim))
     }

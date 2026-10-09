@@ -101,7 +101,7 @@ struct SessionDetailView: View {
 
     private func stat(_ value: String, _ label: String) -> some View {
         VStack(alignment: .leading, spacing: 3) {
-            Text(value).font(.title3.bold()).foregroundStyle(t.accent).lineLimit(1).minimumScaleFactor(0.6)
+            Text(value).font(.title3.bold()).foregroundStyle(t.accent).lineLimit(1).minimumScaleFactor(0.6).numericChange(value)
             Text(label).font(.caption).foregroundStyle(t.secondary)
         }.frame(maxWidth: .infinity, alignment: .leading).card()
     }

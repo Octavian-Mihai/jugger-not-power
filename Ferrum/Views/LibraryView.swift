@@ -157,7 +157,7 @@ struct CustomExerciseSheet: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name", text: $name)
+                TextField("Name", text: $name).doneOnSubmit()
                 Picker("Movement pattern", selection: $pattern) { ForEach(store.library.patterns, id: \.self) { Text($0).tag($0) } }
                 Picker("Primary muscle", selection: $muscle) { ForEach(store.library.muscles) { Text($0.name).tag($0.id) } }
                 Picker("Equipment", selection: $equipment) {

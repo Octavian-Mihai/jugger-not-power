@@ -18,6 +18,7 @@ struct WorkoutView: View {
     @State private var infoExercise: ExerciseInfo?
     @State private var page = 0
     @State private var showSummary = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         if showSummary {
@@ -34,6 +35,7 @@ struct WorkoutView: View {
                     VStack(spacing: 0) {
                         if let restEnd {
                             RestBar(end: restEnd, onAdjust: adjustRest) { self.restEnd = nil }
+                                .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
                         }
                         if keypad.isActive {
                             WorkoutKeypad(keypad: keypad, profile: profile, onComplete: completeFromKeypad)
@@ -41,6 +43,7 @@ struct WorkoutView: View {
                         }
                     }
                     .animation(.easeOut(duration: 0.2), value: keypad.isActive)
+                    .animation(.spring(response: 0.35, dampingFraction: 0.85), value: restEnd != nil)
                 }
             .background(t.bg.ignoresSafeArea())
             .navigationTitle(session.dayName)
@@ -313,6 +316,7 @@ struct SetRow: View {
             keypad.activate(set, field: field, store: store)
         } label: {
             Text(value).font(.body.monospacedDigit())
+                .numericChange(value, animated: !active)
                 .foregroundStyle(value == "0" && !active ? t.secondary : t.text)
                 .frame(maxWidth: .infinity, minHeight: 36)
                 .background(Color.black.opacity(0.35), in: RoundedRectangle(cornerRadius: 8, style: .continuous))

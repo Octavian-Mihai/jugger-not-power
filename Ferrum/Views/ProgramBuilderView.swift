@@ -14,7 +14,7 @@ struct ProgramBuilderView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Name") { TextField("Program name", text: $plan.name) }
+                Section("Name") { TextField("Program name", text: $plan.name).doneOnSubmit() }
                 Section {
                     ForEach($plan.blocks) { $block in
                         NavigationLink {
@@ -63,7 +63,7 @@ struct BlockEditor: View {
     var body: some View {
         Form {
             Section("Block") {
-                TextField("Name", text: $block.name)
+                TextField("Name", text: $block.name).doneOnSubmit()
                 Picker("Phase", selection: $block.phase) {
                     ForEach(PhaseKind.allCases, id: \.self) { Text($0.title).tag($0) }
                 }
@@ -126,7 +126,7 @@ struct DayEditor: View {
     var body: some View {
         Form {
             Section("Day") {
-                TextField("Name", text: $day.name)
+                TextField("Name", text: $day.name).doneOnSubmit()
                 Toggle("Rest day", isOn: $day.isRest)
             }
             if day.isRest {
@@ -174,7 +174,7 @@ struct ExerciseEditor: View {
         Form {
             Section {
                 Stepper("Rest \(exercise.restSeconds)s", value: $exercise.restSeconds, in: 15...600, step: 15)
-                TextField("Note", text: $exercise.note)
+                TextField("Note", text: $exercise.note).doneOnSubmit()
                 Picker("% reference lift", selection: Binding(get: { exercise.reference }, set: { exercise.reference = $0 })) {
                     Text("Auto").tag(MainLift?.none)
                     ForEach(MainLift.allCases) { Text($0.title).tag(MainLift?.some($0)) }

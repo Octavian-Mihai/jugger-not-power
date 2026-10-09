@@ -16,6 +16,13 @@ extension View {
     }
 }
 
+extension View {
+    /// Return key reads "Done" and closes the keyboard. For single-line text fields that aren't part of a chain.
+    func doneOnSubmit() -> some View {
+        self.submitLabel(.done).onSubmit { Keyboard.hide() }
+    }
+}
+
 enum Keyboard {
     static func hide() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

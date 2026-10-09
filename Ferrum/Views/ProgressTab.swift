@@ -47,7 +47,7 @@ struct ProgressTab: View {
 
     private func stat(_ value: String, _ label: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(value).font(.title2.bold()).foregroundStyle(t.accent).minimumScaleFactor(0.6).lineLimit(1)
+            Text(value).font(.title2.bold()).foregroundStyle(t.accent).minimumScaleFactor(0.6).lineLimit(1).numericChange(value)
             Text(label).font(.caption).foregroundStyle(t.secondary)
         }.frame(maxWidth: .infinity, alignment: .leading).card()
     }

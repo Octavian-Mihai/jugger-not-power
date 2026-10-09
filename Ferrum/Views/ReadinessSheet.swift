@@ -19,7 +19,7 @@ struct ReadinessSheet: View {
                     let adj = Readiness.adjustment(for: input)
                     VStack(alignment: .leading, spacing: 6) {
                         HStack {
-                            Text("\(adj.score)").font(.system(size: 40, weight: .black)).foregroundStyle(t.accent)
+                            Text("\(adj.score)").font(.system(size: 40, weight: .black)).foregroundStyle(t.accent).numericChange(adj.score)
                             Text(adj.band.title).font(.title3.bold()).foregroundStyle(t.text)
                         }
                         Text(adj.summary).foregroundStyle(t.secondary)

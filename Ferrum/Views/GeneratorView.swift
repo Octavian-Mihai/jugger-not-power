@@ -217,7 +217,7 @@ struct GeneratorView: View {
                 .font(.footnote).foregroundStyle(t.secondary)
             VStack(alignment: .leading, spacing: 4) {
                 Text("Name").font(.caption).foregroundStyle(t.secondary)
-                TextField(plan.name, text: $name).textFieldStyle(.roundedBorder)
+                TextField(plan.name, text: $name).textFieldStyle(.roundedBorder).doneOnSubmit()
             }
         }
     }

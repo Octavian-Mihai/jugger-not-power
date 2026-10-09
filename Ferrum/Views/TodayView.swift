@@ -140,7 +140,7 @@ struct TodayView: View {
             SectionHeader(text: "Readiness")
             if let e = todaysReadiness {
                 HStack {
-                    Text("\(e.score)").font(.system(size: 44, weight: .black)).foregroundStyle(color(adj.band))
+                    Text("\(e.score)").font(.system(size: 44, weight: .black)).foregroundStyle(color(adj.band)).numericChange(e.score)
                     VStack(alignment: .leading) {
                         Text(adj.band.title).font(.headline).foregroundStyle(t.text)
                         Text(adj.summary).font(.caption).foregroundStyle(t.secondary)
