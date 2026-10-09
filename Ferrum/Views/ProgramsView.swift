@@ -9,6 +9,7 @@ struct ProgramsView: View {
     @Query(sort: \Program.createdAt, order: .reverse) private var programs: [Program]
     @State private var showGenerator = false
     @State private var editing: Program?
+    @State private var editingIsNew = false
 
     var body: some View {
         Screen(title: "Programs") {
@@ -33,7 +34,7 @@ struct ProgramsView: View {
             }
         }
         .sheet(isPresented: $showGenerator) { GeneratorView(profile: profile) }
-        .sheet(item: $editing) { p in ProgramBuilderView(program: p) }
+        .sheet(item: $editing) { p in ProgramBuilderView(program: p, isNew: editingIsNew) }
     }
 
     private func row(_ p: Program) -> some View {
@@ -64,6 +65,7 @@ struct ProgramsView: View {
         let p = Program(plan: plan)
         context.insert(p)
         if programs.isEmpty { p.isActive = true }
+        editingIsNew = true
         editing = p
     }
 

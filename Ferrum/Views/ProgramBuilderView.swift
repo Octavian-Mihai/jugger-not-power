@@ -4,6 +4,8 @@ import FerrumCore
 /// Edits a copy of the plan and saves on Done.
 struct ProgramBuilderView: View {
     let program: Program
+    var isNew = false
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Environment(\.theme) private var t
     @State private var plan: ProgramPlan = ProgramPlan(name: "", blocks: [])
@@ -38,7 +40,7 @@ struct ProgramBuilderView: View {
             .navigationTitle("Program builder")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { if isNew { context.delete(program) }; dismiss() } }
                 ToolbarItem(placement: .topBarTrailing) { EditButton() }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") {
